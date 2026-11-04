@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# Env / secrets
+.env
+
+# Data (cloned docs, generated JSONL, eval outputs)
+data/
+eval/results/
+
+# Frontend
+frontend/node_modules/
+frontend/.next/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

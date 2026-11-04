@@ -1,0 +1,8 @@
+{"id": "signals-code", "question": "How do I connect a signal in code?", "expected_paths": ["getting_started/step_by_step/signals.rst"]}
+{"id": "process-vs-physics", "question": "When should I use _physics_process instead of _process?", "expected_paths": ["tutorials/scripting/idle_and_physics_processing.rst"]}
+{"id": "character-collide", "question": "How do I make a 2D character move and stop at walls?", "expected_paths": ["tutorials/physics/using_character_body_2d.rst", "classes/class_characterbody2d.rst"]}
+{"id": "move-and-slide", "question": "What does move_and_slide return?", "expected_paths": ["classes/class_characterbody2d.rst"]}
+{"id": "save-game", "question": "What's the best way to save player progress to disk?", "expected_paths": ["tutorials/io/saving_games.rst"]}
+{"id": "export-android", "question": "How do I build my game as an APK?", "expected_paths": ["tutorials/export/exporting_for_android.rst"]}
+{"id": "input-events", "question": "How does Godot pass keyboard and mouse input to nodes?", "expected_paths": ["tutorials/inputs/inputevent.rst"]}
+{"id": "out-of-scope", "question": "How do I set up a Unity project?", "expected_paths": []}
