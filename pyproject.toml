@@ -10,8 +10,7 @@ dependencies = [
     "pydantic>=2.7",
     "pydantic-settings>=2.3",
     "openai>=1.40",
-    "psycopg[binary]>=3.2",
-    "pgvector>=0.3",
+    "pinecone>=10.0",
     "tiktoken>=0.7",
 ]
 

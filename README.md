@@ -6,9 +6,9 @@ Built with Retrieval-Augmented Generation (RAG): the docs are split into chunks 
 
 ```
 OFFLINE (indexing, re-run when docs change)
-  godot-docs repo ─► parse ─► chunk ─► embed ─► Postgres + pgvector
-                     (code)   (code)  (embedding        ▲
-                                        model)          │ search
+  godot-docs repo ─► parse ─► chunk ─► embed ─► Pinecone
+                     (code)   (code)  (OpenAI           ▲
+                                     embedding model)   │ search
 ONLINE (per question)                                   │
   question ─► embed ─► vector + keyword search ─────────┘
                           │
@@ -21,7 +21,7 @@ ONLINE (per question)                                   │
 | # | Milestone | Status |
 |---|-----------|--------|
 | 1 | Ingest: fetch docs, parse RST into clean sections + metadata | ✅ done |
-| 2 | Chunk + embed into pgvector, with content hashes | ⬜ |
+| 2 | Chunk + embed into Pinecone, with content hashes | ⬜ |
 | 3 | Retrieval API: vector search, then hybrid (vector + keyword) | ⬜ |
 | 4 | Generation: grounded answers with citations | ⬜ |
 | 5 | Evaluation: question set + retrieval/answer metrics | ⬜ |
@@ -33,23 +33,20 @@ Details and acceptance criteria: [docs/04-roadmap.md](docs/04-roadmap.md).
 
 ## Quick start
 
-Requirements: Python 3.11+, Docker, git, an OpenAI API key (needed from milestone 2).
+Requirements: Python 3.11+, git. From milestone 2: an OpenAI API key (embeddings + answers) and a Pinecone API key (free Starter plan is enough; the index is created on first use).
 
 ```bash
 # 1. Install
 python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -e ".[dev]"
-cp .env.example .env               # then add your OPENAI_API_KEY
+cp .env.example .env               # then add OPENAI_API_KEY and PINECONE_API_KEY
 
-# 2. Start Postgres + pgvector (schema in db/init.sql is applied automatically)
-docker compose up -d
-
-# 3. Ingest the docs -> data/documents.jsonl
+# 2. Ingest the docs -> data/documents.jsonl
 rag-ingest                         # clones/pulls godot-docs, parses ~1,600 pages
 rag-ingest --no-fetch              # re-parse the existing checkout
 
-# 4. Tests
+# 3. Tests
 pytest
 
 # API (stub for now)
@@ -59,7 +56,6 @@ uvicorn rag.api:app --reload       # http://localhost:8000/docs
 ## Project layout
 
 ```
-db/init.sql              Postgres schema: documents, chunks (vector + full-text indexes)
 src/rag/
   config.py              Settings from .env
   models.py              Document / Section / Chunk / RetrievedChunk
@@ -69,7 +65,7 @@ src/rag/
     run.py               `rag-ingest` CLI
   chunking.py            [M2] Split sections into ~300-500 token chunks
   embeddings.py          [M2] OpenAI embeddings, batched
-  db.py                  [M2] Upserts, deletes, connection
+  store.py               Pinecone index + sync manifest; [M2] upserts, deletes
   retrieval.py           [M3] Vector / keyword / hybrid search
   generation.py          [M4] Prompt building + LLM call
   api.py                 FastAPI app

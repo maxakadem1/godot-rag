@@ -18,16 +18,21 @@ Most LLM and RAG tooling (OpenAI/Anthropic SDKs, embeddings, eval libraries, Pyd
 
 Running every page through an LLM to "normalize" it is slow and expensive at scale, and it can silently drop or change content. Each source format has structure that code can convert deterministically. An LLM is reserved for genuinely messy input.
 
+## One provider (OpenAI) for embeddings and answers
+
+One API key and one bill. The embedding model and the chat model are independent: the chat model never sees vectors, only chunk text, so either can be swapped later. Anthropic has no embedding model, so using Claude for answers would still mean a second provider for embeddings (OpenAI or Voyage AI).
+
 ## Embedding model: OpenAI `text-embedding-3-small` (1536 dims)
 
-Cheap enough to re-embed the whole corpus freely (~2.7M tokens) and good quality for English docs. Changing models means changing `vector(1536)` in `db/init.sql` and re-embedding everything. Vectors from different models can't be mixed.
+Cheap enough to re-embed the whole corpus freely (~2.7M tokens) and good quality for English docs. Changing models means a new Pinecone index with the new dimension (`EMBEDDING_DIMENSIONS`) and re-embedding everything. Vectors from different models can't be mixed. Worth comparing against `text-embedding-3-large` or Voyage `voyage-4` once the eval set exists.
 
-## Vector store: Postgres + pgvector
+## Vector store: Pinecone (serverless)
 
-- One database handles vectors, full-text search (for hybrid) and normal relational data
-- It's what many companies already run, so it's closer to a real production setup than a hosted-only vector DB
-- HNSW index for fast approximate nearest-neighbour search; GIN index for full-text
+- Managed: nothing to install or run, and the free Starter plan easily holds ~10k chunks
+- Stores the chunk text in metadata, so search returns everything the prompt and citations need in one call
+- Supports sparse vectors for the keyword half of hybrid search
+- Trade-offs vs Postgres + pgvector: one more external service, and no relational table for documents, so a small manifest file (`data/index_manifest.json`) tracks content hashes for sync
 
 ## Hybrid search planned from the start
 
-Questions about Godot often contain exact API names (`move_and_slide`, `CharacterBody2D`). Embeddings are weak on exact identifiers, while keyword search is strong on them. The schema includes a generated `tsv` column so adding keyword search later needs no migration.
+Questions about Godot often contain exact API names (`move_and_slide`, `CharacterBody2D`). Embeddings are weak on exact identifiers, while keyword search is strong on them. With Pinecone, the keyword half uses sparse vectors (e.g. its hosted `pinecone-sparse-english-v0` model), merged with dense results via Reciprocal Rank Fusion.

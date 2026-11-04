@@ -21,14 +21,14 @@ Milestones 1–5 make a solid project; 6–8 make it stand out. Keep a short log
 - [ ] `chunk_document()`: heading-aware, ~300–500 tokens, ~50 overlap, merge tiny sections, title + heading prefix
 - [ ] Unit tests: no chunk over the max, nothing lost, order preserved
 - [ ] `embed_texts()`: batched, retries with backoff
-- [ ] `db.py`: upsert documents, replace chunks, delete pages that no longer exist
-- [ ] CLI `rag-index`: documents.jsonl → chunks → embeddings → Postgres; skip pages whose hash is unchanged
+- [ ] `store.py`: upsert chunks, delete a page's leftover chunks, delete pages that no longer exist, keep `data/index_manifest.json` in step
+- [ ] CLI `rag-index`: documents.jsonl → chunks → embeddings → Pinecone; skip pages whose hash is unchanged
 - [ ] Log: chunk count, tokens embedded, cost, time
 
 ## ⬜ 3. Retrieval
 
-- [ ] Vector search with pgvector
-- [ ] Keyword search with Postgres full-text
+- [ ] Vector search with Pinecone
+- [ ] Keyword search with Pinecone sparse vectors
 - [ ] Hybrid with Reciprocal Rank Fusion
 - [ ] `/search` endpoint for debugging (returns chunks + scores, no LLM)
 - [ ] (Later) reranker

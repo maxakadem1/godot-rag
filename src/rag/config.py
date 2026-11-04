@@ -9,7 +9,11 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
     openai_api_key: str = ""
-    database_url: str = "postgresql://rag:rag@localhost:5432/rag"
+
+    pinecone_api_key: str = ""
+    pinecone_index: str = "godot-docs"
+    pinecone_cloud: str = "aws"
+    pinecone_region: str = "us-east-1"
 
     embedding_model: str = "text-embedding-3-small"
     embedding_dimensions: int = 1536
@@ -29,6 +33,11 @@ class Settings(BaseSettings):
     @property
     def documents_path(self) -> Path:
         return self.data_dir / "documents.jsonl"
+
+    @property
+    def manifest_path(self) -> Path:
+        """What's currently in the index: page path -> content hash + chunk count."""
+        return self.data_dir / "index_manifest.json"
 
 
 settings = Settings()

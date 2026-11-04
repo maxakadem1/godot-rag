@@ -8,7 +8,7 @@
 2. **Parse**: convert each `.rst` page to clean text split by headings, with metadata (`rag/ingest/parse_rst.py`)
 3. **Chunk**: split sections into pieces small enough to embed and put in a prompt (`rag/chunking.py`)
 4. **Embed**: run each chunk through the embedding model (`rag/embeddings.py`)
-5. **Store**: write vector + text + metadata to Postgres/pgvector (`rag/db.py`, `db/init.sql`)
+5. **Store**: write vector + text + metadata to Pinecone (`rag/store.py`)
 
 **Online / per question**
 
@@ -24,7 +24,7 @@
 |---|---|
 | Fetch, parse, chunk | Plain code |
 | Text → vectors | **Embedding model** (small, separate model; no answering) |
-| Comparing vectors | Plain math (cosine similarity), done by pgvector |
+| Comparing vectors | Plain math (cosine similarity), done by Pinecone |
 | Building the prompt | Plain code |
 | Writing the answer | **LLM** (chat model) |
 
@@ -48,10 +48,13 @@ answer = llm.complete(prompt)
 
 ## Data model
 
-- `documents`: one row per docs page: path, public URL, title, `content_hash`
-- `chunks`: one row per chunk: text, heading path, token count, `embedding vector(1536)`, and a generated `tsv` full-text column
+Pinecone stores **one record per chunk** (serverless index, cosine metric, 1536 dimensions for `text-embedding-3-small`):
 
-The `content_hash` lets sync skip pages that haven't changed, so only changed pages get re-embedded. `ON DELETE CASCADE` means deleting a page also deletes its chunks.
+- `id`: `<page path>#<chunk index>`, e.g. `tutorials/scripting/signals.rst#3`. It's deterministic, so re-indexing a page overwrites its records instead of duplicating them.
+- `values`: the embedding
+- `metadata`: path, URL, title, heading path, chunk index, `content_hash`, and the chunk **text** itself, so search results go straight into the prompt with no second lookup
+
+Pinecone has no documents table, so `data/index_manifest.json` records what's in the index: `{path: {content_hash, chunk_count}}`. Sync uses it to skip pages whose `content_hash` hasn't changed (only changed pages get re-embedded), to delete leftover chunks when a page shrinks, and to delete every chunk of a page that no longer exists.
 
 ## Parsing
 
@@ -81,8 +84,8 @@ Chunk quality has a big effect on answer quality. The plan:
 
 ## Retrieval (milestone 3)
 
-1. **Vector search**: `ORDER BY embedding <=> :query_vector LIMIT k` (cosine distance)
-2. **Keyword search**: Postgres full-text on the `tsv` column. Catches exact API names like `move_and_slide` or `CharacterBody2D`, which embeddings can miss.
+1. **Vector search**: `index.query(vector=..., top_k=k, include_metadata=True)` (cosine similarity)
+2. **Keyword search**: sparse vectors in Pinecone, e.g. a separate sparse index using its hosted `pinecone-sparse-english-v0` model. Catches exact API names like `move_and_slide` or `CharacterBody2D`, which embeddings can miss.
 3. **Hybrid**: merge both lists with Reciprocal Rank Fusion
 4. **Rerank** (later): fetch ~20 candidates, then a reranker model picks the best 5
 

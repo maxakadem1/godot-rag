@@ -16,7 +16,7 @@ Items marked ✅ are covered in this project, 🟡 are planned, and ➖ don't ap
 ## 2. Storage and search
 
 - Embedding model choice: cost, quality, languages ✅ ([decisions](05-decisions.md))
-- Vector store: companies usually prefer what they already run (pgvector in existing Postgres, OpenSearch). Here: pgvector ✅
+- Vector store: companies usually prefer what they already run (pgvector in existing Postgres, OpenSearch). Here: Pinecone, a managed vector DB, so there's no database to run ✅
 - **Hybrid search**: embeddings are bad at exact names, IDs and error codes 🟡
 - **Reranking** 🟡
 
