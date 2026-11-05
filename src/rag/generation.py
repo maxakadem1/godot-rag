@@ -8,6 +8,7 @@
 """
 
 import re
+from collections.abc import Iterator
 from functools import lru_cache
 
 from openai import OpenAI
@@ -53,16 +54,39 @@ def cited_numbers(answer_text: str, n_chunks: int) -> list[int]:
     return list(seen)
 
 
+def _messages(question: str, chunks: list[RetrievedChunk]) -> list[dict[str, str]]:
+    return [
+        {"role": "system", "content": SYSTEM_PROMPT},
+        {"role": "user", "content": build_prompt(question, chunks)},
+    ]
+
+
 def answer(question: str, chunks: list[RetrievedChunk], client=None) -> tuple[str, list[int]]:
     """Returns (answer text, cited excerpt numbers)."""
     if not chunks:
         return NOT_FOUND, []
     response = (client or _client()).chat.completions.create(
-        model=settings.chat_model,
-        messages=[
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": build_prompt(question, chunks)},
-        ],
+        model=settings.chat_model, messages=_messages(question, chunks)
     )
     text = response.choices[0].message.content or NOT_FOUND
     return text, cited_numbers(text, len(chunks))
+
+
+def stream_answer(question: str, chunks: list[RetrievedChunk], client=None) -> Iterator[str]:
+    """Same prompt as answer(), but yields the text in pieces as the model writes it.
+    Join the pieces and pass them to cited_numbers() for the citations."""
+    if not chunks:
+        yield NOT_FOUND
+        return
+    stream = (client or _client()).chat.completions.create(
+        model=settings.chat_model, messages=_messages(question, chunks), stream=True
+    )
+    produced = False
+    for event in stream:
+        # The final event can carry no choices (e.g. a usage-only event).
+        piece = event.choices[0].delta.content if event.choices else None
+        if piece:
+            produced = True
+            yield piece
+    if not produced:
+        yield NOT_FOUND

@@ -26,6 +26,16 @@ class Settings(BaseSettings):
 
     top_k: int = 5
 
+    # API protection. With internal_api_key set, every endpoint except /health needs
+    # it in the X-Internal-Key header: the web frontend's server holds the key and is
+    # the only public way in. Empty disables the check (local development).
+    internal_api_key: str = ""
+    # Requests per minute per client IP for /search, /ask and /ask/stream. 0 = off.
+    rate_limit_per_minute: int = 30
+    # LLM answers per UTC day across all users: caps the cost of a leaked password.
+    # Retrieval keeps working once it is reached. 0 = off.
+    daily_answer_limit: int = 300
+
     @property
     def docs_checkout_dir(self) -> Path:
         return self.data_dir / "godot-docs"

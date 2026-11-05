@@ -88,3 +88,42 @@ def test_hybrid_fetches_at_least_top_k_candidates(monkeypatch):
 def test_unknown_search_mode_raises():
     with pytest.raises(ValueError, match="unknown search mode"):
         retrieval.search("q", mode="fuzzy")
+
+
+def fake_lists(monkeypatch):
+    """Vector finds a, b, c; keyword finds c, d, a. Records the pool size asked for."""
+    seen = {}
+
+    def fake(name, ids):
+        def search(question, top_k):
+            seen[name] = top_k
+            return [chunk(f"{i}#0") for i in ids][:top_k]
+
+        return search
+
+    monkeypatch.setattr(retrieval, "vector_search", fake("vector", "abc"))
+    monkeypatch.setattr(retrieval, "keyword_search", fake("keyword", "cda"))
+    return seen
+
+
+def test_hybrid_stages_show_each_list_then_fusion_then_context(monkeypatch):
+    fake_lists(monkeypatch)
+    stages = list(retrieval.search_stages("q", top_k=2, mode="hybrid"))
+    assert [s.name for s in stages] == ["vector", "keyword", "fusion", "context"]
+    assert [c.id for c in stages[2].chunks] == ["a#0", "c#0", "b#0", "d#0"]
+    assert [c.id for c in stages[3].chunks] == ["a#0", "c#0"]
+    assert all(s.ms >= 0 for s in stages)
+
+
+def test_last_stage_is_exactly_what_search_returns(monkeypatch):
+    fake_lists(monkeypatch)
+    for mode in retrieval.SEARCH_MODES:
+        *_, last = retrieval.search_stages("q", top_k=2, mode=mode)
+        assert last.chunks == retrieval.search("q", top_k=2, mode=mode)
+
+
+def test_single_mode_stages_skip_the_other_list_and_fusion(monkeypatch):
+    seen = fake_lists(monkeypatch)
+    stages = list(retrieval.search_stages("q", top_k=2, mode="keyword"))
+    assert [s.name for s in stages] == ["keyword", "context"]
+    assert seen == {"keyword": 2}  # no candidate pool outside hybrid

@@ -84,10 +84,13 @@ Response shape (abridged):
 | Endpoint | Description |
 |---|---|
 | `POST /ask` | `{question, mode?, k?}` → answer with cited sources |
+| `POST /ask/stream` | Same, as Server-Sent Events: each search stage, the context, answer tokens, citations. `generate: false` stops after retrieval |
 | `GET /search?q=&mode=&k=` | Retrieval only, with scores; for debugging answers |
 | `GET /health` | Liveness |
 
 `mode` is `hybrid` (default), `vector` or `keyword`; `k` is 1 to 20.
+
+**Protection for a public deployment.** With `INTERNAL_API_KEY` set, every endpoint except `/health` requires it in the `X-Internal-Key` header, so only the web frontend's server can call the API. Requests are rate-limited per client IP (`RATE_LIMIT_PER_MINUTE`, using the `X-Client-IP` the frontend forwards), and LLM answers are capped per UTC day across all users (`DAILY_ANSWER_LIMIT`); past the cap, retrieval still works. Limits live in process memory, which assumes a single API instance.
 
 ## Project layout
 

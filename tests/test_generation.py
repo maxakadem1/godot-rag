@@ -2,7 +2,14 @@
 
 from types import SimpleNamespace
 
-from rag.generation import NOT_FOUND, SYSTEM_PROMPT, answer, build_prompt, cited_numbers
+from rag.generation import (
+    NOT_FOUND,
+    SYSTEM_PROMPT,
+    answer,
+    build_prompt,
+    cited_numbers,
+    stream_answer,
+)
 from rag.models import RetrievedChunk
 
 
@@ -19,14 +26,25 @@ def chunk(n: int) -> RetrievedChunk:
 
 
 class FakeLLM:
-    """Records the messages it was sent and replies with a fixed answer."""
+    """Records the messages it was sent and replies with a fixed answer. With
+    stream=True it sends the reply word by word, then an event with no choices,
+    like OpenAI's final usage event."""
 
     def __init__(self, reply: str):
         self.reply, self.messages = reply, None
         self.chat = SimpleNamespace(completions=SimpleNamespace(create=self._create))
 
-    def _create(self, model, messages):
+    def _create(self, model, messages, stream=False):
         self.messages = messages
+        if stream:
+            pieces = self.reply.split(" ")
+            pieces = [p + " " for p in pieces[:-1]] + pieces[-1:]
+            events = [
+                SimpleNamespace(choices=[SimpleNamespace(delta=SimpleNamespace(content=p))])
+                for p in pieces
+                if p
+            ]
+            return iter([*events, SimpleNamespace(choices=[])])
         message = SimpleNamespace(content=self.reply)
         return SimpleNamespace(choices=[SimpleNamespace(message=message)])
 
@@ -63,3 +81,21 @@ def test_no_chunks_means_no_llm_call():
     llm = FakeLLM("should not be used")
     assert answer("Anything?", [], client=llm) == (NOT_FOUND, [])
     assert llm.messages is None
+
+
+def test_stream_yields_the_answer_in_pieces_with_the_same_prompt():
+    llm = FakeLLM("Use connect() [1].")
+    pieces = list(stream_answer("How do I connect?", [chunk(1)], client=llm))
+    assert len(pieces) > 1
+    assert "".join(pieces) == "Use connect() [1]."
+    assert llm.messages == [
+        {"role": "system", "content": SYSTEM_PROMPT},
+        {"role": "user", "content": build_prompt("How do I connect?", [chunk(1)])},
+    ]
+
+
+def test_stream_without_chunks_or_output_says_not_found():
+    llm = FakeLLM("")
+    assert list(stream_answer("Anything?", [], client=llm)) == [NOT_FOUND]
+    assert llm.messages is None
+    assert list(stream_answer("Anything?", [chunk(1)], client=llm)) == [NOT_FOUND]

@@ -1,5 +1,8 @@
 """Retrieval: vector search, BM25 keyword search, and hybrid fusion with RRF."""
 
+import time
+from collections.abc import Iterator
+from dataclasses import dataclass
 from typing import Literal, get_args
 
 from rag.models import RetrievedChunk
@@ -63,15 +66,58 @@ def rrf(result_lists: list[list[RetrievedChunk]], k: int = 60) -> list[Retrieved
 
 def hybrid_search(question: str, top_k: int = 5, candidates: int = 20) -> list[RetrievedChunk]:
     """Top `candidates` from vector and keyword search, fused with RRF, cut to top_k."""
-    pool = max(candidates, top_k)
-    return rrf([vector_search(question, pool), keyword_search(question, pool)])[:top_k]
+    return search(question, top_k, "hybrid", candidates)
 
 
-def search(question: str, top_k: int = 5, mode: SearchMode = "hybrid") -> list[RetrievedChunk]:
+@dataclass
+class Stage:
+    """One step of a search, for showing the pipeline as it runs.
+
+    name: "vector" / "keyword" (that search's candidate list, best first),
+    "fusion" (every candidate re-ranked by RRF score) or "context" (the final top_k,
+    always last). ms is how long the step took.
+    """
+
+    name: Literal["vector", "keyword", "fusion", "context"]
+    ms: float
+    chunks: list[RetrievedChunk]
+
+
+def search_stages(
+    question: str, top_k: int = 5, mode: SearchMode = "hybrid", candidates: int = 20
+) -> Iterator[Stage]:
+    """Run a search one stage at a time. The last stage holds the same chunks search()
+    returns, because search() is built on this: the trace shows exactly what was used.
+
+    Hybrid search pulls `candidates` from each list (more than top_k) so a chunk ranked
+    6th by both lists can still win the fusion.
+    """
+    if mode not in SEARCH_MODES:
+        raise ValueError(f"unknown search mode {mode!r}; expected one of {SEARCH_MODES}")
+    pool = max(candidates, top_k) if mode == "hybrid" else top_k
+
+    lists = []
+    for name, run in (("vector", vector_search), ("keyword", keyword_search)):
+        if mode in (name, "hybrid"):
+            start = time.perf_counter()
+            results = run(question, pool)
+            lists.append(results)
+            yield Stage(name, _ms_since(start), results)
+
     if mode == "hybrid":
-        return hybrid_search(question, top_k)
-    if mode == "vector":
-        return vector_search(question, top_k)
-    if mode == "keyword":
-        return keyword_search(question, top_k)
-    raise ValueError(f"unknown search mode {mode!r}; expected one of {SEARCH_MODES}")
+        start = time.perf_counter()
+        fused = rrf(lists)
+        yield Stage("fusion", _ms_since(start), fused)
+        lists = [fused]
+    yield Stage("context", 0.0, lists[0][:top_k])
+
+
+def search(
+    question: str, top_k: int = 5, mode: SearchMode = "hybrid", candidates: int = 20
+) -> list[RetrievedChunk]:
+    *_, last = search_stages(question, top_k, mode, candidates)
+    return last.chunks
+
+
+def _ms_since(start: float) -> float:
+    return round((time.perf_counter() - start) * 1000, 1)
