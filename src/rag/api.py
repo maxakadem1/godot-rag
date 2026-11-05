@@ -29,7 +29,7 @@ MAX_K = 20
 async def lifespan(_: FastAPI):
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s %(message)s")
     # Build the BM25 index up front so the first request doesn't pay for it.
-    if settings.documents_path.exists():
+    if settings.keyword_chunks_path.exists() or settings.documents_path.exists():
         from rag.keyword import get_keyword_index
 
         start = time.perf_counter()

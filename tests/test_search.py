@@ -127,3 +127,28 @@ def test_single_mode_stages_skip_the_other_list_and_fusion(monkeypatch):
     stages = list(retrieval.search_stages("q", top_k=2, mode="keyword"))
     assert [s.name for s in stages] == ["keyword", "context"]
     assert seen == {"keyword": 2}  # no candidate pool outside hybrid
+
+
+def test_saved_chunks_round_trip_and_are_byte_stable(tmp_path):
+    from rag.keyword import load_chunks, save_chunks
+
+    chunks = [chunk("a#0", "signals"), chunk("b#0", "physics")]
+    path = tmp_path / "chunks.jsonl.gz"
+    save_chunks(chunks, path)
+    first = path.read_bytes()
+    save_chunks(chunks, path)
+    assert path.read_bytes() == first  # no timestamp in the gzip header
+    assert load_chunks(path) == chunks
+
+
+def test_keyword_index_prefers_the_saved_chunks_file(tmp_path, monkeypatch):
+    from rag import keyword
+
+    monkeypatch.setattr(keyword.settings, "data_dir", tmp_path)
+    keyword.save_chunks([chunk("saved#0", "tween")], keyword.settings.keyword_chunks_path)
+    (tmp_path / "documents.jsonl").write_text("not valid json\n")  # must not be read
+    keyword.get_keyword_index.cache_clear()
+    try:
+        assert [c.id for c in keyword.keyword_search("tween")] == ["saved#0"]
+    finally:
+        keyword.get_keyword_index.cache_clear()

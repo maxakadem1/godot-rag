@@ -90,19 +90,16 @@ Response shape (abridged):
 
 `mode` is `hybrid` (default), `vector` or `keyword`; `k` is 1 to 20.
 
-**Protection for a public deployment.** With `INTERNAL_API_KEY` set, every endpoint except `/health` requires it in the `X-Internal-Key` header, so only the web frontend's server can call the API. Requests are rate-limited per client IP (`RATE_LIMIT_PER_MINUTE`, using the `X-Client-IP` the frontend forwards), and LLM answers are capped per UTC day across all users (`DAILY_ANSWER_LIMIT`); past the cap, retrieval still works. Limits live in process memory, which assumes a single API instance.
+**Protection for a public deployment.** With `INTERNAL_API_KEY` set, every endpoint except `/health` requires it in the `X-Internal-Key` header, so only the web frontend's server can call the API. Requests are rate-limited per client IP (`RATE_LIMIT_PER_MINUTE`, using the `X-Client-IP` the frontend forwards), and LLM answers are capped per UTC day across all users (`DAILY_ANSWER_LIMIT`); past the cap, retrieval still works. These limits live in process memory, so they are exact only on a single instance; see Deploying the API.
 
 ## Deploying the API
 
-The API runs as one always-on [Fly.io](https://fly.io) machine (config in `fly.toml`, image in `Dockerfile`). The image carries `data/documents.jsonl` for the BM25 index, so deploy from a machine where `rag-ingest` has run; `.dockerignore` is an allow-list, so `.env` and the docs checkout never leave your machine.
+The API deploys to [Vercel](https://vercel.com) as one Python function: `app.py` at the root is the entrypoint. It needs no docs checkout: the BM25 index loads from `data/keyword_chunks.jsonl.gz` (2.8 MB, committed), which `rag-index` rewrites after every sync so it always matches Pinecone. Loading it takes under a second, against several seconds to chunk the documents, so serverless cold starts stay short.
 
-```bash
-fly launch --no-deploy --copy-config          # once: creates the app from fly.toml
-fly secrets set OPENAI_API_KEY=... PINECONE_API_KEY=... INTERNAL_API_KEY=...
-fly deploy --ha=false                         # one machine: the limits are in memory
-```
+1. Import the repo as a new Vercel project (root directory: the repo root), or run `vercel deploy` here: `.vercelignore` uploads only what the API needs.
+2. Set the environment variables `OPENAI_API_KEY`, `PINECONE_API_KEY` and `INTERNAL_API_KEY`. Generate the last with `python -c "import secrets; print(secrets.token_urlsafe(32))"` and give the same value to the web frontend. Without it the API is open to anyone with the URL.
 
-Generate `INTERNAL_API_KEY` with `python -c "import secrets; print(secrets.token_urlsafe(32))"` and give the same value to the web frontend. Without it the API is open to anyone with the URL.
+The rate and daily limits in the API are in-memory, so on serverless each instance counts on its own: they are a backstop. The limits that hold across instances live in the web frontend's proxy, backed by Redis.
 
 ## Project layout
 

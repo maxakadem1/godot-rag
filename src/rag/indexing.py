@@ -115,6 +115,7 @@ def main() -> None:
 
     # Imported here so `rag-index --help` works without credentials.
     from rag.embeddings import embed_texts
+    from rag.keyword import chunks_from_documents, save_chunks
     from rag.store import ensure_index, get_index, load_manifest, save_manifest
 
     with settings.documents_path.open(encoding="utf-8") as f:
@@ -130,6 +131,8 @@ def main() -> None:
         force=args.force,
         limit=args.limit,
     )
+    # The keyword index's copy of the chunks, for the deployed API (see keyword.py).
+    save_chunks(chunks_from_documents(docs), settings.keyword_chunks_path)
     print(json.dumps(stats, indent=2))
 
 

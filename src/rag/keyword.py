@@ -5,18 +5,21 @@ Embeddings match meaning but blur exact identifiers: a question about
 matches, weighted by how rare the term is (IDF), with diminishing returns for repeats
 (K1) and normalised for chunk length (B).
 
-The ~8.6k chunks fit comfortably in memory: the index builds in a few seconds at
-startup and a query takes milliseconds. At much larger scale this would move to a
-search engine (OpenSearch) or Pinecone sparse vectors.
+The ~8.6k chunks fit comfortably in memory and a query takes milliseconds. Chunking
+the documents at startup takes seconds, so `rag-index` also saves the chunks to a
+small gzipped file that the API loads instead (serverless cold starts stay short).
+At much larger scale this would move to a search engine (OpenSearch) or Pinecone
+sparse vectors.
 """
 
+import gzip
 import heapq
 import math
 import re
 from collections import Counter, defaultdict
 from functools import lru_cache
+from pathlib import Path
 
-from rag.chunking import chunk_document
 from rag.config import settings
 from rag.models import Document, RetrievedChunk
 from rag.store import chunk_id
@@ -69,6 +72,10 @@ class KeywordIndex:
 
 def chunks_from_documents(docs: list[Document]) -> list[RetrievedChunk]:
     """The same chunks Pinecone holds (same chunker, same ids), as search results."""
+    # Imported here: the chunker loads a tokenizer, which the API doesn't need when
+    # it reads the saved chunks file.
+    from rag.chunking import chunk_document
+
     return [
         RetrievedChunk(
             id=chunk_id(c.document_path, c.chunk_index),
@@ -84,9 +91,26 @@ def chunks_from_documents(docs: list[Document]) -> list[RetrievedChunk]:
     ]
 
 
+def save_chunks(chunks: list[RetrievedChunk], path: Path) -> None:
+    """Write chunks as gzipped JSON lines. mtime=0 keeps the bytes identical for the
+    same chunks, so an unchanged file doesn't show up as changed in git."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with gzip.GzipFile(path, "wb", mtime=0) as f:
+        for c in chunks:
+            f.write(c.model_dump_json().encode() + b"\n")
+
+
+def load_chunks(path: Path) -> list[RetrievedChunk]:
+    with gzip.open(path, "rt", encoding="utf-8") as f:
+        return [RetrievedChunk.model_validate_json(line) for line in f if line.strip()]
+
+
 @lru_cache
 def get_keyword_index() -> KeywordIndex:
-    """Built once per process from data/documents.jsonl."""
+    """Built once per process: from the saved chunks file if there is one (fast),
+    otherwise by chunking data/documents.jsonl."""
+    if settings.keyword_chunks_path.exists():
+        return KeywordIndex(load_chunks(settings.keyword_chunks_path))
     path = settings.documents_path
     if not path.exists():
         raise FileNotFoundError(f"{path} not found. Run rag-ingest first.")

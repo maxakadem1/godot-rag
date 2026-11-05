@@ -45,6 +45,12 @@ class Settings(BaseSettings):
         return self.data_dir / "documents.jsonl"
 
     @property
+    def keyword_chunks_path(self) -> Path:
+        """Chunks for the BM25 index, written by rag-index. Committed to git so the
+        deployed API has them without the docs checkout."""
+        return self.data_dir / "keyword_chunks.jsonl.gz"
+
+    @property
     def manifest_path(self) -> Path:
         """What's currently in the index: page path -> content hash + chunk count."""
         return self.data_dir / "index_manifest.json"
