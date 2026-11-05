@@ -33,6 +33,11 @@ build-backend = "setuptools.build_meta"
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.vercel]
+# Explicit, because Vercel's auto-detection looks for `app = FastAPI(...)` written in
+# the entrypoint file itself and doesn't follow app.py's re-export.
+entrypoint = "app:app"
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 
