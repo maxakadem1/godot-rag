@@ -1,12 +1,13 @@
 """CLI: fetch the Godot docs and write cleaned documents to data/documents.jsonl.
 
-rag-ingest                       # clone/pull + parse everything
-rag-ingest --no-fetch            # reuse the existing checkout
+rag-ingest                        clone/pull + parse everything
+rag-ingest --no-fetch             reuse the existing checkout
 rag-ingest --skip-class-reference
 """
 
 import argparse
 import json
+import os
 import time
 
 from rag.config import settings
@@ -18,7 +19,7 @@ SOURCE = "godot-docs"
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description=__doc__, formatter_class=argparse.RawTextHelpFormatter
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
     parser.add_argument(
         "--no-fetch", action="store_true", help="don't clone/pull, use existing checkout"
@@ -36,8 +37,11 @@ def main() -> None:
     files = list_rst_files(repo_dir, include_class_reference=not args.skip_class_reference)
     written = skipped = sections = 0
 
-    settings.documents_path.parent.mkdir(parents=True, exist_ok=True)
-    with settings.documents_path.open("w", encoding="utf-8") as out:
+    # Write to a temp file and swap it in, so a failed run never leaves a partial file.
+    out_path = settings.documents_path
+    tmp_path = out_path.with_suffix(out_path.suffix + ".tmp")
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    with tmp_path.open("w", encoding="utf-8") as out:
         for path in files:
             rel = path.relative_to(repo_dir).as_posix()
             doc = parse_rst(SOURCE, rel, path.read_text(encoding="utf-8"), settings.docs_base_url)
@@ -47,6 +51,7 @@ def main() -> None:
             out.write(doc.model_dump_json() + "\n")
             written += 1
             sections += len(doc.sections)
+    os.replace(tmp_path, out_path)
 
     summary = {
         "commit": current_commit(repo_dir),

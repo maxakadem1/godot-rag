@@ -1,1 +1,1 @@
-"""Step 1: get source data and normalize it into Document objects."""
+"""Fetch the godot-docs source and normalise it into Document objects."""

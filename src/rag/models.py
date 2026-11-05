@@ -35,6 +35,8 @@ class Chunk(BaseModel):
 class RetrievedChunk(BaseModel):
     """A chunk returned by search, with what the citation needs."""
 
+    id: str  # "<doc path>#<chunk index>"
+    path: str  # document path; the eval compares this with the expected pages
     text: str
     heading_path: str
     title: str

@@ -1,22 +1,38 @@
-"""Step 2b: turn text into vectors with the embedding model.
+"""Text -> vectors with the OpenAI embeddings API.
 
-The embedding model is NOT the chat model. Its only job is text -> numbers so that
-texts with similar meaning end up close together. The LLM never sees these vectors.
-
-Plan:
-- Use the OpenAI embeddings API (settings.embedding_model).
-- Send in batches (e.g. 100 texts per request) to stay fast and under rate limits.
-- Retry with backoff on rate-limit / transient errors.
-- The SAME model must embed both the chunks and the user's question,
-  otherwise the vectors are not comparable.
+Chunks and questions must be embedded by the same model, or their vectors aren't
+comparable. Texts are sent in batches of BATCH_SIZE to cut round trips; the OpenAI SDK
+retries 429s and 5xxs with exponential backoff, and max_retries is raised because a
+full index run can briefly exceed the tokens-per-minute limit.
 """
+
+from functools import lru_cache
+
+from openai import OpenAI
+
+from rag.config import settings
+
+BATCH_SIZE = 100
+
+
+@lru_cache
+def _client() -> OpenAI:
+    return OpenAI(api_key=settings.openai_api_key, max_retries=8)
 
 
 def embed_texts(texts: list[str]) -> list[list[float]]:
-    """Embed a batch of texts. Returns one vector per input, same order."""
-    raise NotImplementedError("TODO: milestone 2")
+    """Embed texts in batches. Returns one vector per input, in input order."""
+    vectors: list[list[float]] = []
+    for start in range(0, len(texts), BATCH_SIZE):
+        batch = texts[start : start + BATCH_SIZE]
+        response = _client().embeddings.create(
+            model=settings.embedding_model,
+            input=batch,
+            dimensions=settings.embedding_dimensions,
+        )
+        vectors += [item.embedding for item in sorted(response.data, key=lambda d: d.index)]
+    return vectors
 
 
 def embed_query(question: str) -> list[float]:
-    """Embed a single user question."""
     return embed_texts([question])[0]

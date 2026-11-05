@@ -14,9 +14,8 @@ venv/
 data/
 eval/results/
 
-# Frontend
-frontend/node_modules/
-frontend/.next/
+# Personal study notes (kept locally, not part of the project)
+notes/
 
 # OS / editor
 .DS_Store

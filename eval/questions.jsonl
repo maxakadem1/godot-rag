@@ -1,0 +1,38 @@
+{"id": "signals-code", "kind": "concept", "question": "How do I connect a signal in code?", "expected_paths": ["getting_started/step_by_step/signals.rst"]}
+{"id": "process-vs-physics", "kind": "exact", "question": "When should I use _physics_process instead of _process?", "expected_paths": ["tutorials/scripting/idle_and_physics_processing.rst"]}
+{"id": "character-collide", "kind": "concept", "question": "How do I make a 2D character move and stop at walls?", "expected_paths": ["tutorials/physics/using_character_body_2d.rst", "classes/class_characterbody2d.rst"]}
+{"id": "get-node-or-null", "kind": "exact", "question": "What does get_node_or_null return?", "expected_paths": ["classes/class_node.rst"]}
+{"id": "queue-free", "kind": "exact", "question": "What's the difference between queue_free and free?", "expected_paths": ["classes/class_node.rst", "classes/class_object.rst"]}
+{"id": "move-and-slide", "kind": "exact", "question": "What does move_and_slide do with the velocity?", "expected_paths": ["classes/class_characterbody2d.rst", "classes/class_characterbody3d.rst", "tutorials/physics/using_character_body_2d.rst"]}
+{"id": "is-on-floor", "kind": "exact", "question": "How do I check is_on_floor before jumping?", "expected_paths": ["classes/class_characterbody2d.rst", "classes/class_characterbody3d.rst", "getting_started/first_3d_game/06.jump_and_squash.rst", "tutorials/physics/using_character_body_2d.rst"]}
+{"id": "action-just-pressed", "kind": "exact", "question": "Input.is_action_just_pressed vs is_action_pressed", "expected_paths": ["classes/class_input.rst", "tutorials/inputs/input_examples.rst"]}
+{"id": "tween-property", "kind": "exact", "question": "How do I use tween_property to fade out a sprite?", "expected_paths": ["classes/class_tween.rst"]}
+{"id": "onready", "kind": "exact", "question": "What does @onready do?", "expected_paths": ["tutorials/scripting/gdscript/gdscript_basics.rst"]}
+{"id": "export-var", "kind": "exact", "question": "How do I use @export to show a variable in the inspector?", "expected_paths": ["tutorials/scripting/gdscript/gdscript_exports.rst"]}
+{"id": "load-threaded", "kind": "exact", "question": "How does ResourceLoader.load_threaded_request work?", "expected_paths": ["tutorials/io/background_loading.rst", "classes/class_resourceloader.rst"]}
+{"id": "intersect-ray", "kind": "exact", "question": "How do I use intersect_ray from code?", "expected_paths": ["tutorials/physics/ray-casting.rst"]}
+{"id": "create-timer", "kind": "exact", "question": "How do I await get_tree().create_timer?", "expected_paths": ["classes/class_scenetree.rst", "classes/class_scenetreetimer.rst"]}
+{"id": "change-scene", "kind": "exact", "question": "How do I use change_scene_to_file?", "expected_paths": ["classes/class_scenetree.rst", "tutorials/scripting/scene_tree.rst", "tutorials/scripting/change_scenes_manually.rst"]}
+{"id": "randi-range", "kind": "exact", "question": "How do I get a random integer with randi_range?", "expected_paths": ["tutorials/math/random_number_generation.rst", "classes/class_@globalscope.rst", "classes/class_randomnumbergenerator.rst"]}
+{"id": "autoload", "kind": "concept", "question": "How do I set up an autoload singleton?", "expected_paths": ["tutorials/scripting/singletons_autoload.rst"]}
+{"id": "groups", "kind": "concept", "question": "How do I add nodes to a group and call a method on all of them?", "expected_paths": ["tutorials/scripting/groups.rst"]}
+{"id": "save-game", "kind": "concept", "question": "How do I save a game to a file?", "expected_paths": ["tutorials/io/saving_games.rst"]}
+{"id": "tilemaps", "kind": "concept", "question": "How do I paint a level with tilemaps?", "expected_paths": ["tutorials/2d/using_tilemaps.rst"]}
+{"id": "first-shader", "kind": "concept", "question": "How do I write my first 2D shader?", "expected_paths": ["tutorials/shaders/your_first_shader/your_first_2d_shader.rst"]}
+{"id": "export-project", "kind": "concept", "question": "How do I export my project to run without the editor?", "expected_paths": ["tutorials/export/exporting_projects.rst"]}
+{"id": "http-request", "kind": "concept", "question": "How do I make an HTTP request?", "expected_paths": ["tutorials/networking/http_request_class.rst", "classes/class_httprequest.rst"]}
+{"id": "multiplayer", "kind": "concept", "question": "How does high-level multiplayer with RPCs work?", "expected_paths": ["tutorials/networking/high_level_multiplayer.rst"]}
+{"id": "audio-buses", "kind": "concept", "question": "How do audio buses and effects work?", "expected_paths": ["tutorials/audio/audio_buses.rst"]}
+{"id": "csharp-basics", "kind": "concept", "question": "How do I start using C# in Godot?", "expected_paths": ["tutorials/scripting/c_sharp/c_sharp_basics.rst"]}
+{"id": "freeze-loading", "kind": "paraphrase", "question": "My game freezes for a few seconds when I switch to a big level. How do I stop that?", "expected_paths": ["tutorials/io/background_loading.rst", "classes/class_resourceloader.rst"]}
+{"id": "global-variable", "kind": "paraphrase", "question": "How do I keep the player's score when going from one level to the next?", "expected_paths": ["tutorials/scripting/singletons_autoload.rst", "tutorials/scripting/change_scenes_manually.rst"]}
+{"id": "pause-menu", "kind": "paraphrase", "question": "When I stop the game for a menu, the menu buttons stop working too. Why?", "expected_paths": ["tutorials/scripting/pausing_games.rst"]}
+{"id": "user-folder", "kind": "paraphrase", "question": "Where on my computer does my game store the files it writes?", "expected_paths": ["tutorials/io/data_paths.rst"]}
+{"id": "line-of-sight", "kind": "paraphrase", "question": "How can an enemy check if it can see the player without a wall in between?", "expected_paths": ["tutorials/physics/ray-casting.rst", "classes/class_raycast2d.rst", "classes/class_raycast3d.rst"]}
+{"id": "screen-sizes", "kind": "paraphrase", "question": "My game looks stretched or cut off on other monitors. What should I set?", "expected_paths": ["tutorials/rendering/multiple_resolutions.rst"]}
+{"id": "enemy-pathfinding", "kind": "paraphrase", "question": "How do I make enemies walk around obstacles to reach the player?", "expected_paths": ["tutorials/navigation/navigation_using_navigationagents.rst", "tutorials/navigation/navigation_introduction_2d.rst", "tutorials/navigation/navigation_introduction_3d.rst", "classes/class_navigationagent2d.rst", "classes/class_navigationagent3d.rst"]}
+{"id": "find-slow-code", "kind": "paraphrase", "question": "My game runs slowly. How do I find which function is taking the time?", "expected_paths": ["tutorials/scripting/debug/the_profiler.rst", "tutorials/performance/cpu_optimization.rst"]}
+{"id": "translate-game", "kind": "paraphrase", "question": "How do I offer my game in French and German?", "expected_paths": ["tutorials/i18n/internationalizing_games.rst", "tutorials/i18n/localization_using_spreadsheets.rst", "tutorials/i18n/localization_using_gettext.rst"]}
+{"id": "smooth-follow", "kind": "paraphrase", "question": "How do I make a value change smoothly towards a target instead of jumping?", "expected_paths": ["tutorials/math/interpolation.rst", "classes/class_tween.rst"]}
+{"id": "no-answer-unity", "kind": "unanswerable", "question": "How do I import a Unity asset store package with its scripts working?", "expected_paths": []}
+{"id": "no-answer-steam", "kind": "unanswerable", "question": "How many Godot games were released on Steam last year?", "expected_paths": []}
