@@ -1,14 +1,19 @@
+import { GODOT_LOGO as L } from "@/lib/godot-logo";
 import { cn } from "@/lib/utils";
 
-/** Stand-in mark until the three.js glass Godot logo replaces it. */
+/** Flat Godot logo: small marks, and the placeholder while the 3D one loads. */
 export function LogoMark({ className }: { className?: string }) {
   return (
-    <span
-      aria-hidden
-      className={cn(
-        "relative inline-block rounded-[28%] bg-[radial-gradient(circle_at_30%_25%,#8fc3ff_0%,#2f6fd6_35%,#0b2a7a_75%,#06123a_100%)] shadow-[inset_0_1px_2px_rgb(255_255_255/0.5),0_0_24px_rgb(47_111_214/0.35)]",
-        className,
-      )}
-    />
+    <svg viewBox="40 40 944 944" aria-hidden className={cn("inline-block shrink-0", className)}>
+      <path d={L.band} fill="#fff" />
+      <path d={L.body} fill={L.blue} />
+      <path d={L.nose} fill="#fff" />
+      {L.eyes.map((e) => (
+        <circle key={e.cx} cx={e.cx} cy={e.cy} r={e.r} fill="#fff" />
+      ))}
+      {L.pupils.map((p) => (
+        <circle key={p.cx} cx={p.cx} cy={p.cy} r={p.r} fill="#414042" />
+      ))}
+    </svg>
   );
 }
