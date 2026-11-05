@@ -1,6 +1,10 @@
-# Allow-list for `vercel deploy` from this folder: upload only what the API needs,
-# so .env, the docs checkout and documents.jsonl stay on this machine.
+# Allow-list of what may be uploaded to Vercel. It applies to BOTH projects built
+# from this repo (the API at the root and the web app in web/), whatever their
+# Root Directory, so it must let each one's files through. Secrets, the docs
+# checkout and documents.jsonl stay on this machine.
 /*
+
+# API project
 !/app.py
 !/pyproject.toml
 !/README.md
@@ -8,5 +12,13 @@
 !/data
 /data/*
 !/data/keyword_chunks.jsonl.gz
+
+# Web project (Root Directory: web)
+!/web
+/web/node_modules
+/web/.next
+/web/.env*
+!/web/.env.example
+
 **/__pycache__
 **/*.egg-info
