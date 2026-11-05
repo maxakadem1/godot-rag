@@ -1,0 +1,9 @@
+# Allow-list: send only what the image needs, so .env and the docs checkout
+# never reach the build.
+*
+!pyproject.toml
+!README.md
+!src/
+!data/documents.jsonl
+**/__pycache__
+**/*.egg-info

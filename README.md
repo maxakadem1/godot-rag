@@ -92,6 +92,18 @@ Response shape (abridged):
 
 **Protection for a public deployment.** With `INTERNAL_API_KEY` set, every endpoint except `/health` requires it in the `X-Internal-Key` header, so only the web frontend's server can call the API. Requests are rate-limited per client IP (`RATE_LIMIT_PER_MINUTE`, using the `X-Client-IP` the frontend forwards), and LLM answers are capped per UTC day across all users (`DAILY_ANSWER_LIMIT`); past the cap, retrieval still works. Limits live in process memory, which assumes a single API instance.
 
+## Deploying the API
+
+The API runs as one always-on [Fly.io](https://fly.io) machine (config in `fly.toml`, image in `Dockerfile`). The image carries `data/documents.jsonl` for the BM25 index, so deploy from a machine where `rag-ingest` has run; `.dockerignore` is an allow-list, so `.env` and the docs checkout never leave your machine.
+
+```bash
+fly launch --no-deploy --copy-config          # once: creates the app from fly.toml
+fly secrets set OPENAI_API_KEY=... PINECONE_API_KEY=... INTERNAL_API_KEY=...
+fly deploy --ha=false                         # one machine: the limits are in memory
+```
+
+Generate `INTERNAL_API_KEY` with `python -c "import secrets; print(secrets.token_urlsafe(32))"` and give the same value to the web frontend. Without it the API is open to anyone with the URL.
+
 ## Project layout
 
 ```

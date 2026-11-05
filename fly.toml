@@ -1,0 +1,28 @@
+# Fly.io config for the API. Deploy from a machine that has data/documents.jsonl
+# (run `rag-ingest` first). See README "Deploying the API".
+app = "godot-rag-api"
+primary_region = "iad"  # Ashburn, next to Pinecone's us-east-1
+
+[env]
+  RATE_LIMIT_PER_MINUTE = "30"
+  DAILY_ANSWER_LIMIT = "300"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  # Always on: every start rebuilds the BM25 index from documents.jsonl, so a
+  # machine waking from sleep would make the first visitor wait.
+  auto_stop_machines = "off"
+  auto_start_machines = true
+  min_machines_running = 1
+
+  [[http_service.checks]]
+    grace_period = "60s"
+    interval = "30s"
+    method = "GET"
+    path = "/health"
+    timeout = "5s"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "512mb"  # BM25 index + documents peak around 130 MB of Python objects
