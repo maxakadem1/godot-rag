@@ -1,0 +1,742 @@
+{
+ "id": "global-variable",
+ "question": "How do I keep the player's score when going from one level to the next?",
+ "mode": "hybrid",
+ "events": [
+  {
+   "t": 2567,
+   "event": "vector",
+   "data": {
+    "ms": 356.0,
+    "hits": [
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#3",
+      "rank": 1,
+      "score": 0.528888822,
+      "title": "Score and replay",
+      "heading_path": "Score and replay > Keeping track of the score",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#2",
+      "rank": 2,
+      "score": 0.528758228,
+      "title": "Score and replay",
+      "heading_path": "Score and replay > Keeping track of the score",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#0",
+      "rank": 3,
+      "score": 0.508383512,
+      "title": "Score and replay",
+      "heading_path": "Score and replay",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/07.killing_player.rst#10",
+      "rank": 4,
+      "score": 0.50052619,
+      "title": "Killing the player",
+      "heading_path": "Killing the player > Code checkpoint",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/07.killing_player.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#8",
+      "rank": 5,
+      "score": 0.460332781,
+      "title": "Score and replay",
+      "heading_path": "Score and replay > Adding music",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#4",
+      "rank": 6,
+      "score": 0.454629481,
+      "title": "Score and replay",
+      "heading_path": "Score and replay > Retrying the game",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html"
+     },
+     {
+      "id": "tutorials/io/saving_games.rst#0",
+      "rank": 7,
+      "score": 0.444090575,
+      "title": "Saving games",
+      "heading_path": "Saving games > Introduction",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/io/saving_games.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#7",
+      "rank": 8,
+      "score": 0.442825645,
+      "title": "Score and replay",
+      "heading_path": "Score and replay > Adding music",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/07.killing_player.rst#3",
+      "rank": 9,
+      "score": 0.432857931,
+      "title": "Killing the player",
+      "heading_path": "Killing the player > Ending the game",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/07.killing_player.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/03.coding_the_player.rst#4",
+      "rank": 10,
+      "score": 0.419266105,
+      "title": "Coding the player",
+      "heading_path": "Coding the player",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/03.coding_the_player.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/06.heads_up_display.rst#0",
+      "rank": 11,
+      "score": 0.414444476,
+      "title": "Heads up display",
+      "heading_path": "Heads up display",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/06.heads_up_display.html"
+     },
+     {
+      "id": "tutorials/scripting/scene_tree.rst#6",
+      "rank": 12,
+      "score": 0.411545873,
+      "title": "Using SceneTree",
+      "heading_path": "Using SceneTree > Changing current scene",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/scene_tree.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/07.killing_player.rst#8",
+      "rank": 13,
+      "score": 0.407974124,
+      "title": "Killing the player",
+      "heading_path": "Killing the player > Code checkpoint",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/07.killing_player.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#5",
+      "rank": 14,
+      "score": 0.406322062,
+      "title": "Score and replay",
+      "heading_path": "Score and replay > Retrying the game > Coding the retry option",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html"
+     },
+     {
+      "id": "tutorials/best_practices/scene_organization.rst#9",
+      "rank": 15,
+      "score": 0.40524444,
+      "title": "Scene organization",
+      "heading_path": "Scene organization > Choosing a node tree structure",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/best_practices/scene_organization.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#6",
+      "rank": 16,
+      "score": 0.404645503,
+      "title": "Score and replay",
+      "heading_path": "Score and replay > Adding music",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/06.heads_up_display.rst#3",
+      "rank": 17,
+      "score": 0.403062105,
+      "title": "Heads up display",
+      "heading_path": "Heads up display > StartButton",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/06.heads_up_display.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/05.the_main_game_scene.rst#6",
+      "rank": 18,
+      "score": 0.400544733,
+      "title": "The main game scene",
+      "heading_path": "The main game scene > Testing the scene",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/05.the_main_game_scene.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/05.the_main_game_scene.rst#0",
+      "rank": 19,
+      "score": 0.399243385,
+      "title": "The main game scene",
+      "heading_path": "The main game scene",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/05.the_main_game_scene.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/07.killing_player.rst#9",
+      "rank": 20,
+      "score": 0.396759868,
+      "title": "Killing the player",
+      "heading_path": "Killing the player > Code checkpoint",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/07.killing_player.html"
+     }
+    ]
+   }
+  },
+  {
+   "t": 2579,
+   "event": "keyword",
+   "data": {
+    "ms": 11.0,
+    "hits": [
+     {
+      "id": "classes/class_configfile.rst#2",
+      "rank": 1,
+      "score": 24.40148069760943,
+      "title": "ConfigFile",
+      "heading_path": "ConfigFile > Description",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_configfile.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#6",
+      "rank": 2,
+      "score": 23.727487601574527,
+      "title": "Score and replay",
+      "heading_path": "Score and replay > Adding music",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html"
+     },
+     {
+      "id": "classes/class_configfile.rst#1",
+      "rank": 3,
+      "score": 22.874336664462692,
+      "title": "ConfigFile",
+      "heading_path": "ConfigFile > Description",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_configfile.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/06.heads_up_display.rst#4",
+      "rank": 4,
+      "score": 21.70947518613568,
+      "title": "Heads up display",
+      "heading_path": "Heads up display > Connecting HUD to Main",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/06.heads_up_display.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#7",
+      "rank": 5,
+      "score": 21.681974948291792,
+      "title": "Score and replay",
+      "heading_path": "Score and replay > Adding music",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/05.the_main_game_scene.rst#6",
+      "rank": 6,
+      "score": 21.454570436497605,
+      "title": "The main game scene",
+      "heading_path": "The main game scene > Testing the scene",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/05.the_main_game_scene.html"
+     },
+     {
+      "id": "tutorials/3d/using_transforms.rst#9",
+      "rank": 7,
+      "score": 21.175894997521123,
+      "title": "Using 3D transforms",
+      "heading_path": "Using 3D transforms > Introducing transforms > Obtaining information",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/3d/using_transforms.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#2",
+      "rank": 8,
+      "score": 20.9584488617299,
+      "title": "Score and replay",
+      "heading_path": "Score and replay > Keeping track of the score",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#3",
+      "rank": 9,
+      "score": 20.937824669922257,
+      "title": "Score and replay",
+      "heading_path": "Score and replay > Keeping track of the score",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/05.the_main_game_scene.rst#3",
+      "rank": 10,
+      "score": 20.07866360436225,
+      "title": "The main game scene",
+      "heading_path": "The main game scene > Main script",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/05.the_main_game_scene.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/07.killing_player.rst#3",
+      "rank": 11,
+      "score": 20.03167611032566,
+      "title": "Killing the player",
+      "heading_path": "Killing the player > Ending the game",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/07.killing_player.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/07.killing_player.rst#1",
+      "rank": 12,
+      "score": 20.018966996832418,
+      "title": "Killing the player",
+      "heading_path": "Killing the player > Hitbox with the Area node",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/07.killing_player.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/06.jump_and_squash.rst#7",
+      "rank": 13,
+      "score": 19.632881148418377,
+      "title": "Jumping and squashing monsters",
+      "heading_path": "Jumping and squashing monsters > Squashing monsters > Coding the squash mechanic",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/06.jump_and_squash.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/05.the_main_game_scene.rst#2",
+      "rank": 14,
+      "score": 18.92445229955285,
+      "title": "The main game scene",
+      "heading_path": "The main game scene > Main script",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/05.the_main_game_scene.html"
+     },
+     {
+      "id": "tutorials/rendering/drawable_textures.rst#5",
+      "rank": 15,
+      "score": 18.57090072324718,
+      "title": "Using DrawableTextures",
+      "heading_path": "Using DrawableTextures > Example 1: Simple painting",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/rendering/drawable_textures.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/03.coding_the_player.rst#8",
+      "rank": 16,
+      "score": 18.375368838885755,
+      "title": "Coding the player",
+      "heading_path": "Coding the player > Preparing for collisions",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/03.coding_the_player.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/03.coding_the_player.rst#7",
+      "rank": 17,
+      "score": 18.279432217822205,
+      "title": "Coding the player",
+      "heading_path": "Coding the player > Preparing for collisions",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/03.coding_the_player.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#0",
+      "rank": 18,
+      "score": 18.106914382809283,
+      "title": "Score and replay",
+      "heading_path": "Score and replay",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html"
+     },
+     {
+      "id": "tutorials/scripting/scene_tree.rst#1",
+      "rank": 19,
+      "score": 17.824911515507978,
+      "title": "Using SceneTree",
+      "heading_path": "Using SceneTree > SceneTree",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/scene_tree.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/02.player_input.rst#0",
+      "rank": 20,
+      "score": 17.70893923871254,
+      "title": "Player scene and input actions",
+      "heading_path": "Player scene and input actions",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/02.player_input.html"
+     }
+    ]
+   }
+  },
+  {
+   "t": 2579,
+   "event": "fusion",
+   "data": {
+    "ms": 0.1,
+    "hits": [
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#3",
+      "rank": 1,
+      "score": 0.030886196246139225,
+      "title": "Score and replay",
+      "heading_path": "Score and replay > Keeping track of the score",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#2",
+      "rank": 2,
+      "score": 0.030834914611005692,
+      "title": "Score and replay",
+      "heading_path": "Score and replay > Keeping track of the score",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#7",
+      "rank": 3,
+      "score": 0.030090497737556562,
+      "title": "Score and replay",
+      "heading_path": "Score and replay > Adding music",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#6",
+      "rank": 4,
+      "score": 0.02928692699490662,
+      "title": "Score and replay",
+      "heading_path": "Score and replay > Adding music",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#0",
+      "rank": 5,
+      "score": 0.028693528693528692,
+      "title": "Score and replay",
+      "heading_path": "Score and replay",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/07.killing_player.rst#3",
+      "rank": 6,
+      "score": 0.028577260665441927,
+      "title": "Killing the player",
+      "heading_path": "Killing the player > Ending the game",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/07.killing_player.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/05.the_main_game_scene.rst#6",
+      "rank": 7,
+      "score": 0.027972027972027972,
+      "title": "The main game scene",
+      "heading_path": "The main game scene > Testing the scene",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/05.the_main_game_scene.html"
+     },
+     {
+      "id": "classes/class_configfile.rst#2",
+      "rank": 8,
+      "score": 0.01639344262295082,
+      "title": "ConfigFile",
+      "heading_path": "ConfigFile > Description",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_configfile.html"
+     },
+     {
+      "id": "classes/class_configfile.rst#1",
+      "rank": 9,
+      "score": 0.015873015873015872,
+      "title": "ConfigFile",
+      "heading_path": "ConfigFile > Description",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_configfile.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/07.killing_player.rst#10",
+      "rank": 10,
+      "score": 0.015625,
+      "title": "Killing the player",
+      "heading_path": "Killing the player > Code checkpoint",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/07.killing_player.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/06.heads_up_display.rst#4",
+      "rank": 11,
+      "score": 0.015625,
+      "title": "Heads up display",
+      "heading_path": "Heads up display > Connecting HUD to Main",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/06.heads_up_display.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#8",
+      "rank": 12,
+      "score": 0.015384615384615385,
+      "title": "Score and replay",
+      "heading_path": "Score and replay > Adding music",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#4",
+      "rank": 13,
+      "score": 0.015151515151515152,
+      "title": "Score and replay",
+      "heading_path": "Score and replay > Retrying the game",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html"
+     },
+     {
+      "id": "tutorials/io/saving_games.rst#0",
+      "rank": 14,
+      "score": 0.014925373134328358,
+      "title": "Saving games",
+      "heading_path": "Saving games > Introduction",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/io/saving_games.html"
+     },
+     {
+      "id": "tutorials/3d/using_transforms.rst#9",
+      "rank": 15,
+      "score": 0.014925373134328358,
+      "title": "Using 3D transforms",
+      "heading_path": "Using 3D transforms > Introducing transforms > Obtaining information",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/3d/using_transforms.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/03.coding_the_player.rst#4",
+      "rank": 16,
+      "score": 0.014285714285714285,
+      "title": "Coding the player",
+      "heading_path": "Coding the player",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/03.coding_the_player.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/05.the_main_game_scene.rst#3",
+      "rank": 17,
+      "score": 0.014285714285714285,
+      "title": "The main game scene",
+      "heading_path": "The main game scene > Main script",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/05.the_main_game_scene.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/06.heads_up_display.rst#0",
+      "rank": 18,
+      "score": 0.014084507042253521,
+      "title": "Heads up display",
+      "heading_path": "Heads up display",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/06.heads_up_display.html"
+     },
+     {
+      "id": "tutorials/scripting/scene_tree.rst#6",
+      "rank": 19,
+      "score": 0.013888888888888888,
+      "title": "Using SceneTree",
+      "heading_path": "Using SceneTree > Changing current scene",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/scene_tree.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/07.killing_player.rst#1",
+      "rank": 20,
+      "score": 0.013888888888888888,
+      "title": "Killing the player",
+      "heading_path": "Killing the player > Hitbox with the Area node",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/07.killing_player.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/07.killing_player.rst#8",
+      "rank": 21,
+      "score": 0.0136986301369863,
+      "title": "Killing the player",
+      "heading_path": "Killing the player > Code checkpoint",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/07.killing_player.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/06.jump_and_squash.rst#7",
+      "rank": 22,
+      "score": 0.0136986301369863,
+      "title": "Jumping and squashing monsters",
+      "heading_path": "Jumping and squashing monsters > Squashing monsters > Coding the squash mechanic",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/06.jump_and_squash.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#5",
+      "rank": 23,
+      "score": 0.013513513513513514,
+      "title": "Score and replay",
+      "heading_path": "Score and replay > Retrying the game > Coding the retry option",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/05.the_main_game_scene.rst#2",
+      "rank": 24,
+      "score": 0.013513513513513514,
+      "title": "The main game scene",
+      "heading_path": "The main game scene > Main script",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/05.the_main_game_scene.html"
+     },
+     {
+      "id": "tutorials/best_practices/scene_organization.rst#9",
+      "rank": 25,
+      "score": 0.013333333333333334,
+      "title": "Scene organization",
+      "heading_path": "Scene organization > Choosing a node tree structure",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/best_practices/scene_organization.html"
+     },
+     {
+      "id": "tutorials/rendering/drawable_textures.rst#5",
+      "rank": 26,
+      "score": 0.013333333333333334,
+      "title": "Using DrawableTextures",
+      "heading_path": "Using DrawableTextures > Example 1: Simple painting",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/rendering/drawable_textures.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/03.coding_the_player.rst#8",
+      "rank": 27,
+      "score": 0.013157894736842105,
+      "title": "Coding the player",
+      "heading_path": "Coding the player > Preparing for collisions",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/03.coding_the_player.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/06.heads_up_display.rst#3",
+      "rank": 28,
+      "score": 0.012987012987012988,
+      "title": "Heads up display",
+      "heading_path": "Heads up display > StartButton",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/06.heads_up_display.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/03.coding_the_player.rst#7",
+      "rank": 29,
+      "score": 0.012987012987012988,
+      "title": "Coding the player",
+      "heading_path": "Coding the player > Preparing for collisions",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/03.coding_the_player.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/05.the_main_game_scene.rst#0",
+      "rank": 30,
+      "score": 0.012658227848101266,
+      "title": "The main game scene",
+      "heading_path": "The main game scene",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/05.the_main_game_scene.html"
+     },
+     {
+      "id": "tutorials/scripting/scene_tree.rst#1",
+      "rank": 31,
+      "score": 0.012658227848101266,
+      "title": "Using SceneTree",
+      "heading_path": "Using SceneTree > SceneTree",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/scene_tree.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/07.killing_player.rst#9",
+      "rank": 32,
+      "score": 0.0125,
+      "title": "Killing the player",
+      "heading_path": "Killing the player > Code checkpoint",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/07.killing_player.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/02.player_input.rst#0",
+      "rank": 33,
+      "score": 0.0125,
+      "title": "Player scene and input actions",
+      "heading_path": "Player scene and input actions",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/02.player_input.html"
+     }
+    ]
+   }
+  },
+  {
+   "t": 2580,
+   "event": "context",
+   "data": {
+    "chunks": [
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#3",
+      "path": "getting_started/first_3d_game/08.score_and_replay.rst",
+      "text": "Score and replay > Keeping track of the score\n\nit and call the function `_on_mob_squashed()`.\n\nHead back to the `score_label.gd` script to define the `_on_mob_squashed()`\ncallback function.\n\nThere, we increment the score and update the displayed text.\n\n```gdscript\nfunc _on_mob_squashed():\n    score += 1\n    text = \"Score: %s\" % score\n```\n\n```csharp\npublic void OnMobSquashed()\n{\n    _score += 1;\n    Text = $\"Score: {_score}\";\n}\n```\n\nThe second line uses the value of the `score` variable to replace the\nplaceholder `%s`. When using this feature, Godot automatically converts values\nto string text, which is convenient when outputting text in labels or\nwhen using the `print()` function.\n\nSeealso: You can learn more about string formatting here: gdscript printf.\nIn C#, consider using string interpolation with \"$\".\n\nYou can now play the game and squash a few enemies to see the score\nincrease.\n\nNote: In a complex game, you may want to completely separate your user interface\nfrom the game world. In that case, you would not keep track of the score on\nthe label. Instead, you may want to store it in a separate, dedicated\nobject. But when prototyping or when your project is simple, it is fine to\nkeep your code simple. Programming is always a balancing act.",
+      "heading_path": "Score and replay > Keeping track of the score",
+      "title": "Score and replay",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html",
+      "score": 0.030886196246139225
+     },
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#2",
+      "path": "getting_started/first_3d_game/08.score_and_replay.rst",
+      "text": "Score and replay > Keeping track of the score\n\nLet's work on the score next. Attach a new script to the `ScoreLabel` and define\nthe `score` variable.\n\n```gdscript\nextends Label\n\nvar score = 0\n```\n\n```csharp\nusing Godot;\n\npublic partial class ScoreLabel : Label\n{\n    private int _score = 0;\n}\n```\n\nThe score should increase by `1` every time we squash a monster. We can use\ntheir `squashed` signal to know when that happens. However, because we instantiate\nmonsters from the code, we cannot connect the mob signal to the `ScoreLabel` via the editor.\n\nInstead, we have to make the connection from the code every time we spawn a\nmonster.\n\nOpen the script `main.gd`. If it's still open, you can click on its name in\nthe script editor's left column.\n\nAlternatively, you can double-click the `main.gd` file in the FileSystem\ndock.\n\nAt the bottom of the `_on_mob_timer_timeout()` function, add the following\nline:\n\n```gdscript\nfunc _on_mob_timer_timeout():\n    #...\n    # We connect the mob to the score label to update the score upon squashing one.\n    mob.squashed.connect($UserInterface/ScoreLabel._on_mob_squashed.bind())\n```\n\n```csharp\nprivate void OnMobTimerTimeout()\n{\n    // ...\n    // We connect the mob to the score label to update the score upon squashing one.\n    mob.Squashed += GetNode<ScoreLabel>(\"UserInterface/ScoreLabel\").OnMobSquashed;\n}\n```\n\nThis line means that when the mob emits the `squashed` signal, the\n`ScoreLabel` node will receive it and call the function `_on_mob_squashed()`.\n\nHead back to the `score_label.gd` script to define the `_on_mob_squashed()`\ncallback function.\n\nThere, we increment the score and update the displayed text.",
+      "heading_path": "Score and replay > Keeping track of the score",
+      "title": "Score and replay",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html",
+      "score": 0.030834914611005692
+     },
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#7",
+      "path": "getting_started/first_3d_game/08.score_and_replay.rst",
+      "text": "Score and replay > Adding music\n\nthe music will play automatically in any scene.\n\nBefore we wrap up this lesson, here's a quick look at how it works under the\nhood. When you run the game, your Scene dock changes to give you two tabs:\nRemote and Local.\n\nThe Remote tab allows you to visualize the node tree of your running game.\nThere, you will see the Main node and everything the scene contains and the\ninstantiated mobs at the bottom.\n\nAt the top are the autoloaded `MusicPlayer` and a root node, which is your\ngame's viewport.\n\nAnd that does it for this lesson. In the next part, we'll add an animation to\nmake the game both look and feel much nicer.\n\nHere is the complete `main.gd` script for reference.\n\n```gdscript\nextends Node\n\n@export var mob_scene: PackedScene\n\nfunc _ready():\n    $UserInterface/Retry.hide()\n\nfunc _on_mob_timer_timeout():\n    # Create a new instance of the Mob scene.\n    var mob = mob_scene.instantiate()\n\n    # Choose a random location on the SpawnPath.\n    # We store the reference to the SpawnLocation node.\n    var mob_spawn_location = get_node(\"SpawnPath/SpawnLocation\")\n    # And give it a random offset.\n    mob_spawn_location.progress_ratio = randf()\n\n    var player_position = $Player.position\n    mob.initialize(mob_spawn_location.position, player_position)\n\n    # Spawn the mob by adding it to the Main scene.\n    add_child(mob)\n\n    # We connect the mob to the score label to update the score upon squashing one.\n    mob.squashed.connect($UserInterface/ScoreLabel._on_mob_squashed.bind())\n\nfunc _on_player_hit():\n    $MobTimer.stop()\n    $UserInterface/Retry.show()\n\nfunc _unhandled_input(event):\n    if event.is_action_pressed(\"ui_accept\") and $UserInterface/Retry.visible:\n        # This restarts the current scene.\n        get_tree().reload_current_scene()\n```",
+      "heading_path": "Score and replay > Adding music",
+      "title": "Score and replay",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html",
+      "score": 0.030090497737556562
+     },
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#6",
+      "path": "getting_started/first_3d_game/08.score_and_replay.rst",
+      "text": "Score and replay > Adding music\n\nTo add music that plays continuously in the background, we're going to use\nanother feature in Godot: autoloads.\n\nTo play audio, all you need to do is add an AudioStreamPlayer node to your\nscene and attach an audio file to it. When you start the scene, it can play\nautomatically. However, when you reload the scene, like we do to play again, the\naudio nodes are also reset, and the music starts back from the beginning.\n\nYou can use the autoload feature to have Godot load a node or a scene\nautomatically at the start of the game, outside the current scene. You can also\nuse it to create globally accessible objects.\n\nCreate a new scene by going to the Scene menu and clicking New Scene\nor by using the + icon next to your currently opened scene.\n\nClick the Other Node button to create an AudioStreamPlayer and rename it to\n`MusicPlayer`.\n\nWe included a music soundtrack in the `art/` directory, `House In a Forest\nLoop.ogg`. Click and drag it onto the Stream property in the Inspector.\nAlso, turn on Autoplay so the music plays automatically at the start of the\ngame.\n\nSave the scene as `music_player.tscn`.\n\nWe have to register it as an autoload. Head to the *Project -> Project\nSettings\u2026* menu and click on the Globals -> Autoload tab.\n\nIn the Path field, you want to enter the path to your scene. Click the folder\nicon to open the file browser and double-click on `music_player.tscn`. Then,\nclick the Add button on the right to register the node.\n\n`music_player.tscn` now loads into any scene you open or play.\nSo if you run the game now, the music will play automatically in any scene.\n\nBefore we wrap up this lesson, here's a quick look at how it works under the\nhood. When you run the game, your Scene dock changes to give you two tabs:\nRemote and Local.",
+      "heading_path": "Score and replay > Adding music",
+      "title": "Score and replay",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html",
+      "score": 0.02928692699490662
+     },
+     {
+      "id": "getting_started/first_3d_game/08.score_and_replay.rst#0",
+      "path": "getting_started/first_3d_game/08.score_and_replay.rst",
+      "text": "Score and replay\n\nIn this part, we'll add the score, music playback, and the ability to restart\nthe game.\n\nWe have to keep track of the current score in a variable and display it on\nscreen using a minimal interface. We will use a text label to do that.\n\nIn the main scene, add a new child node Control to `Main` and name it\n`UserInterface`. Ensure you are on the 2D screen, where you can edit your User Interface (UI).\n\nAdd a Label node and name it `ScoreLabel`\n\nIn the Inspector, set the Label's Text to a placeholder like \"Score: 0\".\n\nAlso, the text is white by default, like our game's background. We need to\nchange its color to see it at runtime.\n\nScroll down to Theme Overrides, and expand Colors\nand enable Font Color in order to tint the text to black\n(which contrasts well with the white 3D scene)\n\nFinally, click and drag on the text in the viewport to move it away from the\ntop-left corner.\n\nThe `UserInterface` node allows us to group our UI in a branch of the scene tree\nand use a theme resource that will propagate to all its children. We'll use it\nto set our game's font.",
+      "heading_path": "Score and replay",
+      "title": "Score and replay",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/08.score_and_replay.html",
+      "score": 0.028693528693528692
+     }
+    ]
+   }
+  },
+  {
+   "t": 3539,
+   "event": "token",
+   "data": {
+    "text": "I"
+   }
+  },
+  {
+   "t": 3539,
+   "event": "token",
+   "data": {
+    "text": " couldn't"
+   }
+  },
+  {
+   "t": 3552,
+   "event": "token",
+   "data": {
+    "text": " find"
+   }
+  },
+  {
+   "t": 3552,
+   "event": "token",
+   "data": {
+    "text": " it"
+   }
+  },
+  {
+   "t": 3567,
+   "event": "token",
+   "data": {
+    "text": " in"
+   }
+  },
+  {
+   "t": 3567,
+   "event": "token",
+   "data": {
+    "text": " the"
+   }
+  },
+  {
+   "t": 3611,
+   "event": "token",
+   "data": {
+    "text": " docs"
+   }
+  },
+  {
+   "t": 3611,
+   "event": "token",
+   "data": {
+    "text": "."
+   }
+  },
+  {
+   "t": 3634,
+   "event": "citations",
+   "data": {
+    "cited": [],
+    "ms": 1054.4
+   }
+  },
+  {
+   "t": 3635,
+   "event": "done",
+   "data": {
+    "ms": 1423.5
+   }
+  }
+ ]
+}

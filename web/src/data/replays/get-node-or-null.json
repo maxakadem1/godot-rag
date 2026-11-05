@@ -1,0 +1,1048 @@
+{
+ "id": "get-node-or-null",
+ "question": "What does get_node_or_null return?",
+ "mode": "hybrid",
+ "events": [
+  {
+   "t": 2775,
+   "event": "vector",
+   "data": {
+    "ms": 572.2,
+    "hits": [
+     {
+      "id": "classes/class_node.rst#28",
+      "rank": 1,
+      "score": 0.45107156,
+      "title": "Node",
+      "heading_path": "Node > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html"
+     },
+     {
+      "id": "classes/class_node.rst#29",
+      "rank": 2,
+      "score": 0.440088153,
+      "title": "Node",
+      "heading_path": "Node > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html"
+     },
+     {
+      "id": "classes/class_missingnode.rst#0",
+      "rank": 3,
+      "score": 0.413078547,
+      "title": "MissingNode",
+      "heading_path": "MissingNode",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_missingnode.html"
+     },
+     {
+      "id": "classes/class_node.rst#30",
+      "rank": 4,
+      "score": 0.411614627,
+      "title": "Node",
+      "heading_path": "Node > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html"
+     },
+     {
+      "id": "classes/class_node.rst#27",
+      "rank": 5,
+      "score": 0.377555519,
+      "title": "Node",
+      "heading_path": "Node > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html"
+     },
+     {
+      "id": "tutorials/scripting/scene_unique_nodes.rst#3",
+      "rank": 6,
+      "score": 0.363040179,
+      "title": "Scene Unique Nodes",
+      "heading_path": "Scene Unique Nodes > Alternatives",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/scene_unique_nodes.html"
+     },
+     {
+      "id": "classes/class_nodepath.rst#7",
+      "rank": 7,
+      "score": 0.35886,
+      "title": "NodePath",
+      "heading_path": "NodePath > Operator Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_nodepath.html"
+     },
+     {
+      "id": "tutorials/scripting/scene_unique_nodes.rst#0",
+      "rank": 8,
+      "score": 0.352295965,
+      "title": "Scene Unique Nodes",
+      "heading_path": "Scene Unique Nodes > Introduction",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/scene_unique_nodes.html"
+     },
+     {
+      "id": "classes/class_node.rst#25",
+      "rank": 9,
+      "score": 0.330859393,
+      "title": "Node",
+      "heading_path": "Node > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html"
+     },
+     {
+      "id": "classes/class_node.rst#3",
+      "rank": 10,
+      "score": 0.324891299,
+      "title": "Node",
+      "heading_path": "Node",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html"
+     },
+     {
+      "id": "classes/class_visualshadernodeis.rst#0",
+      "rank": 11,
+      "score": 0.323734581,
+      "title": "VisualShaderNodeIs",
+      "heading_path": "VisualShaderNodeIs",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_visualshadernodeis.html"
+     },
+     {
+      "id": "classes/class_instanceplaceholder.rst#0",
+      "rank": 12,
+      "score": 0.323394805,
+      "title": "InstancePlaceholder",
+      "heading_path": "InstancePlaceholder",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_instanceplaceholder.html"
+     },
+     {
+      "id": "tutorials/scripting/scene_unique_nodes.rst#2",
+      "rank": 13,
+      "score": 0.322615504,
+      "title": "Scene Unique Nodes",
+      "heading_path": "Scene Unique Nodes > Same-scene limitation",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/scene_unique_nodes.html"
+     },
+     {
+      "id": "classes/class_node.rst#34",
+      "rank": 14,
+      "score": 0.319694549,
+      "title": "Node",
+      "heading_path": "Node > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html"
+     },
+     {
+      "id": "classes/class_node.rst#31",
+      "rank": 15,
+      "score": 0.316302985,
+      "title": "Node",
+      "heading_path": "Node > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html"
+     },
+     {
+      "id": "classes/class_node.rst#32",
+      "rank": 16,
+      "score": 0.315673292,
+      "title": "Node",
+      "heading_path": "Node > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html"
+     },
+     {
+      "id": "tutorials/shaders/visual_shaders.rst#7",
+      "rank": 17,
+      "score": 0.311852038,
+      "title": "Using VisualShaders",
+      "heading_path": "Using VisualShaders > Visual Shader nodes",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/shaders/visual_shaders.html"
+     },
+     {
+      "id": "classes/class_editorselection.rst#0",
+      "rank": 18,
+      "score": 0.309177816,
+      "title": "EditorSelection",
+      "heading_path": "EditorSelection",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_editorselection.html"
+     },
+     {
+      "id": "tutorials/scripting/overridable_functions.rst#0",
+      "rank": 19,
+      "score": 0.308744699,
+      "title": "Overridable functions",
+      "heading_path": "Overridable functions",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/overridable_functions.html"
+     },
+     {
+      "id": "classes/class_node.rst#0",
+      "rank": 20,
+      "score": 0.308258772,
+      "title": "Node",
+      "heading_path": "Node",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html"
+     }
+    ]
+   }
+  },
+  {
+   "t": 2780,
+   "event": "keyword",
+   "data": {
+    "ms": 5.1,
+    "hits": [
+     {
+      "id": "classes/class_node.rst#29",
+      "rank": 1,
+      "score": 21.5316773929727,
+      "title": "Node",
+      "heading_path": "Node > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html"
+     },
+     {
+      "id": "classes/class_gltfanimation.rst#1",
+      "rank": 2,
+      "score": 14.325290090000612,
+      "title": "GLTFAnimation",
+      "heading_path": "GLTFAnimation > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_gltfanimation.html"
+     },
+     {
+      "id": "classes/class_gltfmesh.rst#1",
+      "rank": 3,
+      "score": 14.325290090000612,
+      "title": "GLTFMesh",
+      "heading_path": "GLTFMesh > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_gltfmesh.html"
+     },
+     {
+      "id": "classes/class_node.rst#27",
+      "rank": 4,
+      "score": 14.253451998293412,
+      "title": "Node",
+      "heading_path": "Node > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html"
+     },
+     {
+      "id": "tutorials/scripting/gdscript/gdscript_styleguide.rst#21",
+      "rank": 5,
+      "score": 14.153098498100414,
+      "title": "GDScript style guide",
+      "heading_path": "GDScript style guide > Static typing > Inferred types",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html"
+     },
+     {
+      "id": "classes/class_node.rst#28",
+      "rank": 6,
+      "score": 14.142503882078204,
+      "title": "Node",
+      "heading_path": "Node > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html"
+     },
+     {
+      "id": "classes/class_raycast3d.rst#4",
+      "rank": 7,
+      "score": 13.603591869006053,
+      "title": "RayCast3D",
+      "heading_path": "RayCast3D > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_raycast3d.html"
+     },
+     {
+      "id": "classes/class_gltfnode.rst#4",
+      "rank": 8,
+      "score": 13.563091695882054,
+      "title": "GLTFNode",
+      "heading_path": "GLTFNode > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_gltfnode.html"
+     },
+     {
+      "id": "classes/class_raycast2d.rst#2",
+      "rank": 9,
+      "score": 13.546159612443702,
+      "title": "RayCast2D",
+      "heading_path": "RayCast2D > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_raycast2d.html"
+     },
+     {
+      "id": "classes/class_array.rst#11",
+      "rank": 10,
+      "score": 13.461423286128117,
+      "title": "Array",
+      "heading_path": "Array > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_array.html"
+     },
+     {
+      "id": "engine_details/engine_api/gdextension/gdextension_c_example.rst#4",
+      "rank": 11,
+      "score": 13.394616668750924,
+      "title": "GDExtension C example",
+      "heading_path": "GDExtension C example > Initializing the extension",
+      "url": "https://docs.godotengine.org/en/stable/engine_details/engine_api/gdextension/gdextension_c_example.html"
+     },
+     {
+      "id": "classes/class_node.rst#30",
+      "rank": 12,
+      "score": 13.228326398804382,
+      "title": "Node",
+      "heading_path": "Node > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html"
+     },
+     {
+      "id": "classes/class_editorscenepostimport.rst#0",
+      "rank": 13,
+      "score": 13.140757516144411,
+      "title": "EditorScenePostImport",
+      "heading_path": "EditorScenePostImport",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_editorscenepostimport.html"
+     },
+     {
+      "id": "classes/class_object.rst#9",
+      "rank": 14,
+      "score": 13.060132441391879,
+      "title": "Object",
+      "heading_path": "Object > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_object.html"
+     },
+     {
+      "id": "classes/class_editorscenepostimportplugin.rst#1",
+      "rank": 15,
+      "score": 12.754294237247974,
+      "title": "EditorScenePostImportPlugin",
+      "heading_path": "EditorScenePostImportPlugin > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_editorscenepostimportplugin.html"
+     },
+     {
+      "id": "classes/class_codeedit.rst#6",
+      "rank": 16,
+      "score": 12.619037962397675,
+      "title": "CodeEdit",
+      "heading_path": "CodeEdit > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_codeedit.html"
+     },
+     {
+      "id": "classes/class_object.rst#5",
+      "rank": 17,
+      "score": 12.54938392516943,
+      "title": "Object",
+      "heading_path": "Object > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_object.html"
+     },
+     {
+      "id": "classes/class_meshinstance3d.rst#3",
+      "rank": 18,
+      "score": 12.54695676021651,
+      "title": "MeshInstance3D",
+      "heading_path": "MeshInstance3D > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_meshinstance3d.html"
+     },
+     {
+      "id": "tutorials/plugins/editor/making_main_screen_plugins.rst#3",
+      "rank": 19,
+      "score": 12.436902103912564,
+      "title": "Making main screen plugins",
+      "heading_path": "Making main screen plugins > Update the plugin script",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/plugins/editor/making_main_screen_plugins.html"
+     },
+     {
+      "id": "classes/class_editorexportplugin.rst#2",
+      "rank": 20,
+      "score": 12.349519863701925,
+      "title": "EditorExportPlugin",
+      "heading_path": "EditorExportPlugin > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_editorexportplugin.html"
+     }
+    ]
+   }
+  },
+  {
+   "t": 2781,
+   "event": "fusion",
+   "data": {
+    "ms": 0.1,
+    "hits": [
+     {
+      "id": "classes/class_node.rst#29",
+      "rank": 1,
+      "score": 0.03252247488101534,
+      "title": "Node",
+      "heading_path": "Node > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html"
+     },
+     {
+      "id": "classes/class_node.rst#28",
+      "rank": 2,
+      "score": 0.031544957774465976,
+      "title": "Node",
+      "heading_path": "Node > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html"
+     },
+     {
+      "id": "classes/class_node.rst#27",
+      "rank": 3,
+      "score": 0.031009615384615385,
+      "title": "Node",
+      "heading_path": "Node > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html"
+     },
+     {
+      "id": "classes/class_node.rst#30",
+      "rank": 4,
+      "score": 0.029513888888888888,
+      "title": "Node",
+      "heading_path": "Node > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html"
+     },
+     {
+      "id": "classes/class_gltfanimation.rst#1",
+      "rank": 5,
+      "score": 0.016129032258064516,
+      "title": "GLTFAnimation",
+      "heading_path": "GLTFAnimation > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_gltfanimation.html"
+     },
+     {
+      "id": "classes/class_missingnode.rst#0",
+      "rank": 6,
+      "score": 0.015873015873015872,
+      "title": "MissingNode",
+      "heading_path": "MissingNode",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_missingnode.html"
+     },
+     {
+      "id": "classes/class_gltfmesh.rst#1",
+      "rank": 7,
+      "score": 0.015873015873015872,
+      "title": "GLTFMesh",
+      "heading_path": "GLTFMesh > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_gltfmesh.html"
+     },
+     {
+      "id": "tutorials/scripting/gdscript/gdscript_styleguide.rst#21",
+      "rank": 8,
+      "score": 0.015384615384615385,
+      "title": "GDScript style guide",
+      "heading_path": "GDScript style guide > Static typing > Inferred types",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html"
+     },
+     {
+      "id": "tutorials/scripting/scene_unique_nodes.rst#3",
+      "rank": 9,
+      "score": 0.015151515151515152,
+      "title": "Scene Unique Nodes",
+      "heading_path": "Scene Unique Nodes > Alternatives",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/scene_unique_nodes.html"
+     },
+     {
+      "id": "classes/class_nodepath.rst#7",
+      "rank": 10,
+      "score": 0.014925373134328358,
+      "title": "NodePath",
+      "heading_path": "NodePath > Operator Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_nodepath.html"
+     },
+     {
+      "id": "classes/class_raycast3d.rst#4",
+      "rank": 11,
+      "score": 0.014925373134328358,
+      "title": "RayCast3D",
+      "heading_path": "RayCast3D > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_raycast3d.html"
+     },
+     {
+      "id": "tutorials/scripting/scene_unique_nodes.rst#0",
+      "rank": 12,
+      "score": 0.014705882352941176,
+      "title": "Scene Unique Nodes",
+      "heading_path": "Scene Unique Nodes > Introduction",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/scene_unique_nodes.html"
+     },
+     {
+      "id": "classes/class_gltfnode.rst#4",
+      "rank": 13,
+      "score": 0.014705882352941176,
+      "title": "GLTFNode",
+      "heading_path": "GLTFNode > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_gltfnode.html"
+     },
+     {
+      "id": "classes/class_node.rst#25",
+      "rank": 14,
+      "score": 0.014492753623188406,
+      "title": "Node",
+      "heading_path": "Node > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html"
+     },
+     {
+      "id": "classes/class_raycast2d.rst#2",
+      "rank": 15,
+      "score": 0.014492753623188406,
+      "title": "RayCast2D",
+      "heading_path": "RayCast2D > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_raycast2d.html"
+     },
+     {
+      "id": "classes/class_node.rst#3",
+      "rank": 16,
+      "score": 0.014285714285714285,
+      "title": "Node",
+      "heading_path": "Node",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html"
+     },
+     {
+      "id": "classes/class_array.rst#11",
+      "rank": 17,
+      "score": 0.014285714285714285,
+      "title": "Array",
+      "heading_path": "Array > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_array.html"
+     },
+     {
+      "id": "classes/class_visualshadernodeis.rst#0",
+      "rank": 18,
+      "score": 0.014084507042253521,
+      "title": "VisualShaderNodeIs",
+      "heading_path": "VisualShaderNodeIs",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_visualshadernodeis.html"
+     },
+     {
+      "id": "engine_details/engine_api/gdextension/gdextension_c_example.rst#4",
+      "rank": 19,
+      "score": 0.014084507042253521,
+      "title": "GDExtension C example",
+      "heading_path": "GDExtension C example > Initializing the extension",
+      "url": "https://docs.godotengine.org/en/stable/engine_details/engine_api/gdextension/gdextension_c_example.html"
+     },
+     {
+      "id": "classes/class_instanceplaceholder.rst#0",
+      "rank": 20,
+      "score": 0.013888888888888888,
+      "title": "InstancePlaceholder",
+      "heading_path": "InstancePlaceholder",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_instanceplaceholder.html"
+     },
+     {
+      "id": "tutorials/scripting/scene_unique_nodes.rst#2",
+      "rank": 21,
+      "score": 0.0136986301369863,
+      "title": "Scene Unique Nodes",
+      "heading_path": "Scene Unique Nodes > Same-scene limitation",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/scene_unique_nodes.html"
+     },
+     {
+      "id": "classes/class_editorscenepostimport.rst#0",
+      "rank": 22,
+      "score": 0.0136986301369863,
+      "title": "EditorScenePostImport",
+      "heading_path": "EditorScenePostImport",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_editorscenepostimport.html"
+     },
+     {
+      "id": "classes/class_node.rst#34",
+      "rank": 23,
+      "score": 0.013513513513513514,
+      "title": "Node",
+      "heading_path": "Node > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html"
+     },
+     {
+      "id": "classes/class_object.rst#9",
+      "rank": 24,
+      "score": 0.013513513513513514,
+      "title": "Object",
+      "heading_path": "Object > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_object.html"
+     },
+     {
+      "id": "classes/class_node.rst#31",
+      "rank": 25,
+      "score": 0.013333333333333334,
+      "title": "Node",
+      "heading_path": "Node > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html"
+     },
+     {
+      "id": "classes/class_editorscenepostimportplugin.rst#1",
+      "rank": 26,
+      "score": 0.013333333333333334,
+      "title": "EditorScenePostImportPlugin",
+      "heading_path": "EditorScenePostImportPlugin > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_editorscenepostimportplugin.html"
+     },
+     {
+      "id": "classes/class_node.rst#32",
+      "rank": 27,
+      "score": 0.013157894736842105,
+      "title": "Node",
+      "heading_path": "Node > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html"
+     },
+     {
+      "id": "classes/class_codeedit.rst#6",
+      "rank": 28,
+      "score": 0.013157894736842105,
+      "title": "CodeEdit",
+      "heading_path": "CodeEdit > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_codeedit.html"
+     },
+     {
+      "id": "tutorials/shaders/visual_shaders.rst#7",
+      "rank": 29,
+      "score": 0.012987012987012988,
+      "title": "Using VisualShaders",
+      "heading_path": "Using VisualShaders > Visual Shader nodes",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/shaders/visual_shaders.html"
+     },
+     {
+      "id": "classes/class_object.rst#5",
+      "rank": 30,
+      "score": 0.012987012987012988,
+      "title": "Object",
+      "heading_path": "Object > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_object.html"
+     },
+     {
+      "id": "classes/class_editorselection.rst#0",
+      "rank": 31,
+      "score": 0.01282051282051282,
+      "title": "EditorSelection",
+      "heading_path": "EditorSelection",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_editorselection.html"
+     },
+     {
+      "id": "classes/class_meshinstance3d.rst#3",
+      "rank": 32,
+      "score": 0.01282051282051282,
+      "title": "MeshInstance3D",
+      "heading_path": "MeshInstance3D > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_meshinstance3d.html"
+     },
+     {
+      "id": "tutorials/scripting/overridable_functions.rst#0",
+      "rank": 33,
+      "score": 0.012658227848101266,
+      "title": "Overridable functions",
+      "heading_path": "Overridable functions",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/overridable_functions.html"
+     },
+     {
+      "id": "tutorials/plugins/editor/making_main_screen_plugins.rst#3",
+      "rank": 34,
+      "score": 0.012658227848101266,
+      "title": "Making main screen plugins",
+      "heading_path": "Making main screen plugins > Update the plugin script",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/plugins/editor/making_main_screen_plugins.html"
+     },
+     {
+      "id": "classes/class_node.rst#0",
+      "rank": 35,
+      "score": 0.0125,
+      "title": "Node",
+      "heading_path": "Node",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html"
+     },
+     {
+      "id": "classes/class_editorexportplugin.rst#2",
+      "rank": 36,
+      "score": 0.0125,
+      "title": "EditorExportPlugin",
+      "heading_path": "EditorExportPlugin > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_editorexportplugin.html"
+     }
+    ]
+   }
+  },
+  {
+   "t": 2781,
+   "event": "context",
+   "data": {
+    "chunks": [
+     {
+      "id": "classes/class_node.rst#29",
+      "path": "classes/class_node.rst",
+      "text": "Node > Method Descriptions\n\nif not found;\n\n- Element `2` is the remaining NodePath, referring to an existing, non-Resource property (see Object.get_indexed()).\n\nExample: Assume that the child's Sprite2D.texture has been assigned an AtlasTexture:\n\n```gdscript\nvar a = get_node_and_resource(\"Area2D/Sprite2D\")\nprint(a[0].name) # Prints Sprite2D\nprint(a[1])      # Prints <null>\nprint(a[2])      # Prints ^\"\"\n\nvar b = get_node_and_resource(\"Area2D/Sprite2D:texture:atlas\")\nprint(b[0].name)        # Prints Sprite2D\nprint(b[1].get_class()) # Prints AtlasTexture\nprint(b[2])             # Prints ^\"\"\n\nvar c = get_node_and_resource(\"Area2D/Sprite2D:texture:atlas:region\")\nprint(c[0].name)        # Prints Sprite2D\nprint(c[1].get_class()) # Prints AtlasTexture\nprint(c[2])             # Prints ^\":region\"\n```\n\n```csharp\nvar a = GetNodeAndResource(NodePath(\"Area2D/Sprite2D\"));\nGD.Print(a[0].Name); // Prints Sprite2D\nGD.Print(a[1]);      // Prints <null>\nGD.Print(a[2]);      // Prints ^\"\n\nvar b = GetNodeAndResource(NodePath(\"Area2D/Sprite2D:texture:atlas\"));\nGD.Print(b[0].name);        // Prints Sprite2D\nGD.Print(b[1].get_class()); // Prints AtlasTexture\nGD.Print(b[2]);             // Prints ^\"\"\n\nvar c = GetNodeAndResource(NodePath(\"Area2D/Sprite2D:texture:atlas:region\"));\nGD.Print(c[0].name);        // Prints Sprite2D\nGD.Print(c[1].get_class()); // Prints AtlasTexture\nGD.Print(c[2]);             // Prints ^\":region\"\n```\n\nNode get_node_or_null(path: NodePath)\n\nFetches a node by NodePath. Similar to get_node(), but does not generate an error if `path` does not point to a valid node.\n\nVariant get_node_rpc_config()\n\nReturns a Dictionary mapping method names to their RPC configuration defined for this node using rpc_config().",
+      "heading_path": "Node > Method Descriptions",
+      "title": "Node",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html",
+      "score": 0.03252247488101534
+     },
+     {
+      "id": "classes/class_node.rst#28",
+      "path": "classes/class_node.rst",
+      "text": "Node > Method Descriptions\n\non a null instance.\" error.\n\nNote: Fetching by absolute path only works when the node is inside the scene tree (see is_inside_tree()).\n\nExample: Assume this method is called from the Character node, inside the following tree:\n\n```text\n\u2516\u2574root\n   \u2520\u2574Character (you are here!)\n   \u2503  \u2520\u2574Sword\n   \u2503  \u2516\u2574Backpack\n   \u2503     \u2516\u2574Dagger\n   \u2520\u2574MyGame\n   \u2516\u2574Swamp\n      \u2520\u2574Alligator\n      \u2520\u2574Mosquito\n      \u2516\u2574Goblin\n```\n\nThe following calls will return a valid node:\n\n```gdscript\nget_node(\"Sword\")\nget_node(\"Backpack/Dagger\")\nget_node(\"../Swamp/Alligator\")\nget_node(\"/root/MyGame\")\n```\n\n```csharp\nGetNode(\"Sword\");\nGetNode(\"Backpack/Dagger\");\nGetNode(\"../Swamp/Alligator\");\nGetNode(\"/root/MyGame\");\n```\n\nArray get_node_and_resource(path: NodePath)\n\nFetches a node and its most nested resource as specified by the NodePath's subname. Returns an Array of size `3` where:\n\n- Element `0` is the Node, or `null` if not found;\n\n- Element `1` is the subname's last nested Resource, or `null` if not found;\n\n- Element `2` is the remaining NodePath, referring to an existing, non-Resource property (see Object.get_indexed()).\n\nExample: Assume that the child's Sprite2D.texture has been assigned an AtlasTexture:",
+      "heading_path": "Node > Method Descriptions",
+      "title": "Node",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html",
+      "score": 0.031544957774465976
+     },
+     {
+      "id": "classes/class_node.rst#27",
+      "path": "classes/class_node.rst",
+      "text": "Node > Method Descriptions\n\nThis method may also return some group names starting with an underscore (`_`). These are internally used by the engine. To avoid conflicts, do not use custom groups starting with underscores. To exclude internal groups, see the following code snippet:\n\n```gdscript\n# Stores the node's non-internal groups only (as an array of StringNames).\nvar non_internal_groups = []\nfor group in get_groups():\n    if not str(group).begins_with(\"_\"):\n        non_internal_groups.push_back(group)\n```\n\n```csharp\n// Stores the node's non-internal groups only (as a List of StringNames).\nList<string> nonInternalGroups = new List<string>();\nforeach (string group in GetGroups())\n{\n    if (!group.BeginsWith(\"_\"))\n        nonInternalGroups.Add(group);\n}\n```\n\nint get_index(include_internal: bool = false)\n\nReturns this node's order among its siblings. The first node's index is `0`. See also get_child().\n\nIf `include_internal` is `false`, returns the index ignoring internal children. The first, non-internal child will have an index of `0` (see add_child()'s `internal` parameter).\n\nWindow get_last_exclusive_window()\n\nReturns the Window that contains this node, or the last exclusive child in a chain of windows starting with the one that contains this node.\n\nint get_multiplayer_authority()\n\nReturns the peer ID of the multiplayer authority for this node. See set_multiplayer_authority().\n\nNode get_node(path: NodePath)\n\nFetches a node. The NodePath can either be a relative path (from this node), or an absolute path (from the SceneTree.root) to a node. If `path` does not point to a valid node, generates an error and returns `null`. Attempts to access methods on the return value will result in an \"Attempt to call <method> on a null instance.\" error.\n\nNote: Fetching by absolute path only works when the node is inside the scene tree (see is_inside_tree()).\n\nExample: Assume this method is called from the Character node, inside the following tree:",
+      "heading_path": "Node > Method Descriptions",
+      "title": "Node",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html",
+      "score": 0.031009615384615385
+     },
+     {
+      "id": "classes/class_node.rst#30",
+      "path": "classes/class_node.rst",
+      "text": "Node > Method Descriptions\n\nNodePath. Similar to get_node(), but does not generate an error if `path` does not point to a valid node.\n\nVariant get_node_rpc_config()\n\nReturns a Dictionary mapping method names to their RPC configuration defined for this node using rpc_config().\n\nNote: This method only returns the RPC configuration assigned via rpc_config(). See Script.get_rpc_config() to retrieve the RPCs defined by the Script.\n\nArray[int] get_orphan_node_ids()\n\nReturns object IDs of all orphan nodes (nodes outside the SceneTree). Used for debugging.\n\nNote: get_orphan_node_ids() only works in debug builds. When called in a project exported in release mode, get_orphan_node_ids() will return an empty array.\n\nNode get_parent()\n\nReturns this node's parent node, or `null` if the node doesn't have a parent.\n\nNodePath get_path()\n\nReturns the node's absolute path, relative to the SceneTree.root. If the node is not inside the scene tree, this method fails and returns an empty NodePath.\n\nNodePath get_path_to(node: Node, use_unique_path: bool = false)\n\nReturns the relative NodePath from this node to the specified `node`. Both nodes must be in the same SceneTree or scene hierarchy, otherwise this method fails and returns an empty NodePath.\n\nIf `use_unique_path` is `true`, returns the shortest path accounting for this node's unique name (see unique_name_in_owner).\n\nNote: If you get a relative path which starts from a unique node, the path may be longer than a normal relative path, due to the addition of the unique node's name.\n\nfloat get_physics_process_delta_time()\n\nReturns the time elapsed (in seconds) since the last physics callback. This value is identical to _physics_process()'s `delta` parameter, and is often consistent at run-time, unless Engine.physics_ticks_per_second is changed. See also NOTIFICATION_PHYSICS_PROCESS.",
+      "heading_path": "Node > Method Descriptions",
+      "title": "Node",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_node.html",
+      "score": 0.029513888888888888
+     },
+     {
+      "id": "classes/class_gltfanimation.rst#1",
+      "path": "classes/class_gltfanimation.rst",
+      "text": "GLTFAnimation > Method Descriptions\n\nVariant get_additional_data(extension_name: StringName)\n\nGets additional arbitrary data in this GLTFAnimation instance. This can be used to keep per-node state data in GLTFDocumentExtension classes, which is important because they are stateless.\n\nThe argument should be the GLTFDocumentExtension name (does not have to match the extension name in the glTF file), and the return value can be anything you set. If nothing was set, the return value is `null`.\n\n set_additional_data(extension_name: StringName, additional_data: Variant)\n\nSets additional arbitrary data in this GLTFAnimation instance. This can be used to keep per-node state data in GLTFDocumentExtension classes, which is important because they are stateless.\n\nThe first argument should be the GLTFDocumentExtension name (does not have to match the extension name in the glTF file), and the second argument can be anything you want.",
+      "heading_path": "GLTFAnimation > Method Descriptions",
+      "title": "GLTFAnimation",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_gltfanimation.html",
+      "score": 0.016129032258064516
+     }
+    ]
+   }
+  },
+  {
+   "t": 4447,
+   "event": "token",
+   "data": {
+    "text": "The"
+   }
+  },
+  {
+   "t": 4447,
+   "event": "token",
+   "data": {
+    "text": " method"
+   }
+  },
+  {
+   "t": 4462,
+   "event": "token",
+   "data": {
+    "text": " `"
+   }
+  },
+  {
+   "t": 4462,
+   "event": "token",
+   "data": {
+    "text": "get"
+   }
+  },
+  {
+   "t": 4478,
+   "event": "token",
+   "data": {
+    "text": "_node"
+   }
+  },
+  {
+   "t": 4478,
+   "event": "token",
+   "data": {
+    "text": "_or"
+   }
+  },
+  {
+   "t": 4498,
+   "event": "token",
+   "data": {
+    "text": "_null"
+   }
+  },
+  {
+   "t": 4498,
+   "event": "token",
+   "data": {
+    "text": "(path"
+   }
+  },
+  {
+   "t": 4580,
+   "event": "token",
+   "data": {
+    "text": ":"
+   }
+  },
+  {
+   "t": 4581,
+   "event": "token",
+   "data": {
+    "text": " Node"
+   }
+  },
+  {
+   "t": 4591,
+   "event": "token",
+   "data": {
+    "text": "Path"
+   }
+  },
+  {
+   "t": 4591,
+   "event": "token",
+   "data": {
+    "text": ")`"
+   }
+  },
+  {
+   "t": 4604,
+   "event": "token",
+   "data": {
+    "text": " fetch"
+   }
+  },
+  {
+   "t": 4604,
+   "event": "token",
+   "data": {
+    "text": "es"
+   }
+  },
+  {
+   "t": 4610,
+   "event": "token",
+   "data": {
+    "text": " a"
+   }
+  },
+  {
+   "t": 4610,
+   "event": "token",
+   "data": {
+    "text": " node"
+   }
+  },
+  {
+   "t": 4615,
+   "event": "token",
+   "data": {
+    "text": " by"
+   }
+  },
+  {
+   "t": 4615,
+   "event": "token",
+   "data": {
+    "text": " Node"
+   }
+  },
+  {
+   "t": 4622,
+   "event": "token",
+   "data": {
+    "text": "Path"
+   }
+  },
+  {
+   "t": 4622,
+   "event": "token",
+   "data": {
+    "text": " and"
+   }
+  },
+  {
+   "t": 4634,
+   "event": "token",
+   "data": {
+    "text": " does"
+   }
+  },
+  {
+   "t": 4634,
+   "event": "token",
+   "data": {
+    "text": " not"
+   }
+  },
+  {
+   "t": 4640,
+   "event": "token",
+   "data": {
+    "text": " generate"
+   }
+  },
+  {
+   "t": 4640,
+   "event": "token",
+   "data": {
+    "text": " an"
+   }
+  },
+  {
+   "t": 4665,
+   "event": "token",
+   "data": {
+    "text": " error"
+   }
+  },
+  {
+   "t": 4665,
+   "event": "token",
+   "data": {
+    "text": " if"
+   }
+  },
+  {
+   "t": 4704,
+   "event": "token",
+   "data": {
+    "text": " the"
+   }
+  },
+  {
+   "t": 4704,
+   "event": "token",
+   "data": {
+    "text": " `"
+   }
+  },
+  {
+   "t": 4728,
+   "event": "token",
+   "data": {
+    "text": "path"
+   }
+  },
+  {
+   "t": 4728,
+   "event": "token",
+   "data": {
+    "text": "`"
+   }
+  },
+  {
+   "t": 4747,
+   "event": "token",
+   "data": {
+    "text": " does"
+   }
+  },
+  {
+   "t": 4747,
+   "event": "token",
+   "data": {
+    "text": " not"
+   }
+  },
+  {
+   "t": 4763,
+   "event": "token",
+   "data": {
+    "text": " point"
+   }
+  },
+  {
+   "t": 4763,
+   "event": "token",
+   "data": {
+    "text": " to"
+   }
+  },
+  {
+   "t": 4765,
+   "event": "token",
+   "data": {
+    "text": " a"
+   }
+  },
+  {
+   "t": 4765,
+   "event": "token",
+   "data": {
+    "text": " valid"
+   }
+  },
+  {
+   "t": 4791,
+   "event": "token",
+   "data": {
+    "text": " node"
+   }
+  },
+  {
+   "t": 4791,
+   "event": "token",
+   "data": {
+    "text": ","
+   }
+  },
+  {
+   "t": 4799,
+   "event": "token",
+   "data": {
+    "text": " returning"
+   }
+  },
+  {
+   "t": 4799,
+   "event": "token",
+   "data": {
+    "text": " `"
+   }
+  },
+  {
+   "t": 4828,
+   "event": "token",
+   "data": {
+    "text": "null"
+   }
+  },
+  {
+   "t": 4828,
+   "event": "token",
+   "data": {
+    "text": "`"
+   }
+  },
+  {
+   "t": 4833,
+   "event": "token",
+   "data": {
+    "text": " in"
+   }
+  },
+  {
+   "t": 4833,
+   "event": "token",
+   "data": {
+    "text": " such"
+   }
+  },
+  {
+   "t": 4849,
+   "event": "token",
+   "data": {
+    "text": " cases"
+   }
+  },
+  {
+   "t": 4849,
+   "event": "token",
+   "data": {
+    "text": " ["
+   }
+  },
+  {
+   "t": 4887,
+   "event": "token",
+   "data": {
+    "text": "1"
+   }
+  },
+  {
+   "t": 4888,
+   "event": "token",
+   "data": {
+    "text": "]."
+   }
+  },
+  {
+   "t": 4903,
+   "event": "citations",
+   "data": {
+    "cited": [
+     1
+    ],
+    "ms": 2122.3
+   }
+  },
+  {
+   "t": 4904,
+   "event": "done",
+   "data": {
+    "ms": 2701.5
+   }
+  }
+ ]
+}

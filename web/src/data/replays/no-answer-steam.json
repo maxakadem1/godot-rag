@@ -1,0 +1,782 @@
+{
+ "id": "no-answer-steam",
+ "question": "How many Godot games were released on Steam last year?",
+ "mode": "hybrid",
+ "events": [
+  {
+   "t": 2558,
+   "event": "vector",
+   "data": {
+    "ms": 358.1,
+    "hits": [
+     {
+      "id": "getting_started/introduction/introduction_to_godot.rst#1",
+      "rank": 1,
+      "score": 0.533202827,
+      "title": "Introduction to Godot",
+      "heading_path": "Introduction to Godot > What can the engine do?",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/introduction/introduction_to_godot.html"
+     },
+     {
+      "id": "about/release_policy.rst#4",
+      "rank": 2,
+      "score": 0.524418473,
+      "title": "Godot release policy",
+      "heading_path": "Godot release policy > Release support timeline",
+      "url": "https://docs.godotengine.org/en/stable/about/release_policy.html"
+     },
+     {
+      "id": "getting_started/introduction/introduction_to_godot.rst#0",
+      "rank": 3,
+      "score": 0.498758465,
+      "title": "Introduction to Godot",
+      "heading_path": "Introduction to Godot",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/introduction/introduction_to_godot.html"
+     },
+     {
+      "id": "getting_started/introduction/introduction_to_godot.rst#2",
+      "rank": 4,
+      "score": 0.479444921,
+      "title": "Introduction to Godot",
+      "heading_path": "Introduction to Godot > How does it work and look?",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/introduction/introduction_to_godot.html"
+     },
+     {
+      "id": "about/release_policy.rst#3",
+      "rank": 5,
+      "score": 0.473747253,
+      "title": "Godot release policy",
+      "heading_path": "Godot release policy > Release support timeline",
+      "url": "https://docs.godotengine.org/en/stable/about/release_policy.html"
+     },
+     {
+      "id": "getting_started/introduction/introduction_to_godot.rst#3",
+      "rank": 6,
+      "score": 0.470049739,
+      "title": "Introduction to Godot",
+      "heading_path": "Introduction to Godot > Programming languages",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/introduction/introduction_to_godot.html"
+     },
+     {
+      "id": "about/release_policy.rst#8",
+      "rank": 7,
+      "score": 0.468461692,
+      "title": "Godot release policy",
+      "heading_path": "Godot release policy > When is the next release out?",
+      "url": "https://docs.godotengine.org/en/stable/about/release_policy.html"
+     },
+     {
+      "id": "about/release_policy.rst#0",
+      "rank": 8,
+      "score": 0.467627,
+      "title": "Godot release policy",
+      "heading_path": "Godot release policy",
+      "url": "https://docs.godotengine.org/en/stable/about/release_policy.html"
+     },
+     {
+      "id": "about/faq.rst#0",
+      "rank": 9,
+      "score": 0.465947419,
+      "title": "Frequently asked questions",
+      "heading_path": "Frequently asked questions > What can I do with Godot? How much does it cost? What are the license terms?",
+      "url": "https://docs.godotengine.org/en/stable/about/faq.html"
+     },
+     {
+      "id": "about/faq.rst#1",
+      "rank": 10,
+      "score": 0.462855607,
+      "title": "Frequently asked questions",
+      "heading_path": "Frequently asked questions > Which platforms are supported by Godot?",
+      "url": "https://docs.godotengine.org/en/stable/about/faq.html"
+     },
+     {
+      "id": "getting_started/introduction/godot_design_philosophy.rst#5",
+      "rank": 11,
+      "score": 0.461817741,
+      "title": "Godot's design philosophy",
+      "heading_path": "Godot's design philosophy",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/introduction/godot_design_philosophy.html"
+     },
+     {
+      "id": "tutorials/scripting/other_languages.rst#0",
+      "rank": 12,
+      "score": 0.461793959,
+      "title": "Other languages",
+      "heading_path": "Other languages",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/other_languages.html"
+     },
+     {
+      "id": "about/release_policy.rst#5",
+      "rank": 13,
+      "score": 0.460465312,
+      "title": "Godot release policy",
+      "heading_path": "Godot release policy > Release support timeline",
+      "url": "https://docs.godotengine.org/en/stable/about/release_policy.html"
+     },
+     {
+      "id": "getting_started/introduction/godot_design_philosophy.rst#2",
+      "rank": 14,
+      "score": 0.458767533,
+      "title": "Godot's design philosophy",
+      "heading_path": "Godot's design philosophy > All-inclusive package",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/introduction/godot_design_philosophy.html"
+     },
+     {
+      "id": "about/faq.rst#21",
+      "rank": 15,
+      "score": 0.454388678,
+      "title": "Frequently asked questions",
+      "heading_path": "Frequently asked questions",
+      "url": "https://docs.godotengine.org/en/stable/about/faq.html"
+     },
+     {
+      "id": "about/release_policy.rst#1",
+      "rank": 16,
+      "score": 0.443512797,
+      "title": "Godot release policy",
+      "heading_path": "Godot release policy > Godot versioning",
+      "url": "https://docs.godotengine.org/en/stable/about/release_policy.html"
+     },
+     {
+      "id": "about/list_of_features.rst#0",
+      "rank": 17,
+      "score": 0.442920953,
+      "title": "List of features",
+      "heading_path": "List of features",
+      "url": "https://docs.godotengine.org/en/stable/about/list_of_features.html"
+     },
+     {
+      "id": "about/faq.rst#16",
+      "rank": 18,
+      "score": 0.441554636,
+      "title": "Frequently asked questions",
+      "heading_path": "Frequently asked questions",
+      "url": "https://docs.godotengine.org/en/stable/about/faq.html"
+     },
+     {
+      "id": "tutorials/inputs/controllers_gamepads_joysticks.rst#10",
+      "rank": 19,
+      "score": 0.435704291,
+      "title": "Controllers, gamepads, and joysticks",
+      "heading_path": "Controllers, gamepads, and joysticks > Troubleshooting > My controller isn't recognized by Godot.",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/inputs/controllers_gamepads_joysticks.html"
+     },
+     {
+      "id": "about/faq.rst#13",
+      "rank": 20,
+      "score": 0.435162753,
+      "title": "Frequently asked questions",
+      "heading_path": "Frequently asked questions",
+      "url": "https://docs.godotengine.org/en/stable/about/faq.html"
+     }
+    ]
+   }
+  },
+  {
+   "t": 2561,
+   "event": "keyword",
+   "data": {
+    "ms": 3.5,
+    "hits": [
+     {
+      "id": "tutorials/assets_pipeline/importing_translations.rst#0",
+      "rank": 1,
+      "score": 17.984623074319085,
+      "title": "Importing translations",
+      "heading_path": "Importing translations > Games and internationalization",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_translations.html"
+     },
+     {
+      "id": "classes/class_input.rst#9",
+      "rank": 2,
+      "score": 17.890205053942342,
+      "title": "Input",
+      "heading_path": "Input > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_input.html"
+     },
+     {
+      "id": "tutorials/rendering/multiple_resolutions.rst#1",
+      "rank": 3,
+      "score": 16.47137381639129,
+      "title": "Multiple resolutions",
+      "heading_path": "Multiple resolutions > One size fits all",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/rendering/multiple_resolutions.html"
+     },
+     {
+      "id": "tutorials/math/random_number_generation.rst#0",
+      "rank": 4,
+      "score": 16.43820328784261,
+      "title": "Random number generation",
+      "heading_path": "Random number generation",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/math/random_number_generation.html"
+     },
+     {
+      "id": "about/release_policy.rst#8",
+      "rank": 5,
+      "score": 15.245250678385355,
+      "title": "Godot release policy",
+      "heading_path": "Godot release policy > When is the next release out?",
+      "url": "https://docs.godotengine.org/en/stable/about/release_policy.html"
+     },
+     {
+      "id": "tutorials/inputs/controllers_gamepads_joysticks.rst#11",
+      "rank": 6,
+      "score": 14.27456797413716,
+      "title": "Controllers, gamepads, and joysticks",
+      "heading_path": "Controllers, gamepads, and joysticks > Troubleshooting > My controller has incorrectly mapped buttons or axes.",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/inputs/controllers_gamepads_joysticks.html"
+     },
+     {
+      "id": "classes/class_virtualjoystick.rst#0",
+      "rank": 7,
+      "score": 13.682978746129063,
+      "title": "VirtualJoystick",
+      "heading_path": "VirtualJoystick",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_virtualjoystick.html"
+     },
+     {
+      "id": "tutorials/rendering/jitter_stutter.rst#3",
+      "rank": 8,
+      "score": 13.519646285653263,
+      "title": "Fixing jitter, stutter and input lag",
+      "heading_path": "Fixing jitter, stutter and input lag > Stutter > Windows",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/rendering/jitter_stutter.html"
+     },
+     {
+      "id": "about/faq.rst#8",
+      "rank": 9,
+      "score": 13.44306317502944,
+      "title": "Frequently asked questions",
+      "heading_path": "Frequently asked questions > How do I install the Godot editor on my system (for desktop integration)?",
+      "url": "https://docs.godotengine.org/en/stable/about/faq.html"
+     },
+     {
+      "id": "tutorials/3d/variable_rate_shading.rst#6",
+      "rank": 10,
+      "score": 13.208484699289421,
+      "title": "Variable rate shading",
+      "heading_path": "Variable rate shading > Using variable rate shading in Godot > Performance comparison",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/3d/variable_rate_shading.html"
+     },
+     {
+      "id": "tutorials/scripting/debug/overview_of_debugging_tools.rst#5",
+      "rank": 11,
+      "score": 13.141727426161086,
+      "title": "Overview of debugging tools",
+      "heading_path": "Overview of debugging tools > Debug menu options > Customize Run Instances...",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/debug/overview_of_debugging_tools.html"
+     },
+     {
+      "id": "about/introduction.rst#1",
+      "rank": 12,
+      "score": 13.127526499481641,
+      "title": "Introduction",
+      "heading_path": "Introduction",
+      "url": "https://docs.godotengine.org/en/stable/about/introduction.html"
+     },
+     {
+      "id": "classes/class_xrpositionaltracker.rst#1",
+      "rank": 13,
+      "score": 13.049022774093565,
+      "title": "XRPositionalTracker",
+      "heading_path": "XRPositionalTracker",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_xrpositionaltracker.html"
+     },
+     {
+      "id": "classes/class_time.rst#0",
+      "rank": 14,
+      "score": 12.960755182105187,
+      "title": "Time",
+      "heading_path": "Time",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_time.html"
+     },
+     {
+      "id": "getting_started/introduction/introduction_to_godot.rst#0",
+      "rank": 15,
+      "score": 12.95343952063311,
+      "title": "Introduction to Godot",
+      "heading_path": "Introduction to Godot",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/introduction/introduction_to_godot.html"
+     },
+     {
+      "id": "tutorials/physics/interpolation/using_physics_interpolation.rst#0",
+      "rank": 16,
+      "score": 12.765981818828495,
+      "title": "Using physics interpolation",
+      "heading_path": "Using physics interpolation",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/physics/interpolation/using_physics_interpolation.html"
+     },
+     {
+      "id": "classes/class_time.rst#2",
+      "rank": 17,
+      "score": 12.504706564926556,
+      "title": "Time",
+      "heading_path": "Time > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_time.html"
+     },
+     {
+      "id": "tutorials/ui/index.rst#0",
+      "rank": 18,
+      "score": 12.464282235987785,
+      "title": "User interface (UI)",
+      "heading_path": "User interface (UI)",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/ui/index.html"
+     },
+     {
+      "id": "tutorials/migrating/upgrading_to_godot_4.rst#0",
+      "rank": 19,
+      "score": 12.433326577228293,
+      "title": "Upgrading from Godot 3 to Godot 4",
+      "heading_path": "Upgrading from Godot 3 to Godot 4 > Should I upgrade to Godot 4?",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/migrating/upgrading_to_godot_4.html"
+     },
+     {
+      "id": "classes/class_webxrinterface.rst#3",
+      "rank": 20,
+      "score": 12.38490954089356,
+      "title": "WebXRInterface",
+      "heading_path": "WebXRInterface > Description",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_webxrinterface.html"
+     }
+    ]
+   }
+  },
+  {
+   "t": 2562,
+   "event": "fusion",
+   "data": {
+    "ms": 0.3,
+    "hits": [
+     {
+      "id": "about/release_policy.rst#8",
+      "rank": 1,
+      "score": 0.030309988518943745,
+      "title": "Godot release policy",
+      "heading_path": "Godot release policy > When is the next release out?",
+      "url": "https://docs.godotengine.org/en/stable/about/release_policy.html"
+     },
+     {
+      "id": "getting_started/introduction/introduction_to_godot.rst#0",
+      "rank": 2,
+      "score": 0.029206349206349208,
+      "title": "Introduction to Godot",
+      "heading_path": "Introduction to Godot",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/introduction/introduction_to_godot.html"
+     },
+     {
+      "id": "getting_started/introduction/introduction_to_godot.rst#1",
+      "rank": 3,
+      "score": 0.01639344262295082,
+      "title": "Introduction to Godot",
+      "heading_path": "Introduction to Godot > What can the engine do?",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/introduction/introduction_to_godot.html"
+     },
+     {
+      "id": "tutorials/assets_pipeline/importing_translations.rst#0",
+      "rank": 4,
+      "score": 0.01639344262295082,
+      "title": "Importing translations",
+      "heading_path": "Importing translations > Games and internationalization",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_translations.html"
+     },
+     {
+      "id": "about/release_policy.rst#4",
+      "rank": 5,
+      "score": 0.016129032258064516,
+      "title": "Godot release policy",
+      "heading_path": "Godot release policy > Release support timeline",
+      "url": "https://docs.godotengine.org/en/stable/about/release_policy.html"
+     },
+     {
+      "id": "classes/class_input.rst#9",
+      "rank": 6,
+      "score": 0.016129032258064516,
+      "title": "Input",
+      "heading_path": "Input > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_input.html"
+     },
+     {
+      "id": "tutorials/rendering/multiple_resolutions.rst#1",
+      "rank": 7,
+      "score": 0.015873015873015872,
+      "title": "Multiple resolutions",
+      "heading_path": "Multiple resolutions > One size fits all",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/rendering/multiple_resolutions.html"
+     },
+     {
+      "id": "getting_started/introduction/introduction_to_godot.rst#2",
+      "rank": 8,
+      "score": 0.015625,
+      "title": "Introduction to Godot",
+      "heading_path": "Introduction to Godot > How does it work and look?",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/introduction/introduction_to_godot.html"
+     },
+     {
+      "id": "tutorials/math/random_number_generation.rst#0",
+      "rank": 9,
+      "score": 0.015625,
+      "title": "Random number generation",
+      "heading_path": "Random number generation",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/math/random_number_generation.html"
+     },
+     {
+      "id": "about/release_policy.rst#3",
+      "rank": 10,
+      "score": 0.015384615384615385,
+      "title": "Godot release policy",
+      "heading_path": "Godot release policy > Release support timeline",
+      "url": "https://docs.godotengine.org/en/stable/about/release_policy.html"
+     },
+     {
+      "id": "getting_started/introduction/introduction_to_godot.rst#3",
+      "rank": 11,
+      "score": 0.015151515151515152,
+      "title": "Introduction to Godot",
+      "heading_path": "Introduction to Godot > Programming languages",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/introduction/introduction_to_godot.html"
+     },
+     {
+      "id": "tutorials/inputs/controllers_gamepads_joysticks.rst#11",
+      "rank": 12,
+      "score": 0.015151515151515152,
+      "title": "Controllers, gamepads, and joysticks",
+      "heading_path": "Controllers, gamepads, and joysticks > Troubleshooting > My controller has incorrectly mapped buttons or axes.",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/inputs/controllers_gamepads_joysticks.html"
+     },
+     {
+      "id": "classes/class_virtualjoystick.rst#0",
+      "rank": 13,
+      "score": 0.014925373134328358,
+      "title": "VirtualJoystick",
+      "heading_path": "VirtualJoystick",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_virtualjoystick.html"
+     },
+     {
+      "id": "about/release_policy.rst#0",
+      "rank": 14,
+      "score": 0.014705882352941176,
+      "title": "Godot release policy",
+      "heading_path": "Godot release policy",
+      "url": "https://docs.godotengine.org/en/stable/about/release_policy.html"
+     },
+     {
+      "id": "tutorials/rendering/jitter_stutter.rst#3",
+      "rank": 15,
+      "score": 0.014705882352941176,
+      "title": "Fixing jitter, stutter and input lag",
+      "heading_path": "Fixing jitter, stutter and input lag > Stutter > Windows",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/rendering/jitter_stutter.html"
+     },
+     {
+      "id": "about/faq.rst#0",
+      "rank": 16,
+      "score": 0.014492753623188406,
+      "title": "Frequently asked questions",
+      "heading_path": "Frequently asked questions > What can I do with Godot? How much does it cost? What are the license terms?",
+      "url": "https://docs.godotengine.org/en/stable/about/faq.html"
+     },
+     {
+      "id": "about/faq.rst#8",
+      "rank": 17,
+      "score": 0.014492753623188406,
+      "title": "Frequently asked questions",
+      "heading_path": "Frequently asked questions > How do I install the Godot editor on my system (for desktop integration)?",
+      "url": "https://docs.godotengine.org/en/stable/about/faq.html"
+     },
+     {
+      "id": "about/faq.rst#1",
+      "rank": 18,
+      "score": 0.014285714285714285,
+      "title": "Frequently asked questions",
+      "heading_path": "Frequently asked questions > Which platforms are supported by Godot?",
+      "url": "https://docs.godotengine.org/en/stable/about/faq.html"
+     },
+     {
+      "id": "tutorials/3d/variable_rate_shading.rst#6",
+      "rank": 19,
+      "score": 0.014285714285714285,
+      "title": "Variable rate shading",
+      "heading_path": "Variable rate shading > Using variable rate shading in Godot > Performance comparison",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/3d/variable_rate_shading.html"
+     },
+     {
+      "id": "getting_started/introduction/godot_design_philosophy.rst#5",
+      "rank": 20,
+      "score": 0.014084507042253521,
+      "title": "Godot's design philosophy",
+      "heading_path": "Godot's design philosophy",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/introduction/godot_design_philosophy.html"
+     },
+     {
+      "id": "tutorials/scripting/debug/overview_of_debugging_tools.rst#5",
+      "rank": 21,
+      "score": 0.014084507042253521,
+      "title": "Overview of debugging tools",
+      "heading_path": "Overview of debugging tools > Debug menu options > Customize Run Instances...",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/debug/overview_of_debugging_tools.html"
+     },
+     {
+      "id": "tutorials/scripting/other_languages.rst#0",
+      "rank": 22,
+      "score": 0.013888888888888888,
+      "title": "Other languages",
+      "heading_path": "Other languages",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/other_languages.html"
+     },
+     {
+      "id": "about/introduction.rst#1",
+      "rank": 23,
+      "score": 0.013888888888888888,
+      "title": "Introduction",
+      "heading_path": "Introduction",
+      "url": "https://docs.godotengine.org/en/stable/about/introduction.html"
+     },
+     {
+      "id": "about/release_policy.rst#5",
+      "rank": 24,
+      "score": 0.0136986301369863,
+      "title": "Godot release policy",
+      "heading_path": "Godot release policy > Release support timeline",
+      "url": "https://docs.godotengine.org/en/stable/about/release_policy.html"
+     },
+     {
+      "id": "classes/class_xrpositionaltracker.rst#1",
+      "rank": 25,
+      "score": 0.0136986301369863,
+      "title": "XRPositionalTracker",
+      "heading_path": "XRPositionalTracker",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_xrpositionaltracker.html"
+     },
+     {
+      "id": "getting_started/introduction/godot_design_philosophy.rst#2",
+      "rank": 26,
+      "score": 0.013513513513513514,
+      "title": "Godot's design philosophy",
+      "heading_path": "Godot's design philosophy > All-inclusive package",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/introduction/godot_design_philosophy.html"
+     },
+     {
+      "id": "classes/class_time.rst#0",
+      "rank": 27,
+      "score": 0.013513513513513514,
+      "title": "Time",
+      "heading_path": "Time",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_time.html"
+     },
+     {
+      "id": "about/faq.rst#21",
+      "rank": 28,
+      "score": 0.013333333333333334,
+      "title": "Frequently asked questions",
+      "heading_path": "Frequently asked questions",
+      "url": "https://docs.godotengine.org/en/stable/about/faq.html"
+     },
+     {
+      "id": "about/release_policy.rst#1",
+      "rank": 29,
+      "score": 0.013157894736842105,
+      "title": "Godot release policy",
+      "heading_path": "Godot release policy > Godot versioning",
+      "url": "https://docs.godotengine.org/en/stable/about/release_policy.html"
+     },
+     {
+      "id": "tutorials/physics/interpolation/using_physics_interpolation.rst#0",
+      "rank": 30,
+      "score": 0.013157894736842105,
+      "title": "Using physics interpolation",
+      "heading_path": "Using physics interpolation",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/physics/interpolation/using_physics_interpolation.html"
+     },
+     {
+      "id": "about/list_of_features.rst#0",
+      "rank": 31,
+      "score": 0.012987012987012988,
+      "title": "List of features",
+      "heading_path": "List of features",
+      "url": "https://docs.godotengine.org/en/stable/about/list_of_features.html"
+     },
+     {
+      "id": "classes/class_time.rst#2",
+      "rank": 32,
+      "score": 0.012987012987012988,
+      "title": "Time",
+      "heading_path": "Time > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_time.html"
+     },
+     {
+      "id": "about/faq.rst#16",
+      "rank": 33,
+      "score": 0.01282051282051282,
+      "title": "Frequently asked questions",
+      "heading_path": "Frequently asked questions",
+      "url": "https://docs.godotengine.org/en/stable/about/faq.html"
+     },
+     {
+      "id": "tutorials/ui/index.rst#0",
+      "rank": 34,
+      "score": 0.01282051282051282,
+      "title": "User interface (UI)",
+      "heading_path": "User interface (UI)",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/ui/index.html"
+     },
+     {
+      "id": "tutorials/inputs/controllers_gamepads_joysticks.rst#10",
+      "rank": 35,
+      "score": 0.012658227848101266,
+      "title": "Controllers, gamepads, and joysticks",
+      "heading_path": "Controllers, gamepads, and joysticks > Troubleshooting > My controller isn't recognized by Godot.",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/inputs/controllers_gamepads_joysticks.html"
+     },
+     {
+      "id": "tutorials/migrating/upgrading_to_godot_4.rst#0",
+      "rank": 36,
+      "score": 0.012658227848101266,
+      "title": "Upgrading from Godot 3 to Godot 4",
+      "heading_path": "Upgrading from Godot 3 to Godot 4 > Should I upgrade to Godot 4?",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/migrating/upgrading_to_godot_4.html"
+     },
+     {
+      "id": "about/faq.rst#13",
+      "rank": 37,
+      "score": 0.0125,
+      "title": "Frequently asked questions",
+      "heading_path": "Frequently asked questions",
+      "url": "https://docs.godotengine.org/en/stable/about/faq.html"
+     },
+     {
+      "id": "classes/class_webxrinterface.rst#3",
+      "rank": 38,
+      "score": 0.0125,
+      "title": "WebXRInterface",
+      "heading_path": "WebXRInterface > Description",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_webxrinterface.html"
+     }
+    ]
+   }
+  },
+  {
+   "t": 2562,
+   "event": "context",
+   "data": {
+    "chunks": [
+     {
+      "id": "about/release_policy.rst#8",
+      "path": "about/release_policy.rst",
+      "text": "Godot release policy > When is the next release out?\n\nWhile Godot contributors aren't working under any deadlines, we strive to\npublish minor releases relatively frequently.\n\nIn particular, after the very long release cycle for 4.0, we are pivoting to\na faster-paced development workflow, 4.1 released 4 months after 4.0, and 4.2\nreleased 4 months after 4.1.\n\nFrequent minor releases will enable us to ship new features faster (possibly\nas experimental), get user feedback quickly, and iterate to improve those\nfeatures and their usability. Likewise, the general user experience will be\nimproved more steadily with a faster path to the end users.\n\nMaintenance (patch) releases are released as needed with potentially very\nshort development cycles, to provide users of the current stable branch with\nthe latest bug fixes for their production needs.\n\nThere is currently no planned release date for the next 3.x minor version, 3.7.\nThe current stable release, 3.6, may be the last stable branch of Godot 3.x.\nGodot 3.x is supported on a best-effort basis, as long as contributors continue\nto maintain it.",
+      "heading_path": "Godot release policy > When is the next release out?",
+      "title": "Godot release policy",
+      "url": "https://docs.godotengine.org/en/stable/about/release_policy.html",
+      "score": 0.030309988518943745
+     },
+     {
+      "id": "getting_started/introduction/introduction_to_godot.rst#0",
+      "path": "getting_started/introduction/introduction_to_godot.rst",
+      "text": "Introduction to Godot\n\nThis article is here to help you figure out whether Godot might be a good fit\nfor you. We will introduce some broad features of the engine to give you a feel\nfor what you can achieve with it and answer questions such as \"what do I need to\nknow to get started?\".\n\nThis is by no means an exhaustive overview. We will introduce many more features\nin this getting started series.\n\nWhat is Godot?\nGodot is a general-purpose 2D and 3D game engine designed to support all sorts\nof projects. You can use it to create games or applications you can then release\non desktop or mobile, as well as on the web.\n\nYou can also create console games with it, although you either need strong\nprogramming skills or a developer to port the game for you.\n\nNote: For information about console support, see the Godot website.",
+      "heading_path": "Introduction to Godot",
+      "title": "Introduction to Godot",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/introduction/introduction_to_godot.html",
+      "score": 0.029206349206349208
+     },
+     {
+      "id": "getting_started/introduction/introduction_to_godot.rst#1",
+      "path": "getting_started/introduction/introduction_to_godot.rst",
+      "text": "Introduction to Godot > What can the engine do?\n\nGodot was initially developed in-house by an Argentinian game studio. Its\ndevelopment started in 2001, and the engine was rewritten and improved\ntremendously since its open source release in 2014.\n\nSome examples of games created with Godot include Cassette Beasts, PVKK, and\nUsagi Shima. As for applications, the open source pixel art drawing program\nPixelorama is powered by Godot, and so is the voxel RPG creator RPG in a Box.\nYou can find many more examples in the Official Showcase.",
+      "heading_path": "Introduction to Godot > What can the engine do?",
+      "title": "Introduction to Godot",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/introduction/introduction_to_godot.html",
+      "score": 0.01639344262295082
+     },
+     {
+      "id": "tutorials/assets_pipeline/importing_translations.rst#0",
+      "path": "tutorials/assets_pipeline/importing_translations.rst",
+      "text": "Importing translations > Games and internationalization\n\nThe gaming community isn't monolingual or monocultural. It's made up of\nmany different languages and cultures - just like the Godot community!\nIf you want to allow players to experience your game in their language,\none of things you'll need to provide is text translations, which Godot\nsupports via internationalized text.\n\nIn regular desktop or mobile applications, internationalized text is\nusually located in resource files (or .po files for GNU stuff). Games,\nhowever, can use several orders of magnitude more text than\napplications, so they must support efficient methods for dealing with\nloads of multilingual text.\n\nThere are two approaches to generate multilingual language games and\napplications. Both are based on a key:value system. The first is to use\none of the languages as the key (usually English), the second is to use a\nspecific identifier. The first approach is probably easier for\ndevelopment if a game is released first in English, later in other\nlanguages, but a complete nightmare if working with many languages at\nthe same time.\n\nIn general, games use the second approach and a unique ID is used for\neach string. This allows you to revise the text while it is being\ntranslated to other languages. The unique ID can be a number, a string,\nor a string with a number (it's just a unique string anyway).",
+      "heading_path": "Importing translations > Games and internationalization",
+      "title": "Importing translations",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_translations.html",
+      "score": 0.01639344262295082
+     },
+     {
+      "id": "about/release_policy.rst#4",
+      "path": "about/release_policy.rst",
+      "text": "Godot release policy > Release support timeline\n\n   | March 2023           |  No longer supported (last update: 4.0.4).                          |\n+--------------+----------------------+--------------------------------------------------------------------------+\n| Godot 3.7    | No ETA for now       |\n\n  Beta. Receives new features, usability and performance     |\n| (`3.x`)      |                      | improvements, as well as bug fixes, while under development.             |\n+--------------+----------------------+--------------------------------------------------------------------------+\n| Godot 3.6    | September 2024       |  Receives fixes for bugs and security issues, as well as      |\n|              |                      | patches that enable platform support.                                    |\n+--------------+----------------------+--------------------------------------------------------------------------+\n| Godot 3.5    | August 2022          |  No longer supported (last update: 3.5.3).                          |\n+--------------+----------------------+--------------------------------------------------------------------------+\n| Godot 3.4    | November 2021        |  No longer supported (last update: 3.4.5).                          |\n+--------------+----------------------+--------------------------------------------------------------------------+\n| Godot 3.3    | April 2021           |  No longer supported (last update: 3.3.4).                          |\n+--------------+----------------------+--------------------------------------------------------------------------+\n| Godot 3.2    | January 2020         |  No longer supported (last update: 3.2.3).                          |\n+--------------+----------------------+--------------------------------------------------------------------------+\n| Godot 3.1    | March 2019           |  No longer supported (last update: 3.1.2).                          |\n+--------------+----------------------+--------------------------------------------------------------------------+\n| Godot 3.0    | January 2018         |  No longer supported (last update: 3.0.6).                          |\n+--------------+----------------------+--------------------------------------------------------------------------+\n| Godot 2.1    | July 2016            |  No longer supported (last update: 2.1.6).                          |\n+--------------+----------------------+--------------------------------------------------------------------------+\n| Godot 2.0    | February 2016        |  No longer supported (last update: 2.0.4.1).                        |\n+--------------+----------------------+--------------------------------------------------------------------------+\n| Godot 1.1    | May 2015             |  No longer supported.                                               |\n+--------------",
+      "heading_path": "Godot release policy > Release support timeline",
+      "title": "Godot release policy",
+      "url": "https://docs.godotengine.org/en/stable/about/release_policy.html",
+      "score": 0.016129032258064516
+     }
+    ]
+   }
+  },
+  {
+   "t": 3126,
+   "event": "token",
+   "data": {
+    "text": "I"
+   }
+  },
+  {
+   "t": 3127,
+   "event": "token",
+   "data": {
+    "text": " couldn't"
+   }
+  },
+  {
+   "t": 3136,
+   "event": "token",
+   "data": {
+    "text": " find"
+   }
+  },
+  {
+   "t": 3136,
+   "event": "token",
+   "data": {
+    "text": " it"
+   }
+  },
+  {
+   "t": 3148,
+   "event": "token",
+   "data": {
+    "text": " in"
+   }
+  },
+  {
+   "t": 3148,
+   "event": "token",
+   "data": {
+    "text": " the"
+   }
+  },
+  {
+   "t": 3192,
+   "event": "token",
+   "data": {
+    "text": " docs"
+   }
+  },
+  {
+   "t": 3193,
+   "event": "token",
+   "data": {
+    "text": "."
+   }
+  },
+  {
+   "t": 3206,
+   "event": "citations",
+   "data": {
+    "cited": [],
+    "ms": 643.1
+   }
+  },
+  {
+   "t": 3206,
+   "event": "done",
+   "data": {
+    "ms": 1006.7
+   }
+  }
+ ]
+}

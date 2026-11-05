@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+/*
+ * Dark-first tokens in the spirit of t3code: pure black canvas, hairline white
+ * borders, dense small type. Each pipeline stage has its own colour, used the same
+ * way everywhere (timeline, step icons, fusion table).
+ */
+:root {
+  color-scheme: dark;
+  --background: #000;
+  --surface: oklch(0.16 0 0);
+  --surface-2: oklch(0.2 0 0);
+  --foreground: oklch(0.96 0 0);
+  --muted: oklch(0.66 0 0);
+  --faint: oklch(0.48 0 0);
+  --border: rgb(255 255 255 / 0.08);
+  --border-strong: rgb(255 255 255 / 0.14);
+  --input: rgb(255 255 255 / 0.11);
+  --message: rgb(255 255 255 / 0.07);
+  --primary: oklch(0.64 0.15 245);
+  --vector: oklch(0.72 0.14 250);
+  --keyword: oklch(0.82 0.13 80);
+  --fusion: oklch(0.77 0.14 165);
+  --answer: oklch(0.74 0.14 300);
+  --danger: oklch(0.7 0.18 25);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-input: var(--input);
+  --color-message: var(--message);
+  --color-primary: var(--primary);
+  --color-vector: var(--vector);
+  --color-keyword: var(--keyword);
+  --color-fusion: var(--fusion);
+  --color-answer: var(--answer);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255 255 255 / 0.12) transparent;
+}
+
+/* Running step label: a light sweep across the text, as t3code does for live tools. */
+.shine {
+  background: linear-gradient(90deg, var(--muted) 30%, var(--foreground) 50%, var(--muted) 70%);
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shine 2.2s linear infinite;
+}
+@keyframes shine {
+  from { background-position: 100% 0; }
+  to { background-position: -100% 0; }
+}
+
+.fade-in {
+  animation: fade-in 280ms ease-out both;
+}
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(2px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Rendered answer markdown. */
+.md > * + * { margin-top: 0.75em; }
+.md ul { list-style: disc; padding-left: 1.25em; }
+.md ol { list-style: decimal; padding-left: 1.25em; }
+.md li + li { margin-top: 0.25em; }
+.md li > * + * { margin-top: 0.4em; }
+.md strong, .md h1, .md h2, .md h3, .md h4 { font-weight: 600; }
+.md :not(pre) > code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  background: rgb(255 255 255 / 0.08);
+  border-radius: 0.25rem;
+  padding: 0.05em 0.3em;
+}
+.md a.ext { color: var(--primary); text-decoration: underline; text-underline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .shine { animation: none; background: none; color: var(--foreground); }
+  .fade-in { animation: none; }
+}

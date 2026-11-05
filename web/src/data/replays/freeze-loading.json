@@ -1,0 +1,1198 @@
+{
+ "id": "freeze-loading",
+ "question": "My game freezes for a few seconds when I switch to a big level. How do I stop that?",
+ "mode": "hybrid",
+ "events": [
+  {
+   "t": 2475,
+   "event": "vector",
+   "data": {
+    "ms": 274.1,
+    "hits": [
+     {
+      "id": "tutorials/performance/general_optimization.rst#1",
+      "rank": 1,
+      "score": 0.454997748,
+      "title": "General optimization tips",
+      "heading_path": "General optimization tips > Introduction",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/performance/general_optimization.html"
+     },
+     {
+      "id": "tutorials/best_practices/logic_preferences.rst#5",
+      "rank": 2,
+      "score": 0.451346219,
+      "title": "Logic preferences",
+      "heading_path": "Logic preferences > Large levels: static vs. dynamic",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/best_practices/logic_preferences.html"
+     },
+     {
+      "id": "tutorials/scripting/debug/the_profiler.rst#4",
+      "rank": 3,
+      "score": 0.438217044,
+      "title": "The Profiler",
+      "heading_path": "The Profiler > Debugging slow code with the profiler",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/debug/the_profiler.html"
+     },
+     {
+      "id": "tutorials/troubleshooting.rst#6",
+      "rank": 4,
+      "score": 0.435912848,
+      "title": "Troubleshooting",
+      "heading_path": "Troubleshooting > The editor/project freezes or displays glitched visuals after resuming the PC from suspend",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/troubleshooting.html"
+     },
+     {
+      "id": "tutorials/editor/game_embedding.rst#2",
+      "rank": 5,
+      "score": 0.429178715,
+      "title": "Game embedding",
+      "heading_path": "Game embedding > Features",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/editor/game_embedding.html"
+     },
+     {
+      "id": "tutorials/rendering/jitter_stutter.rst#2",
+      "rank": 6,
+      "score": 0.428639054,
+      "title": "Fixing jitter, stutter and input lag",
+      "heading_path": "Fixing jitter, stutter and input lag > Stutter",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/rendering/jitter_stutter.html"
+     },
+     {
+      "id": "tutorials/rendering/jitter_stutter.rst#1",
+      "rank": 7,
+      "score": 0.427916,
+      "title": "Fixing jitter, stutter and input lag",
+      "heading_path": "Fixing jitter, stutter and input lag",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/rendering/jitter_stutter.html"
+     },
+     {
+      "id": "tutorials/performance/pipeline_compilations.rst#5",
+      "rank": 8,
+      "score": 0.426583946,
+      "title": "Reducing stutter from shader (pipeline) compilations",
+      "heading_path": "Reducing stutter from shader (pipeline) compilations > Pipeline precompilation features",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/performance/pipeline_compilations.html"
+     },
+     {
+      "id": "tutorials/performance/general_optimization.rst#10",
+      "rank": 9,
+      "score": 0.4258672,
+      "title": "General optimization tips",
+      "heading_path": "General optimization tips > Principles > Optimizing bottlenecks",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/performance/general_optimization.html"
+     },
+     {
+      "id": "tutorials/troubleshooting.rst#1",
+      "rank": 10,
+      "score": 0.423998356,
+      "title": "Troubleshooting",
+      "heading_path": "Troubleshooting > The editor stutters and flickers on my variable refresh rate monitor (G-Sync/FreeSync)",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/troubleshooting.html"
+     },
+     {
+      "id": "tutorials/troubleshooting.rst#0",
+      "rank": 11,
+      "score": 0.423485428,
+      "title": "Troubleshooting",
+      "heading_path": "Troubleshooting",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/troubleshooting.html"
+     },
+     {
+      "id": "tutorials/performance/optimizing_3d_performance.rst#6",
+      "rank": 12,
+      "score": 0.41551736,
+      "title": "Optimizing 3D performance",
+      "heading_path": "Optimizing 3D performance > Large worlds",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/performance/optimizing_3d_performance.html"
+     },
+     {
+      "id": "tutorials/3d/occlusion_culling.rst#6",
+      "rank": 13,
+      "score": 0.411949396,
+      "title": "Occlusion culling",
+      "heading_path": "Occlusion culling > Performance considerations",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/3d/occlusion_culling.html"
+     },
+     {
+      "id": "tutorials/physics/troubleshooting_physics_issues.rst#8",
+      "rank": 14,
+      "score": 0.40980944,
+      "title": "Troubleshooting physics issues",
+      "heading_path": "Troubleshooting physics issues",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/physics/troubleshooting_physics_issues.html"
+     },
+     {
+      "id": "tutorials/rendering/jitter_stutter.rst#6",
+      "rank": 15,
+      "score": 0.408955157,
+      "title": "Fixing jitter, stutter and input lag",
+      "heading_path": "Fixing jitter, stutter and input lag > Input lag > Project configuration",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/rendering/jitter_stutter.html"
+     },
+     {
+      "id": "tutorials/physics/troubleshooting_physics_issues.rst#7",
+      "rank": 16,
+      "score": 0.408805311,
+      "title": "Troubleshooting physics issues",
+      "heading_path": "Troubleshooting physics issues > Framerate drops when an object touches another object",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/physics/troubleshooting_physics_issues.html"
+     },
+     {
+      "id": "tutorials/scripting/pausing_games.rst#0",
+      "rank": 17,
+      "score": 0.407648623,
+      "title": "Pausing games and process mode",
+      "heading_path": "Pausing games and process mode",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/pausing_games.html"
+     },
+     {
+      "id": "tutorials/physics/interpolation/physics_interpolation_quick_start_guide.rst#0",
+      "rank": 18,
+      "score": 0.404477358,
+      "title": "Quick start guide",
+      "heading_path": "Quick start guide",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/physics/interpolation/physics_interpolation_quick_start_guide.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/04.mob_scene.rst#1",
+      "rank": 19,
+      "score": 0.398671567,
+      "title": "Designing the mob scene",
+      "heading_path": "Designing the mob scene > Removing monsters off-screen",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/04.mob_scene.html"
+     },
+     {
+      "id": "tutorials/rendering/jitter_stutter.rst#3",
+      "rank": 20,
+      "score": 0.397081554,
+      "title": "Fixing jitter, stutter and input lag",
+      "heading_path": "Fixing jitter, stutter and input lag > Stutter > Windows",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/rendering/jitter_stutter.html"
+     }
+    ]
+   }
+  },
+  {
+   "t": 2486,
+   "event": "keyword",
+   "data": {
+    "ms": 11.0,
+    "hits": [
+     {
+      "id": "about/faq.rst#21",
+      "rank": 1,
+      "score": 23.092026303201862,
+      "title": "Frequently asked questions",
+      "heading_path": "Frequently asked questions",
+      "url": "https://docs.godotengine.org/en/stable/about/faq.html"
+     },
+     {
+      "id": "tutorials/scripting/scene_tree.rst#6",
+      "rank": 2,
+      "score": 21.53431648059593,
+      "title": "Using SceneTree",
+      "heading_path": "Using SceneTree > Changing current scene",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/scene_tree.html"
+     },
+     {
+      "id": "tutorials/scripting/scene_tree.rst#1",
+      "rank": 3,
+      "score": 21.173785337525192,
+      "title": "Using SceneTree",
+      "heading_path": "Using SceneTree > SceneTree",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/scene_tree.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/07.killing_player.rst#3",
+      "rank": 4,
+      "score": 19.291402225891066,
+      "title": "Killing the player",
+      "heading_path": "Killing the player > Ending the game",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/07.killing_player.html"
+     },
+     {
+      "id": "tutorials/scripting/gdscript/gdscript_advanced.rst#9",
+      "rank": 5,
+      "score": 18.66243449870275,
+      "title": "GDScript: An introduction to dynamic languages",
+      "heading_path": "GDScript: An introduction to dynamic languages > Duck typing",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_advanced.html"
+     },
+     {
+      "id": "tutorials/physics/using_jolt_physics.rst#9",
+      "rank": 6,
+      "score": 18.008776041128268,
+      "title": "Using Jolt Physics",
+      "heading_path": "Using Jolt Physics",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/physics/using_jolt_physics.html"
+     },
+     {
+      "id": "tutorials/xr/setting_up_xr.rst#5",
+      "rank": 7,
+      "score": 17.95279401684485,
+      "title": "Setting up XR",
+      "heading_path": "Setting up XR > Setting up the XR scene",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/xr/setting_up_xr.html"
+     },
+     {
+      "id": "tutorials/2d/2d_movement.rst#0",
+      "rank": 8,
+      "score": 17.931425482759703,
+      "title": "2D movement overview",
+      "heading_path": "2D movement overview",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/2d/2d_movement.html"
+     },
+     {
+      "id": "tutorials/rendering/jitter_stutter.rst#1",
+      "rank": 9,
+      "score": 17.625678841377056,
+      "title": "Fixing jitter, stutter and input lag",
+      "heading_path": "Fixing jitter, stutter and input lag",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/rendering/jitter_stutter.html"
+     },
+     {
+      "id": "tutorials/scripting/cpp/core_types.rst#2",
+      "rank": 10,
+      "score": 17.40887416119139,
+      "title": "Core functions and types",
+      "heading_path": "Core functions and types > Core types > Packed arrays > Data access",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/cpp/core_types.html"
+     },
+     {
+      "id": "tutorials/physics/collision_shapes_3d.rst#3",
+      "rank": 11,
+      "score": 17.234172697896913,
+      "title": "Collision shapes (3D)",
+      "heading_path": "Collision shapes (3D) > Concave or trimesh collision shapes",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/physics/collision_shapes_3d.html"
+     },
+     {
+      "id": "tutorials/shaders/shader_reference/shading_language.rst#18",
+      "rank": 12,
+      "score": 17.127206902623804,
+      "title": "Shading language",
+      "heading_path": "Shading language > Flow control",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/shaders/shader_reference/shading_language.html"
+     },
+     {
+      "id": "classes/class_xrserver.rst#3",
+      "rank": 13,
+      "score": 17.027148619858224,
+      "title": "XRServer",
+      "heading_path": "XRServer > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_xrserver.html"
+     },
+     {
+      "id": "tutorials/3d/physical_light_and_camera_units.rst#5",
+      "rank": 14,
+      "score": 16.887085908742925,
+      "title": "Physical light and camera units",
+      "heading_path": "Physical light and camera units > Setting up physical light units > Configure the camera",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/3d/physical_light_and_camera_units.html"
+     },
+     {
+      "id": "tutorials/best_practices/godot_notifications.rst#7",
+      "rank": 15,
+      "score": 16.854405553016402,
+      "title": "Godot notifications",
+      "heading_path": "Godot notifications > _ready vs. _enter_tree vs. NOTIFICATION_PARENTED",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/best_practices/godot_notifications.html"
+     },
+     {
+      "id": "about/faq.rst#8",
+      "rank": 16,
+      "score": 16.715970000946957,
+      "title": "Frequently asked questions",
+      "heading_path": "Frequently asked questions > How do I install the Godot editor on my system (for desktop integration)?",
+      "url": "https://docs.godotengine.org/en/stable/about/faq.html"
+     },
+     {
+      "id": "tutorials/physics/ray-casting.rst#0",
+      "rank": 17,
+      "score": 16.58883909601519,
+      "title": "Ray-casting",
+      "heading_path": "Ray-casting > Introduction",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/physics/ray-casting.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/04.mob_scene.rst#0",
+      "rank": 18,
+      "score": 16.497680544424426,
+      "title": "Designing the mob scene",
+      "heading_path": "Designing the mob scene",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/04.mob_scene.html"
+     },
+     {
+      "id": "tutorials/networking/high_level_multiplayer.rst#1",
+      "rank": 19,
+      "score": 16.47979598556303,
+      "title": "High-level multiplayer",
+      "heading_path": "High-level multiplayer > High-level vs low-level API",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/networking/high_level_multiplayer.html"
+     },
+     {
+      "id": "classes/class_tween.rst#9",
+      "rank": 20,
+      "score": 16.354470447254872,
+      "title": "Tween",
+      "heading_path": "Tween > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_tween.html"
+     }
+    ]
+   }
+  },
+  {
+   "t": 2487,
+   "event": "fusion",
+   "data": {
+    "ms": 0.1,
+    "hits": [
+     {
+      "id": "tutorials/rendering/jitter_stutter.rst#1",
+      "rank": 1,
+      "score": 0.029418126757516764,
+      "title": "Fixing jitter, stutter and input lag",
+      "heading_path": "Fixing jitter, stutter and input lag",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/rendering/jitter_stutter.html"
+     },
+     {
+      "id": "tutorials/performance/general_optimization.rst#1",
+      "rank": 2,
+      "score": 0.01639344262295082,
+      "title": "General optimization tips",
+      "heading_path": "General optimization tips > Introduction",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/performance/general_optimization.html"
+     },
+     {
+      "id": "about/faq.rst#21",
+      "rank": 3,
+      "score": 0.01639344262295082,
+      "title": "Frequently asked questions",
+      "heading_path": "Frequently asked questions",
+      "url": "https://docs.godotengine.org/en/stable/about/faq.html"
+     },
+     {
+      "id": "tutorials/best_practices/logic_preferences.rst#5",
+      "rank": 4,
+      "score": 0.016129032258064516,
+      "title": "Logic preferences",
+      "heading_path": "Logic preferences > Large levels: static vs. dynamic",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/best_practices/logic_preferences.html"
+     },
+     {
+      "id": "tutorials/scripting/scene_tree.rst#6",
+      "rank": 5,
+      "score": 0.016129032258064516,
+      "title": "Using SceneTree",
+      "heading_path": "Using SceneTree > Changing current scene",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/scene_tree.html"
+     },
+     {
+      "id": "tutorials/scripting/debug/the_profiler.rst#4",
+      "rank": 6,
+      "score": 0.015873015873015872,
+      "title": "The Profiler",
+      "heading_path": "The Profiler > Debugging slow code with the profiler",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/debug/the_profiler.html"
+     },
+     {
+      "id": "tutorials/scripting/scene_tree.rst#1",
+      "rank": 7,
+      "score": 0.015873015873015872,
+      "title": "Using SceneTree",
+      "heading_path": "Using SceneTree > SceneTree",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/scene_tree.html"
+     },
+     {
+      "id": "tutorials/troubleshooting.rst#6",
+      "rank": 8,
+      "score": 0.015625,
+      "title": "Troubleshooting",
+      "heading_path": "Troubleshooting > The editor/project freezes or displays glitched visuals after resuming the PC from suspend",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/troubleshooting.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/07.killing_player.rst#3",
+      "rank": 9,
+      "score": 0.015625,
+      "title": "Killing the player",
+      "heading_path": "Killing the player > Ending the game",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/07.killing_player.html"
+     },
+     {
+      "id": "tutorials/editor/game_embedding.rst#2",
+      "rank": 10,
+      "score": 0.015384615384615385,
+      "title": "Game embedding",
+      "heading_path": "Game embedding > Features",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/editor/game_embedding.html"
+     },
+     {
+      "id": "tutorials/scripting/gdscript/gdscript_advanced.rst#9",
+      "rank": 11,
+      "score": 0.015384615384615385,
+      "title": "GDScript: An introduction to dynamic languages",
+      "heading_path": "GDScript: An introduction to dynamic languages > Duck typing",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_advanced.html"
+     },
+     {
+      "id": "tutorials/rendering/jitter_stutter.rst#2",
+      "rank": 12,
+      "score": 0.015151515151515152,
+      "title": "Fixing jitter, stutter and input lag",
+      "heading_path": "Fixing jitter, stutter and input lag > Stutter",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/rendering/jitter_stutter.html"
+     },
+     {
+      "id": "tutorials/physics/using_jolt_physics.rst#9",
+      "rank": 13,
+      "score": 0.015151515151515152,
+      "title": "Using Jolt Physics",
+      "heading_path": "Using Jolt Physics",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/physics/using_jolt_physics.html"
+     },
+     {
+      "id": "tutorials/xr/setting_up_xr.rst#5",
+      "rank": 14,
+      "score": 0.014925373134328358,
+      "title": "Setting up XR",
+      "heading_path": "Setting up XR > Setting up the XR scene",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/xr/setting_up_xr.html"
+     },
+     {
+      "id": "tutorials/performance/pipeline_compilations.rst#5",
+      "rank": 15,
+      "score": 0.014705882352941176,
+      "title": "Reducing stutter from shader (pipeline) compilations",
+      "heading_path": "Reducing stutter from shader (pipeline) compilations > Pipeline precompilation features",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/performance/pipeline_compilations.html"
+     },
+     {
+      "id": "tutorials/2d/2d_movement.rst#0",
+      "rank": 16,
+      "score": 0.014705882352941176,
+      "title": "2D movement overview",
+      "heading_path": "2D movement overview",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/2d/2d_movement.html"
+     },
+     {
+      "id": "tutorials/performance/general_optimization.rst#10",
+      "rank": 17,
+      "score": 0.014492753623188406,
+      "title": "General optimization tips",
+      "heading_path": "General optimization tips > Principles > Optimizing bottlenecks",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/performance/general_optimization.html"
+     },
+     {
+      "id": "tutorials/troubleshooting.rst#1",
+      "rank": 18,
+      "score": 0.014285714285714285,
+      "title": "Troubleshooting",
+      "heading_path": "Troubleshooting > The editor stutters and flickers on my variable refresh rate monitor (G-Sync/FreeSync)",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/troubleshooting.html"
+     },
+     {
+      "id": "tutorials/scripting/cpp/core_types.rst#2",
+      "rank": 19,
+      "score": 0.014285714285714285,
+      "title": "Core functions and types",
+      "heading_path": "Core functions and types > Core types > Packed arrays > Data access",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/cpp/core_types.html"
+     },
+     {
+      "id": "tutorials/troubleshooting.rst#0",
+      "rank": 20,
+      "score": 0.014084507042253521,
+      "title": "Troubleshooting",
+      "heading_path": "Troubleshooting",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/troubleshooting.html"
+     },
+     {
+      "id": "tutorials/physics/collision_shapes_3d.rst#3",
+      "rank": 21,
+      "score": 0.014084507042253521,
+      "title": "Collision shapes (3D)",
+      "heading_path": "Collision shapes (3D) > Concave or trimesh collision shapes",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/physics/collision_shapes_3d.html"
+     },
+     {
+      "id": "tutorials/performance/optimizing_3d_performance.rst#6",
+      "rank": 22,
+      "score": 0.013888888888888888,
+      "title": "Optimizing 3D performance",
+      "heading_path": "Optimizing 3D performance > Large worlds",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/performance/optimizing_3d_performance.html"
+     },
+     {
+      "id": "tutorials/shaders/shader_reference/shading_language.rst#18",
+      "rank": 23,
+      "score": 0.013888888888888888,
+      "title": "Shading language",
+      "heading_path": "Shading language > Flow control",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/shaders/shader_reference/shading_language.html"
+     },
+     {
+      "id": "tutorials/3d/occlusion_culling.rst#6",
+      "rank": 24,
+      "score": 0.0136986301369863,
+      "title": "Occlusion culling",
+      "heading_path": "Occlusion culling > Performance considerations",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/3d/occlusion_culling.html"
+     },
+     {
+      "id": "classes/class_xrserver.rst#3",
+      "rank": 25,
+      "score": 0.0136986301369863,
+      "title": "XRServer",
+      "heading_path": "XRServer > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_xrserver.html"
+     },
+     {
+      "id": "tutorials/physics/troubleshooting_physics_issues.rst#8",
+      "rank": 26,
+      "score": 0.013513513513513514,
+      "title": "Troubleshooting physics issues",
+      "heading_path": "Troubleshooting physics issues",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/physics/troubleshooting_physics_issues.html"
+     },
+     {
+      "id": "tutorials/3d/physical_light_and_camera_units.rst#5",
+      "rank": 27,
+      "score": 0.013513513513513514,
+      "title": "Physical light and camera units",
+      "heading_path": "Physical light and camera units > Setting up physical light units > Configure the camera",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/3d/physical_light_and_camera_units.html"
+     },
+     {
+      "id": "tutorials/rendering/jitter_stutter.rst#6",
+      "rank": 28,
+      "score": 0.013333333333333334,
+      "title": "Fixing jitter, stutter and input lag",
+      "heading_path": "Fixing jitter, stutter and input lag > Input lag > Project configuration",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/rendering/jitter_stutter.html"
+     },
+     {
+      "id": "tutorials/best_practices/godot_notifications.rst#7",
+      "rank": 29,
+      "score": 0.013333333333333334,
+      "title": "Godot notifications",
+      "heading_path": "Godot notifications > _ready vs. _enter_tree vs. NOTIFICATION_PARENTED",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/best_practices/godot_notifications.html"
+     },
+     {
+      "id": "tutorials/physics/troubleshooting_physics_issues.rst#7",
+      "rank": 30,
+      "score": 0.013157894736842105,
+      "title": "Troubleshooting physics issues",
+      "heading_path": "Troubleshooting physics issues > Framerate drops when an object touches another object",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/physics/troubleshooting_physics_issues.html"
+     },
+     {
+      "id": "about/faq.rst#8",
+      "rank": 31,
+      "score": 0.013157894736842105,
+      "title": "Frequently asked questions",
+      "heading_path": "Frequently asked questions > How do I install the Godot editor on my system (for desktop integration)?",
+      "url": "https://docs.godotengine.org/en/stable/about/faq.html"
+     },
+     {
+      "id": "tutorials/scripting/pausing_games.rst#0",
+      "rank": 32,
+      "score": 0.012987012987012988,
+      "title": "Pausing games and process mode",
+      "heading_path": "Pausing games and process mode",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/pausing_games.html"
+     },
+     {
+      "id": "tutorials/physics/ray-casting.rst#0",
+      "rank": 33,
+      "score": 0.012987012987012988,
+      "title": "Ray-casting",
+      "heading_path": "Ray-casting > Introduction",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/physics/ray-casting.html"
+     },
+     {
+      "id": "tutorials/physics/interpolation/physics_interpolation_quick_start_guide.rst#0",
+      "rank": 34,
+      "score": 0.01282051282051282,
+      "title": "Quick start guide",
+      "heading_path": "Quick start guide",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/physics/interpolation/physics_interpolation_quick_start_guide.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/04.mob_scene.rst#0",
+      "rank": 35,
+      "score": 0.01282051282051282,
+      "title": "Designing the mob scene",
+      "heading_path": "Designing the mob scene",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/04.mob_scene.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/04.mob_scene.rst#1",
+      "rank": 36,
+      "score": 0.012658227848101266,
+      "title": "Designing the mob scene",
+      "heading_path": "Designing the mob scene > Removing monsters off-screen",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/04.mob_scene.html"
+     },
+     {
+      "id": "tutorials/networking/high_level_multiplayer.rst#1",
+      "rank": 37,
+      "score": 0.012658227848101266,
+      "title": "High-level multiplayer",
+      "heading_path": "High-level multiplayer > High-level vs low-level API",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/networking/high_level_multiplayer.html"
+     },
+     {
+      "id": "tutorials/rendering/jitter_stutter.rst#3",
+      "rank": 38,
+      "score": 0.0125,
+      "title": "Fixing jitter, stutter and input lag",
+      "heading_path": "Fixing jitter, stutter and input lag > Stutter > Windows",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/rendering/jitter_stutter.html"
+     },
+     {
+      "id": "classes/class_tween.rst#9",
+      "rank": 39,
+      "score": 0.0125,
+      "title": "Tween",
+      "heading_path": "Tween > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_tween.html"
+     }
+    ]
+   }
+  },
+  {
+   "t": 2487,
+   "event": "context",
+   "data": {
+    "chunks": [
+     {
+      "id": "tutorials/rendering/jitter_stutter.rst#1",
+      "path": "tutorials/rendering/jitter_stutter.rst",
+      "text": "Fixing jitter, stutter and input lag\n\nDistinguishing between jitter and stutter\nA game running at a normal framerate without exhibiting any effect will appear smooth:\n\nA game exhibiting jitter will shake constantly in a very subtle way:\n\nFinally, a game exhibiting stutter will appear smooth, but appear to stop or\nroll back a frame every few seconds:\n\nJitter\nThere can be many causes of jitter. The most typical one happens when the game\nphysics frequency (usually 60 Hz) runs at a different resolution than the\nmonitor refresh rate. Check whether your monitor refresh rate is different from\n60 Hz.\n\nSometimes, only some objects appear to jitter (character or background). This\nhappens when they are processed in different time sources (one is processed in\nthe physics step while another is processed in the idle step).\n\nThis cause of jitter can be alleviated by enabling\nphysics interpolation\nin the Project Settings. Physics interpolation will smooth out physics updates by\ninterpolating the transforms of physics objects between physics frames.\nThis way, the visual representation of physics objects will always look\nsmooth no matter the framerate and physics tick rate.\n\nEnabling physics interpolation has some caveats you should be aware of.\nFor example, care should be taken when teleporting objects so that they\ndon't visibly interpolate between the old position and new position\nwhen it's not intended. See the\nphysics interpolation documentation for details.\n\nNote: Enabling physics interpolation will increase input lag for behavior\nthat depends on the physics tick, such as player movement.\nIn most games, this is generally preferable to jitter, but consider this carefully\nfor games that operate on a fixed framerate (like fighting or rhythm games).\nThis increase in input lag can be compensated by increasing the physics\ntick rate as described in the jitter stutter input lag section.",
+      "heading_path": "Fixing jitter, stutter and input lag",
+      "title": "Fixing jitter, stutter and input lag",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/rendering/jitter_stutter.html",
+      "score": 0.029418126757516764
+     },
+     {
+      "id": "tutorials/performance/general_optimization.rst#1",
+      "path": "tutorials/performance/general_optimization.rst",
+      "text": "General optimization tips > Introduction\n\nSmoke and mirrors\nPart of working smarter is recognizing that, in games, we can often get the\nplayer to believe they're in a world that is far more complex, interactive, and\ngraphically exciting than it really is. A good programmer is a magician, and\nshould strive to learn the tricks of the trade while trying to invent new ones.\n\nThe nature of slowness\nTo the outside observer, performance problems are often lumped together.\nBut in reality, there are several different kinds of performance problems:\n\n- A slow process that occurs every frame, leading to a continuously low frame\n  rate.\n- An intermittent process that causes \"spikes\" of slowness, leading to\n  stalls.\n- A slow process that occurs outside of normal gameplay, for instance,\n  when loading a level.\n\nEach of these are annoying to the user, but in different ways.",
+      "heading_path": "General optimization tips > Introduction",
+      "title": "General optimization tips",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/performance/general_optimization.html",
+      "score": 0.01639344262295082
+     },
+     {
+      "id": "about/faq.rst#21",
+      "path": "about/faq.rst",
+      "text": "Frequently asked questions\n\nWhy does Godot not force users to implement DOD (Data-Oriented Design)?\nWhile Godot internally attempts to use cache coherency as much as possible,\nwe believe users don't need to be forced to use DOD practices.\n\nDOD is mostly a cache coherency optimization that can only provide\nsignificant performance improvements when dealing with dozens of\nthousands of objects which are processed every frame with little\nmodification. That is, if you are moving a few hundred sprites or enemies\nper frame, DOD won't result in a meaningful improvement in performance. In\nsuch a case, you should consider a different approach to optimization.\n\nThe vast majority of games do not need this and Godot provides handy helpers\nto do the job for most cases when you do.\n\nIf a game needs to process such a large amount of objects, our recommendation\nis to use C++ and GDExtensions for performance-heavy tasks and GDScript (or C#)\nfor the rest of the game.\n\nHow can I support Godot development or contribute?\nSee How to contribute.\n\nWho is working on Godot? How can I contact you?\nSee the corresponding page on the Godot website.",
+      "heading_path": "Frequently asked questions",
+      "title": "Frequently asked questions",
+      "url": "https://docs.godotengine.org/en/stable/about/faq.html",
+      "score": 0.01639344262295082
+     },
+     {
+      "id": "tutorials/best_practices/logic_preferences.rst#5",
+      "path": "tutorials/best_practices/logic_preferences.rst",
+      "text": "Logic preferences > Large levels: static vs. dynamic\n\nIf one is creating a large level, which circumstances are most appropriate?\nIs it better to create the level as one static space? Or is it better to load\nthe level in pieces and shift the world's content as needed?\n\nWell, the simple answer is, \"when the performance requires it.\" The\ndilemma associated with the two options is one of the age-old programming\nchoices: does one optimize memory over speed, or vice versa?\n\nThe naive answer is to use a static level that loads everything at once.\nBut, depending on the project, this could consume a large amount of\nmemory. Wasting users' RAM leads to programs running slow or outright\ncrashing from everything else the computer tries to do at the same time.\n\nNo matter what, one should break larger scenes into smaller ones (to aid\nin reusability of assets). Developers can then design a node that manages the\ncreation/loading and deletion/unloading of resources and nodes in real-time.\nGames with large and varied environments or procedurally generated\nelements often implement these strategies to avoid wasting memory.\n\nOn the flip side, coding a dynamic system is more complex; it uses more\nprogrammed logic which results in opportunities for errors and bugs. If one\nisn't careful, they can develop a system that bloats the technical debt of\nthe application.\n\nAs such, the best options would be...\n\n1. Use static levels for smaller games.\n\n2. If one has the time/resources on a medium/large game, create a library or\n   plugin that can manage nodes and resources with code. If refined\n   over time so as to improve usability and stability, then it could evolve\n   into a reliable tool across projects.\n\n3. Use dynamic logic for a medium/large game because one has the coding\n   skills, but not the time or resources to refine the code (game's\n   gotta get done). Could potentially refactor later to outsource the code\n   into a plugin.\n\nFor an example of the various ways one can swap scenes around at runtime,\nplease see the \"Change scenes manually\"\ndocumentation.",
+      "heading_path": "Logic preferences > Large levels: static vs. dynamic",
+      "title": "Logic preferences",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/best_practices/logic_preferences.html",
+      "score": 0.016129032258064516
+     },
+     {
+      "id": "tutorials/scripting/scene_tree.rst#6",
+      "path": "tutorials/scripting/scene_tree.rst",
+      "text": "Using SceneTree > Changing current scene\n\nAfter a scene is loaded, you may want to change this scene for\nanother one. One way to do this is to use the\nSceneTree.change_scene_to_file()\nfunction:\n\n```gdscript\nfunc _my_level_was_completed():\n    get_tree().change_scene_to_file(\"res://levels/level2.tscn\")\n```\n\n```csharp\npublic void _MyLevelWasCompleted()\n{\n    GetTree().ChangeSceneToFile(\"res://levels/level2.tscn\");\n}\n```\n\nRather than using file paths, one can also use ready-made\nPackedScene resources using the equivalent\nfunction\nSceneTree.change_scene_to_packed(PackedScene scene):\n\n```gdscript\nvar next_scene = preload(\"res://levels/level2.tscn\")\n\nfunc _my_level_was_completed():\n    get_tree().change_scene_to_packed(next_scene)\n```\n\n```csharp\npublic void _MyLevelWasCompleted()\n{\n    var nextScene = (PackedScene)ResourceLoader.Load(\"res://levels/level2.tscn\");\n    GetTree().ChangeSceneToPacked(nextScene);\n}\n```\n\nThese are quick and useful ways to switch scenes but have the drawback\nthat the game will stall until the new scene is loaded and running. At\nsome point in the development of your game, it may be preferable to create proper loading\nscreens with progress bar, animated indicators or threaded (background)\nloading. This must be done manually using singletons autoload\nand background loading.",
+      "heading_path": "Using SceneTree > Changing current scene",
+      "title": "Using SceneTree",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/scene_tree.html",
+      "score": 0.016129032258064516
+     }
+    ]
+   }
+  },
+  {
+   "t": 3721,
+   "event": "token",
+   "data": {
+    "text": "The"
+   }
+  },
+  {
+   "t": 3721,
+   "event": "token",
+   "data": {
+    "text": " game"
+   }
+  },
+  {
+   "t": 3735,
+   "event": "token",
+   "data": {
+    "text": " freezing"
+   }
+  },
+  {
+   "t": 3736,
+   "event": "token",
+   "data": {
+    "text": " for"
+   }
+  },
+  {
+   "t": 3750,
+   "event": "token",
+   "data": {
+    "text": " a"
+   }
+  },
+  {
+   "t": 3750,
+   "event": "token",
+   "data": {
+    "text": " few"
+   }
+  },
+  {
+   "t": 3921,
+   "event": "token",
+   "data": {
+    "text": " seconds"
+   }
+  },
+  {
+   "t": 3921,
+   "event": "token",
+   "data": {
+    "text": " when"
+   }
+  },
+  {
+   "t": 3960,
+   "event": "token",
+   "data": {
+    "text": " switching"
+   }
+  },
+  {
+   "t": 3960,
+   "event": "token",
+   "data": {
+    "text": " to"
+   }
+  },
+  {
+   "t": 3963,
+   "event": "token",
+   "data": {
+    "text": " a"
+   }
+  },
+  {
+   "t": 3964,
+   "event": "token",
+   "data": {
+    "text": " big"
+   }
+  },
+  {
+   "t": 3981,
+   "event": "token",
+   "data": {
+    "text": " level"
+   }
+  },
+  {
+   "t": 3981,
+   "event": "token",
+   "data": {
+    "text": " is"
+   }
+  },
+  {
+   "t": 3985,
+   "event": "token",
+   "data": {
+    "text": " likely"
+   }
+  },
+  {
+   "t": 3986,
+   "event": "token",
+   "data": {
+    "text": " due"
+   }
+  },
+  {
+   "t": 3988,
+   "event": "token",
+   "data": {
+    "text": " to"
+   }
+  },
+  {
+   "t": 3989,
+   "event": "token",
+   "data": {
+    "text": " the"
+   }
+  },
+  {
+   "t": 3993,
+   "event": "token",
+   "data": {
+    "text": " time"
+   }
+  },
+  {
+   "t": 3993,
+   "event": "token",
+   "data": {
+    "text": " it"
+   }
+  },
+  {
+   "t": 3999,
+   "event": "token",
+   "data": {
+    "text": " takes"
+   }
+  },
+  {
+   "t": 4000,
+   "event": "token",
+   "data": {
+    "text": " to"
+   }
+  },
+  {
+   "t": 4004,
+   "event": "token",
+   "data": {
+    "text": " load"
+   }
+  },
+  {
+   "t": 4005,
+   "event": "token",
+   "data": {
+    "text": " the"
+   }
+  },
+  {
+   "t": 4007,
+   "event": "token",
+   "data": {
+    "text": " new"
+   }
+  },
+  {
+   "t": 4008,
+   "event": "token",
+   "data": {
+    "text": " scene"
+   }
+  },
+  {
+   "t": 4010,
+   "event": "token",
+   "data": {
+    "text": "."
+   }
+  },
+  {
+   "t": 4011,
+   "event": "token",
+   "data": {
+    "text": " To"
+   }
+  },
+  {
+   "t": 4020,
+   "event": "token",
+   "data": {
+    "text": " prevent"
+   }
+  },
+  {
+   "t": 4021,
+   "event": "token",
+   "data": {
+    "text": " this"
+   }
+  },
+  {
+   "t": 4025,
+   "event": "token",
+   "data": {
+    "text": ","
+   }
+  },
+  {
+   "t": 4026,
+   "event": "token",
+   "data": {
+    "text": " it"
+   }
+  },
+  {
+   "t": 4029,
+   "event": "token",
+   "data": {
+    "text": " is"
+   }
+  },
+  {
+   "t": 4030,
+   "event": "token",
+   "data": {
+    "text": " recommended"
+   }
+  },
+  {
+   "t": 4191,
+   "event": "token",
+   "data": {
+    "text": " to"
+   }
+  },
+  {
+   "t": 4191,
+   "event": "token",
+   "data": {
+    "text": " create"
+   }
+  },
+  {
+   "t": 4193,
+   "event": "token",
+   "data": {
+    "text": " proper"
+   }
+  },
+  {
+   "t": 4193,
+   "event": "token",
+   "data": {
+    "text": " loading"
+   }
+  },
+  {
+   "t": 4196,
+   "event": "token",
+   "data": {
+    "text": " screens"
+   }
+  },
+  {
+   "t": 4197,
+   "event": "token",
+   "data": {
+    "text": " with"
+   }
+  },
+  {
+   "t": 4231,
+   "event": "token",
+   "data": {
+    "text": " progress"
+   }
+  },
+  {
+   "t": 4231,
+   "event": "token",
+   "data": {
+    "text": " indicators"
+   }
+  },
+  {
+   "t": 4235,
+   "event": "token",
+   "data": {
+    "text": " or"
+   }
+  },
+  {
+   "t": 4235,
+   "event": "token",
+   "data": {
+    "text": " to"
+   }
+  },
+  {
+   "t": 4239,
+   "event": "token",
+   "data": {
+    "text": " implement"
+   }
+  },
+  {
+   "t": 4239,
+   "event": "token",
+   "data": {
+    "text": " threaded"
+   }
+  },
+  {
+   "t": 4244,
+   "event": "token",
+   "data": {
+    "text": " ("
+   }
+  },
+  {
+   "t": 4245,
+   "event": "token",
+   "data": {
+    "text": "background"
+   }
+  },
+  {
+   "t": 4250,
+   "event": "token",
+   "data": {
+    "text": ")"
+   }
+  },
+  {
+   "t": 4250,
+   "event": "token",
+   "data": {
+    "text": " loading"
+   }
+  },
+  {
+   "t": 4254,
+   "event": "token",
+   "data": {
+    "text": "."
+   }
+  },
+  {
+   "t": 4254,
+   "event": "token",
+   "data": {
+    "text": " This"
+   }
+  },
+  {
+   "t": 4259,
+   "event": "token",
+   "data": {
+    "text": " background"
+   }
+  },
+  {
+   "t": 4259,
+   "event": "token",
+   "data": {
+    "text": " loading"
+   }
+  },
+  {
+   "t": 4268,
+   "event": "token",
+   "data": {
+    "text": " must"
+   }
+  },
+  {
+   "t": 4268,
+   "event": "token",
+   "data": {
+    "text": " be"
+   }
+  },
+  {
+   "t": 4272,
+   "event": "token",
+   "data": {
+    "text": " done"
+   }
+  },
+  {
+   "t": 4272,
+   "event": "token",
+   "data": {
+    "text": " manually"
+   }
+  },
+  {
+   "t": 4276,
+   "event": "token",
+   "data": {
+    "text": " using"
+   }
+  },
+  {
+   "t": 4276,
+   "event": "token",
+   "data": {
+    "text": " single"
+   }
+  },
+  {
+   "t": 4279,
+   "event": "token",
+   "data": {
+    "text": "tons"
+   }
+  },
+  {
+   "t": 4279,
+   "event": "token",
+   "data": {
+    "text": " aut"
+   }
+  },
+  {
+   "t": 4282,
+   "event": "token",
+   "data": {
+    "text": "oload"
+   }
+  },
+  {
+   "t": 4282,
+   "event": "token",
+   "data": {
+    "text": " ["
+   }
+  },
+  {
+   "t": 4310,
+   "event": "token",
+   "data": {
+    "text": "5"
+   }
+  },
+  {
+   "t": 4310,
+   "event": "token",
+   "data": {
+    "text": "]."
+   }
+  },
+  {
+   "t": 4320,
+   "event": "citations",
+   "data": {
+    "cited": [
+     5
+    ],
+    "ms": 1832.4
+   }
+  },
+  {
+   "t": 4320,
+   "event": "done",
+   "data": {
+    "ms": 2119.9
+   }
+  }
+ ]
+}

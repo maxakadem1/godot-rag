@@ -1,0 +1,782 @@
+{
+ "id": "line-of-sight",
+ "question": "How can an enemy check if it can see the player without a wall in between?",
+ "mode": "hybrid",
+ "events": [
+  {
+   "t": 2816,
+   "event": "vector",
+   "data": {
+    "ms": 610.8,
+    "hits": [
+     {
+      "id": "tutorials/math/vector_math.rst#11",
+      "rank": 1,
+      "score": 0.488890231,
+      "title": "Vector math",
+      "heading_path": "Vector math > Dot product > Facing",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/math/vector_math.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/03.player_movement_code.rst#9",
+      "rank": 2,
+      "score": 0.41406098,
+      "title": "Moving the player with code",
+      "heading_path": "Moving the player with code > Testing our player's movement > Adding a camera",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/03.player_movement_code.html"
+     },
+     {
+      "id": "tutorials/xr/xr_room_scale.rst#12",
+      "rank": 3,
+      "score": 0.412605643,
+      "title": "Room scale in XR",
+      "heading_path": "Room scale in XR > When the player walks to somewhere they shouldn't",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/xr/xr_room_scale.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/07.killing_player.rst#0",
+      "rank": 4,
+      "score": 0.399762481,
+      "title": "Killing the player",
+      "heading_path": "Killing the player",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/07.killing_player.html"
+     },
+     {
+      "id": "tutorials/3d/occlusion_culling.rst#6",
+      "rank": 5,
+      "score": 0.389330298,
+      "title": "Occlusion culling",
+      "heading_path": "Occlusion culling > Performance considerations",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/3d/occlusion_culling.html"
+     },
+     {
+      "id": "tutorials/xr/xr_room_scale.rst#1",
+      "rank": 6,
+      "score": 0.379361808,
+      "title": "Room scale in XR",
+      "heading_path": "Room scale in XR",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/xr/xr_room_scale.html"
+     },
+     {
+      "id": "tutorials/2d/2d_parallax.rst#8",
+      "rank": 7,
+      "score": 0.3689062,
+      "title": "2D Parallax",
+      "heading_path": "2D Parallax",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/2d/2d_parallax.html"
+     },
+     {
+      "id": "tutorials/3d/occlusion_culling.rst#1",
+      "rank": 8,
+      "score": 0.365955651,
+      "title": "Occlusion culling",
+      "heading_path": "Occlusion culling > How occlusion culling works in Godot",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/3d/occlusion_culling.html"
+     },
+     {
+      "id": "tutorials/performance/optimizing_3d_performance.rst#0",
+      "rank": 9,
+      "score": 0.361232042,
+      "title": "Optimizing 3D performance",
+      "heading_path": "Optimizing 3D performance > Culling",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/performance/optimizing_3d_performance.html"
+     },
+     {
+      "id": "tutorials/physics/using_character_body_2d.rst#9",
+      "rank": 10,
+      "score": 0.354245543,
+      "title": "Using CharacterBody2D/3D",
+      "heading_path": "Using CharacterBody2D/3D > Examples > Movement and walls",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/physics/using_character_body_2d.html"
+     },
+     {
+      "id": "tutorials/3d/occlusion_culling.rst#0",
+      "rank": 11,
+      "score": 0.350937307,
+      "title": "Occlusion culling",
+      "heading_path": "Occlusion culling",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/3d/occlusion_culling.html"
+     },
+     {
+      "id": "tutorials/3d/global_illumination/reflection_probes.rst#1",
+      "rank": 12,
+      "score": 0.350509703,
+      "title": "Reflection probes",
+      "heading_path": "Reflection probes",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/3d/global_illumination/reflection_probes.html"
+     },
+     {
+      "id": "classes/class_visibleonscreenenabler3d.rst#0",
+      "rank": 13,
+      "score": 0.34503755,
+      "title": "VisibleOnScreenEnabler3D",
+      "heading_path": "VisibleOnScreenEnabler3D",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_visibleonscreenenabler3d.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/07.killing_player.rst#1",
+      "rank": 14,
+      "score": 0.344767094,
+      "title": "Killing the player",
+      "heading_path": "Killing the player > Hitbox with the Area node",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/07.killing_player.html"
+     },
+     {
+      "id": "tutorials/physics/physics_introduction.rst#5",
+      "rank": 15,
+      "score": 0.341613054,
+      "title": "Physics introduction",
+      "heading_path": "Physics introduction > Collision objects > Collision layers and masks > GUI example",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/physics/physics_introduction.html"
+     },
+     {
+      "id": "tutorials/physics/troubleshooting_physics_issues.rst#0",
+      "rank": 16,
+      "score": 0.339628637,
+      "title": "Troubleshooting physics issues",
+      "heading_path": "Troubleshooting physics issues",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/physics/troubleshooting_physics_issues.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/04.creating_the_enemy.rst#3",
+      "rank": 17,
+      "score": 0.337017447,
+      "title": "Creating the enemy",
+      "heading_path": "Creating the enemy > Enemy script",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/04.creating_the_enemy.html"
+     },
+     {
+      "id": "tutorials/xr/xr_room_scale.rst#3",
+      "rank": 18,
+      "score": 0.336590618,
+      "title": "Room scale in XR",
+      "heading_path": "Room scale in XR > Step 1",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/xr/xr_room_scale.html"
+     },
+     {
+      "id": "tutorials/3d/3d_rendering_limitations.rst#2",
+      "rank": 19,
+      "score": 0.336553,
+      "title": "3D rendering limitations",
+      "heading_path": "3D rendering limitations > Depth buffer precision",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/3d/3d_rendering_limitations.html"
+     },
+     {
+      "id": "tutorials/navigation/navigation_different_actor_area_access.rst#0",
+      "rank": 20,
+      "score": 0.336514711,
+      "title": "Support different actor area access",
+      "heading_path": "Support different actor area access",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/navigation/navigation_different_actor_area_access.html"
+     }
+    ]
+   }
+  },
+  {
+   "t": 2831,
+   "event": "keyword",
+   "data": {
+    "ms": 14.3,
+    "hits": [
+     {
+      "id": "tutorials/scripting/gdscript/static_typing.rst#8",
+      "rank": 1,
+      "score": 24.854242300414413,
+      "title": "Static typing in GDScript",
+      "heading_path": "Static typing in GDScript > How to use static typing > Type casting",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/static_typing.html"
+     },
+     {
+      "id": "tutorials/3d/using_transforms.rst#9",
+      "rank": 2,
+      "score": 24.296471021979333,
+      "title": "Using 3D transforms",
+      "heading_path": "Using 3D transforms > Introducing transforms > Obtaining information",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/3d/using_transforms.html"
+     },
+     {
+      "id": "tutorials/scripting/filesystem.rst#0",
+      "rank": 3,
+      "score": 21.835715192449317,
+      "title": "File system",
+      "heading_path": "File system",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/filesystem.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/03.coding_the_player.rst#7",
+      "rank": 4,
+      "score": 21.315830507188238,
+      "title": "Coding the player",
+      "heading_path": "Coding the player > Preparing for collisions",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/03.coding_the_player.html"
+     },
+     {
+      "id": "tutorials/physics/using_area_2d.rst#2",
+      "rank": 5,
+      "score": 21.29346857332255,
+      "title": "Using Area2D",
+      "heading_path": "Using Area2D > Overlap detection",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/physics/using_area_2d.html"
+     },
+     {
+      "id": "classes/class_workerthreadpool.rst#0",
+      "rank": 6,
+      "score": 21.198395481871902,
+      "title": "WorkerThreadPool",
+      "heading_path": "WorkerThreadPool",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_workerthreadpool.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/03.coding_the_player.rst#8",
+      "rank": 7,
+      "score": 21.130120746133276,
+      "title": "Coding the player",
+      "heading_path": "Coding the player > Preparing for collisions",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/03.coding_the_player.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/07.killing_player.rst#3",
+      "rank": 8,
+      "score": 20.08458274801975,
+      "title": "Killing the player",
+      "heading_path": "Killing the player > Ending the game",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/07.killing_player.html"
+     },
+     {
+      "id": "tutorials/physics/physics_introduction.rst#5",
+      "rank": 9,
+      "score": 19.84199434158682,
+      "title": "Physics introduction",
+      "heading_path": "Physics introduction > Collision objects > Collision layers and masks > GUI example",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/physics/physics_introduction.html"
+     },
+     {
+      "id": "tutorials/scripting/gdscript/gdscript_basics.rst#78",
+      "rank": 10,
+      "score": 18.431911145408492,
+      "title": "GDScript reference",
+      "heading_path": "GDScript reference > Assert keyword",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/07.killing_player.rst#0",
+      "rank": 11,
+      "score": 18.242021067990187,
+      "title": "Killing the player",
+      "heading_path": "Killing the player",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/07.killing_player.html"
+     },
+     {
+      "id": "tutorials/io/background_loading.rst#2",
+      "rank": 12,
+      "score": 18.23817319993957,
+      "title": "Background loading",
+      "heading_path": "Background loading > Example",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/io/background_loading.html"
+     },
+     {
+      "id": "tutorials/scripting/gdscript/gdscript_basics.rst#63",
+      "rank": 13,
+      "score": 17.93115210738328,
+      "title": "GDScript reference",
+      "heading_path": "GDScript reference > Classes > Inheritance",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html"
+     },
+     {
+      "id": "tutorials/inputs/controllers_gamepads_joysticks.rst#6",
+      "rank": 14,
+      "score": 17.802926630683707,
+      "title": "Controllers, gamepads, and joysticks",
+      "heading_path": "Controllers, gamepads, and joysticks > Differences between keyboard/mouse and controller input",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/inputs/controllers_gamepads_joysticks.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/03.player_movement_code.rst#2",
+      "rank": 15,
+      "score": 16.798281507692455,
+      "title": "Moving the player with code",
+      "heading_path": "Moving the player with code",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/03.player_movement_code.html"
+     },
+     {
+      "id": "classes/class_animation.rst#0",
+      "rank": 16,
+      "score": 16.65770679589799,
+      "title": "Animation",
+      "heading_path": "Animation",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_animation.html"
+     },
+     {
+      "id": "getting_started/step_by_step/scripting_player_input.rst#1",
+      "rank": 17,
+      "score": 16.626246880739945,
+      "title": "Listening to player input",
+      "heading_path": "Listening to player input",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/step_by_step/scripting_player_input.html"
+     },
+     {
+      "id": "tutorials/3d/spring_arm.rst#0",
+      "rank": 18,
+      "score": 16.301838911022067,
+      "title": "Third-person camera with spring arm",
+      "heading_path": "Third-person camera with spring arm",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/3d/spring_arm.html"
+     },
+     {
+      "id": "tutorials/performance/thread_safe_apis.rst#1",
+      "rank": 19,
+      "score": 15.919197523684684,
+      "title": "Thread-safe APIs",
+      "heading_path": "Thread-safe APIs > Scene tree",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/performance/thread_safe_apis.html"
+     },
+     {
+      "id": "classes/class_popupmenu.rst#6",
+      "rank": 20,
+      "score": 15.814946740619508,
+      "title": "PopupMenu",
+      "heading_path": "PopupMenu > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_popupmenu.html"
+     }
+    ]
+   }
+  },
+  {
+   "t": 2831,
+   "event": "fusion",
+   "data": {
+    "ms": 0.1,
+    "hits": [
+     {
+      "id": "getting_started/first_3d_game/07.killing_player.rst#0",
+      "rank": 1,
+      "score": 0.029709507042253523,
+      "title": "Killing the player",
+      "heading_path": "Killing the player",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/07.killing_player.html"
+     },
+     {
+      "id": "tutorials/physics/physics_introduction.rst#5",
+      "rank": 2,
+      "score": 0.02782608695652174,
+      "title": "Physics introduction",
+      "heading_path": "Physics introduction > Collision objects > Collision layers and masks > GUI example",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/physics/physics_introduction.html"
+     },
+     {
+      "id": "tutorials/math/vector_math.rst#11",
+      "rank": 3,
+      "score": 0.01639344262295082,
+      "title": "Vector math",
+      "heading_path": "Vector math > Dot product > Facing",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/math/vector_math.html"
+     },
+     {
+      "id": "tutorials/scripting/gdscript/static_typing.rst#8",
+      "rank": 4,
+      "score": 0.01639344262295082,
+      "title": "Static typing in GDScript",
+      "heading_path": "Static typing in GDScript > How to use static typing > Type casting",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/static_typing.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/03.player_movement_code.rst#9",
+      "rank": 5,
+      "score": 0.016129032258064516,
+      "title": "Moving the player with code",
+      "heading_path": "Moving the player with code > Testing our player's movement > Adding a camera",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/03.player_movement_code.html"
+     },
+     {
+      "id": "tutorials/3d/using_transforms.rst#9",
+      "rank": 6,
+      "score": 0.016129032258064516,
+      "title": "Using 3D transforms",
+      "heading_path": "Using 3D transforms > Introducing transforms > Obtaining information",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/3d/using_transforms.html"
+     },
+     {
+      "id": "tutorials/xr/xr_room_scale.rst#12",
+      "rank": 7,
+      "score": 0.015873015873015872,
+      "title": "Room scale in XR",
+      "heading_path": "Room scale in XR > When the player walks to somewhere they shouldn't",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/xr/xr_room_scale.html"
+     },
+     {
+      "id": "tutorials/scripting/filesystem.rst#0",
+      "rank": 8,
+      "score": 0.015873015873015872,
+      "title": "File system",
+      "heading_path": "File system",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/filesystem.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/03.coding_the_player.rst#7",
+      "rank": 9,
+      "score": 0.015625,
+      "title": "Coding the player",
+      "heading_path": "Coding the player > Preparing for collisions",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/03.coding_the_player.html"
+     },
+     {
+      "id": "tutorials/3d/occlusion_culling.rst#6",
+      "rank": 10,
+      "score": 0.015384615384615385,
+      "title": "Occlusion culling",
+      "heading_path": "Occlusion culling > Performance considerations",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/3d/occlusion_culling.html"
+     },
+     {
+      "id": "tutorials/physics/using_area_2d.rst#2",
+      "rank": 11,
+      "score": 0.015384615384615385,
+      "title": "Using Area2D",
+      "heading_path": "Using Area2D > Overlap detection",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/physics/using_area_2d.html"
+     },
+     {
+      "id": "tutorials/xr/xr_room_scale.rst#1",
+      "rank": 12,
+      "score": 0.015151515151515152,
+      "title": "Room scale in XR",
+      "heading_path": "Room scale in XR",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/xr/xr_room_scale.html"
+     },
+     {
+      "id": "classes/class_workerthreadpool.rst#0",
+      "rank": 13,
+      "score": 0.015151515151515152,
+      "title": "WorkerThreadPool",
+      "heading_path": "WorkerThreadPool",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_workerthreadpool.html"
+     },
+     {
+      "id": "tutorials/2d/2d_parallax.rst#8",
+      "rank": 14,
+      "score": 0.014925373134328358,
+      "title": "2D Parallax",
+      "heading_path": "2D Parallax",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/2d/2d_parallax.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/03.coding_the_player.rst#8",
+      "rank": 15,
+      "score": 0.014925373134328358,
+      "title": "Coding the player",
+      "heading_path": "Coding the player > Preparing for collisions",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/03.coding_the_player.html"
+     },
+     {
+      "id": "tutorials/3d/occlusion_culling.rst#1",
+      "rank": 16,
+      "score": 0.014705882352941176,
+      "title": "Occlusion culling",
+      "heading_path": "Occlusion culling > How occlusion culling works in Godot",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/3d/occlusion_culling.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/07.killing_player.rst#3",
+      "rank": 17,
+      "score": 0.014705882352941176,
+      "title": "Killing the player",
+      "heading_path": "Killing the player > Ending the game",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/07.killing_player.html"
+     },
+     {
+      "id": "tutorials/performance/optimizing_3d_performance.rst#0",
+      "rank": 18,
+      "score": 0.014492753623188406,
+      "title": "Optimizing 3D performance",
+      "heading_path": "Optimizing 3D performance > Culling",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/performance/optimizing_3d_performance.html"
+     },
+     {
+      "id": "tutorials/physics/using_character_body_2d.rst#9",
+      "rank": 19,
+      "score": 0.014285714285714285,
+      "title": "Using CharacterBody2D/3D",
+      "heading_path": "Using CharacterBody2D/3D > Examples > Movement and walls",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/physics/using_character_body_2d.html"
+     },
+     {
+      "id": "tutorials/scripting/gdscript/gdscript_basics.rst#78",
+      "rank": 20,
+      "score": 0.014285714285714285,
+      "title": "GDScript reference",
+      "heading_path": "GDScript reference > Assert keyword",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html"
+     },
+     {
+      "id": "tutorials/3d/occlusion_culling.rst#0",
+      "rank": 21,
+      "score": 0.014084507042253521,
+      "title": "Occlusion culling",
+      "heading_path": "Occlusion culling",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/3d/occlusion_culling.html"
+     },
+     {
+      "id": "tutorials/3d/global_illumination/reflection_probes.rst#1",
+      "rank": 22,
+      "score": 0.013888888888888888,
+      "title": "Reflection probes",
+      "heading_path": "Reflection probes",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/3d/global_illumination/reflection_probes.html"
+     },
+     {
+      "id": "tutorials/io/background_loading.rst#2",
+      "rank": 23,
+      "score": 0.013888888888888888,
+      "title": "Background loading",
+      "heading_path": "Background loading > Example",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/io/background_loading.html"
+     },
+     {
+      "id": "classes/class_visibleonscreenenabler3d.rst#0",
+      "rank": 24,
+      "score": 0.0136986301369863,
+      "title": "VisibleOnScreenEnabler3D",
+      "heading_path": "VisibleOnScreenEnabler3D",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_visibleonscreenenabler3d.html"
+     },
+     {
+      "id": "tutorials/scripting/gdscript/gdscript_basics.rst#63",
+      "rank": 25,
+      "score": 0.0136986301369863,
+      "title": "GDScript reference",
+      "heading_path": "GDScript reference > Classes > Inheritance",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/07.killing_player.rst#1",
+      "rank": 26,
+      "score": 0.013513513513513514,
+      "title": "Killing the player",
+      "heading_path": "Killing the player > Hitbox with the Area node",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/07.killing_player.html"
+     },
+     {
+      "id": "tutorials/inputs/controllers_gamepads_joysticks.rst#6",
+      "rank": 27,
+      "score": 0.013513513513513514,
+      "title": "Controllers, gamepads, and joysticks",
+      "heading_path": "Controllers, gamepads, and joysticks > Differences between keyboard/mouse and controller input",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/inputs/controllers_gamepads_joysticks.html"
+     },
+     {
+      "id": "getting_started/first_3d_game/03.player_movement_code.rst#2",
+      "rank": 28,
+      "score": 0.013333333333333334,
+      "title": "Moving the player with code",
+      "heading_path": "Moving the player with code",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/03.player_movement_code.html"
+     },
+     {
+      "id": "tutorials/physics/troubleshooting_physics_issues.rst#0",
+      "rank": 29,
+      "score": 0.013157894736842105,
+      "title": "Troubleshooting physics issues",
+      "heading_path": "Troubleshooting physics issues",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/physics/troubleshooting_physics_issues.html"
+     },
+     {
+      "id": "classes/class_animation.rst#0",
+      "rank": 30,
+      "score": 0.013157894736842105,
+      "title": "Animation",
+      "heading_path": "Animation",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_animation.html"
+     },
+     {
+      "id": "getting_started/first_2d_game/04.creating_the_enemy.rst#3",
+      "rank": 31,
+      "score": 0.012987012987012988,
+      "title": "Creating the enemy",
+      "heading_path": "Creating the enemy > Enemy script",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/04.creating_the_enemy.html"
+     },
+     {
+      "id": "getting_started/step_by_step/scripting_player_input.rst#1",
+      "rank": 32,
+      "score": 0.012987012987012988,
+      "title": "Listening to player input",
+      "heading_path": "Listening to player input",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/step_by_step/scripting_player_input.html"
+     },
+     {
+      "id": "tutorials/xr/xr_room_scale.rst#3",
+      "rank": 33,
+      "score": 0.01282051282051282,
+      "title": "Room scale in XR",
+      "heading_path": "Room scale in XR > Step 1",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/xr/xr_room_scale.html"
+     },
+     {
+      "id": "tutorials/3d/spring_arm.rst#0",
+      "rank": 34,
+      "score": 0.01282051282051282,
+      "title": "Third-person camera with spring arm",
+      "heading_path": "Third-person camera with spring arm",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/3d/spring_arm.html"
+     },
+     {
+      "id": "tutorials/3d/3d_rendering_limitations.rst#2",
+      "rank": 35,
+      "score": 0.012658227848101266,
+      "title": "3D rendering limitations",
+      "heading_path": "3D rendering limitations > Depth buffer precision",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/3d/3d_rendering_limitations.html"
+     },
+     {
+      "id": "tutorials/performance/thread_safe_apis.rst#1",
+      "rank": 36,
+      "score": 0.012658227848101266,
+      "title": "Thread-safe APIs",
+      "heading_path": "Thread-safe APIs > Scene tree",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/performance/thread_safe_apis.html"
+     },
+     {
+      "id": "tutorials/navigation/navigation_different_actor_area_access.rst#0",
+      "rank": 37,
+      "score": 0.0125,
+      "title": "Support different actor area access",
+      "heading_path": "Support different actor area access",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/navigation/navigation_different_actor_area_access.html"
+     },
+     {
+      "id": "classes/class_popupmenu.rst#6",
+      "rank": 38,
+      "score": 0.0125,
+      "title": "PopupMenu",
+      "heading_path": "PopupMenu > Method Descriptions",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_popupmenu.html"
+     }
+    ]
+   }
+  },
+  {
+   "t": 2831,
+   "event": "context",
+   "data": {
+    "chunks": [
+     {
+      "id": "getting_started/first_3d_game/07.killing_player.rst#0",
+      "path": "getting_started/first_3d_game/07.killing_player.rst",
+      "text": "Killing the player\n\nWe can kill enemies by jumping on them, but the player still can't die.\nLet's fix this.\n\nWe want to detect being hit by an enemy differently from squashing them.\nWe want the player to die when they're moving on the floor, but not if\nthey're in the air. We could use vector math to distinguish the two\nkinds of collisions. Instead, though, we will use an Area3D node, which\nworks well for hitboxes.",
+      "heading_path": "Killing the player",
+      "title": "Killing the player",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/07.killing_player.html",
+      "score": 0.029709507042253523
+     },
+     {
+      "id": "tutorials/physics/physics_introduction.rst#5",
+      "path": "tutorials/physics/physics_introduction.rst",
+      "text": "Physics introduction > Collision objects > Collision layers and masks > GUI example\n\nYou have four node types in your game: Walls, Player, Enemy, and Coin. Both\nPlayer and Enemy should collide with Walls. The Player node should detect\ncollisions with both Enemy and Coin, but Enemy and Coin should ignore each\nother.\n\nStart by naming layers 1-4 \"walls\", \"player\", \"enemies\", and \"coins\" and\nplace each node type in its respective layer using the \"Layer\" property.\nThen set each node's \"Mask\" property by selecting the layers it should\ninteract with. For example, the Player's settings would look like this:",
+      "heading_path": "Physics introduction > Collision objects > Collision layers and masks > GUI example",
+      "title": "Physics introduction",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/physics/physics_introduction.html",
+      "score": 0.02782608695652174
+     },
+     {
+      "id": "tutorials/math/vector_math.rst#11",
+      "path": "tutorials/math/vector_math.rst",
+      "text": "Vector math > Dot product > Facing\n\nWe can use this fact to detect whether an object is facing toward another\nobject. In the diagram below, the player `P` is trying to avoid the zombies\n`A` and `B`. Assuming a zombie's field of view is 180\u00b0, can they see the\nplayer?\n\nThe green arrows `fA` and `fB` are unit vectors representing the\nzombie's facing direction and the blue semicircle represents its field of view.\nFor zombie `A`, we find the direction vector `AP` pointing to the player\nusing `P - A` and normalize it, however, Godot has a helper method to do this\ncalled direction_to(). If the angle\nbetween this vector and the facing vector is less than 90\u00b0, then the zombie can\nsee the player.\n\nIn code it would look like this:\n\n```gdscript\nvar AP = A.direction_to(P)\nif AP.dot(fA) > 0:\n    print(\"A sees P!\")\n```\n\n```csharp\nvar AP = A.DirectionTo(P);\nif (AP.Dot(fA) > 0)\n{\n    GD.Print(\"A sees P!\");\n}\n```",
+      "heading_path": "Vector math > Dot product > Facing",
+      "title": "Vector math",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/math/vector_math.html",
+      "score": 0.01639344262295082
+     },
+     {
+      "id": "tutorials/scripting/gdscript/static_typing.rst#8",
+      "path": "tutorials/scripting/gdscript/static_typing.rst",
+      "text": "Static typing in GDScript > How to use static typing > Type casting\n\nType casting is an important concept in typed languages.\nCasting is the conversion of a value from one type to another.\n\nImagine an `Enemy` in your game, that `extends Area2D`. You want it to collide\nwith the `Player`, a `CharacterBody2D` with a script called `PlayerController`\nattached to it. You use the `body_entered` signal to detect the collision.\nWith typed code, the body you detect is going to be a generic `PhysicsBody2D`,\nand not your `PlayerController` on the `_on_body_entered` callback.\n\nYou can check if this `PhysicsBody2D` is your `Player` with the `as` keyword,\nand using the colon `:` again to force the variable to use this type.\nThis forces the variable to stick to the `PlayerController` type:\n\nfunc _on_body_entered(body: PhysicsBody2D) -> void:\n        var player := body as PlayerController\n        if not player:\n            return\n\nplayer.damage()\n\nAs we're dealing with a custom type, if the `body` doesn't extend\n`PlayerController`, the `player` variable will be set to `null`.\nWe can use this to check if the body is the player or not. We will also\nget full autocompletion on the player variable thanks to that cast.\n\nNote: The `as` keyword silently casts the variable to `null` in case of a type\nmismatch at runtime, without an error/warning. While this may be convenient\nin some cases, it can also lead to bugs. Use the `as` keyword only if this\nbehavior is intended. A safer alternative is to use the `is` keyword:\n\nif not (body is PlayerController):\n        push_error(\"Bug: body is not PlayerController.\")\n\nvar player: PlayerController = body\n    if not player:\n        return\n\nplayer.damage()\n\nYou can also simplify the code by using the `is not` operator:\n\nif body is not PlayerController:\n        push_error(\"Bug: body is not PlayerController\")",
+      "heading_path": "Static typing in GDScript > How to use static typing > Type casting",
+      "title": "Static typing in GDScript",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/static_typing.html",
+      "score": 0.01639344262295082
+     },
+     {
+      "id": "getting_started/first_3d_game/03.player_movement_code.rst#9",
+      "path": "getting_started/first_3d_game/03.player_movement_code.rst",
+      "text": "Moving the player with code > Testing our player's movement > Adding a camera\n\nit easier for the player to read\ndistances.\n\nSelect the Camera again and in the Inspector, set the Projection to\nOrthogonal and the Size to `19`. The character should now look flatter and\nthe ground should fill the background.\n\nNote: When using an orthogonal camera in Godot 4, directional shadow quality is\ndependent on the camera's Far value. The higher the Far value, the\nfurther away the camera will be able to see. However, higher Far values\nalso decrease shadow quality as the shadow rendering has to cover a greater\ndistance.\n\nIf directional shadows look too blurry after switching to an orthogonal\ncamera, decrease the camera's Far property to a lower value such as\n`100`. Don't decrease this Far property too much, or objects in the\ndistance will start disappearing.\n\nTest your scene and you should be able to move in all 8 directions and not glitch through the floor!\n\nUltimately, we have both player movement and the view in place. Next, we will\nwork on the monsters.",
+      "heading_path": "Moving the player with code > Testing our player's movement > Adding a camera",
+      "title": "Moving the player with code",
+      "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/03.player_movement_code.html",
+      "score": 0.016129032258064516
+     }
+    ]
+   }
+  },
+  {
+   "t": 3736,
+   "event": "token",
+   "data": {
+    "text": "I"
+   }
+  },
+  {
+   "t": 3736,
+   "event": "token",
+   "data": {
+    "text": " couldn't"
+   }
+  },
+  {
+   "t": 3793,
+   "event": "token",
+   "data": {
+    "text": " find"
+   }
+  },
+  {
+   "t": 3793,
+   "event": "token",
+   "data": {
+    "text": " it"
+   }
+  },
+  {
+   "t": 3816,
+   "event": "token",
+   "data": {
+    "text": " in"
+   }
+  },
+  {
+   "t": 3817,
+   "event": "token",
+   "data": {
+    "text": " the"
+   }
+  },
+  {
+   "t": 3846,
+   "event": "token",
+   "data": {
+    "text": " docs"
+   }
+  },
+  {
+   "t": 3847,
+   "event": "token",
+   "data": {
+    "text": "."
+   }
+  },
+  {
+   "t": 3854,
+   "event": "citations",
+   "data": {
+    "cited": [],
+    "ms": 1022.6
+   }
+  },
+  {
+   "t": 3855,
+   "event": "done",
+   "data": {
+    "ms": 1649.8
+   }
+  }
+ ]
+}
