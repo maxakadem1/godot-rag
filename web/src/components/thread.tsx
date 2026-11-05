@@ -12,6 +12,7 @@ type TurnProps = {
   hovered: CiteRef;
   onHover: (c: CiteRef) => void;
   onShowTrace: (runId: string) => void;
+  onUnlock: () => void;
 };
 
 export function Thread({
@@ -50,7 +51,14 @@ export function Thread({
   );
 }
 
-function Turn({ run, selected, hovered, onHover, onShowTrace }: { run: Run; selected: boolean } & TurnProps) {
+function Turn({
+  run,
+  selected,
+  hovered,
+  onHover,
+  onShowTrace,
+  onUnlock,
+}: { run: Run; selected: boolean } & TurnProps) {
   const replay = run.replayId ? REPLAYS.find((r) => r.id === run.replayId) : undefined;
   const running = steps(run).find((s) => s.status === "running");
   const sources = (run.cited ?? []).map((n) => ({ n, chunk: run.context?.[n - 1] }));
@@ -107,9 +115,9 @@ function Turn({ run, selected, hovered, onHover, onShowTrace }: { run: Run; sele
           />
         )}
 
-        {!run.generate && run.context && <RetrievalOnly run={run} hovered={hovered} onHover={onHover} />}
-
-        {run.limited && <p className="text-muted">{run.limited}.</p>}
+        {!run.generate && run.context && (
+          <RetrievalOnly run={run} hovered={hovered} onHover={onHover} onUnlock={onUnlock} />
+        )}
 
         {sources.length > 0 && (
           <div className="mt-4 border-t border-border pt-3">
@@ -153,14 +161,30 @@ function Turn({ run, selected, hovered, onHover, onShowTrace }: { run: Run; sele
   );
 }
 
-function RetrievalOnly({ run, hovered, onHover }: { run: Run; hovered: CiteRef; onHover: (c: CiteRef) => void }) {
+function RetrievalOnly({
+  run,
+  hovered,
+  onHover,
+  onUnlock,
+}: {
+  run: Run;
+  hovered: CiteRef;
+  onHover: (c: CiteRef) => void;
+  onUnlock: () => void;
+}) {
   return (
     <div>
-      <p className="flex items-center gap-2 text-muted">
-        <Lock className="size-3.5 shrink-0" strokeWidth={1.75} />
-        Retrieval only. These are the chunks the answer would be built from; writing the answer
-        needs the password.
-      </p>
+      {run.limited ? (
+        <p className="text-muted">{run.limited}. These are the chunks the answer would be built from.</p>
+      ) : (
+        <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-muted">
+          <Lock className="size-3.5 shrink-0" strokeWidth={1.75} />
+          Retrieval only: these are the chunks an answer would be built from.
+          <button onClick={onUnlock} className="text-foreground underline underline-offset-2 hover:text-primary">
+            Unlock answers
+          </button>
+        </p>
+      )}
       <ol className="mt-3 flex flex-col gap-1">
         {run.context!.map((c, i) => (
           <li

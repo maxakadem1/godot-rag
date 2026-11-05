@@ -27,6 +27,8 @@ export type Chunk = {
 export type StageName = "vector" | "keyword" | "fusion";
 
 export type RagEvent =
+  /** Sent first by this app's proxy (not the API): will an answer follow, and if not, why. */
+  | { event: "meta"; data: { generate: boolean; reason?: "locked" | "daily_limit" } }
   | { event: StageName; data: { ms: number; hits: Hit[] } }
   | { event: "context"; data: { chunks: Chunk[] } }
   | { event: "token"; data: { text: string } }

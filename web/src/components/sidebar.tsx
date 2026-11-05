@@ -1,6 +1,6 @@
 "use client";
 
-import { BookOpen, FolderGit2, Lock, Plus } from "lucide-react";
+import { BookOpen, FolderGit2, Lock, LockOpen, Plus } from "lucide-react";
 import { LogoMark } from "./logo";
 import { OutcomeDot } from "./ui";
 import { REPLAYS, type Replay } from "@/lib/replays";
@@ -13,10 +13,16 @@ export function Sidebar({
   onReplay,
   onNew,
   activeReplayId,
+  unlocked,
+  onUnlock,
+  onLock,
 }: {
   onReplay: (r: Replay) => void;
   onNew: () => void;
   activeReplayId?: string;
+  unlocked: boolean | null;
+  onUnlock: () => void;
+  onLock: () => void;
 }) {
   return (
     <aside className="hidden w-64 shrink-0 flex-col border-r border-border lg:flex">
@@ -64,10 +70,18 @@ export function Sidebar({
       </div>
 
       <div className="mt-auto flex flex-col gap-px border-t border-border p-2">
-        <div className="flex items-center gap-2.5 px-2.5 py-1.5 text-faint">
-          <Lock className="size-3.5" strokeWidth={1.75} />
-          Live answers need a password
-        </div>
+        {unlocked ? (
+          <button onClick={onLock} className={item} title="Lock answers again">
+            <LockOpen className="size-3.5 text-fusion" strokeWidth={1.75} />
+            Answers unlocked
+            <span className="ml-auto text-[11px] text-faint">Lock</span>
+          </button>
+        ) : (
+          <button onClick={onUnlock} className={item}>
+            <Lock className="size-3.5" strokeWidth={1.75} />
+            Unlock live answers
+          </button>
+        )}
         <a href="https://github.com/maxakadem1/godot-rag" target="_blank" rel="noreferrer" className={item}>
           <FolderGit2 className="size-3.5" strokeWidth={1.75} />
           Source on GitHub

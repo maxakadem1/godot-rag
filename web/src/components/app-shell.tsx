@@ -9,6 +9,7 @@ import { LogoMark } from "./logo";
 import { Sidebar } from "./sidebar";
 import { Thread } from "./thread";
 import { TracePanel } from "./trace-panel";
+import { UnlockDialog } from "./unlock-dialog";
 import type { Replay } from "@/lib/replays";
 import { applyEvent, newRun, type Run } from "@/lib/run";
 import { playReplay, streamLive } from "@/lib/sources";
@@ -20,7 +21,21 @@ export function AppShell() {
   const [mode, setMode] = useState<Mode>("hybrid");
   const [hovered, setHovered] = useState<CiteRef>(null);
   const [traceOpen, setTraceOpen] = useState(false); // overlay on narrow screens
+  const [unlocked, setUnlocked] = useState<boolean | null>(null); // null: not known yet
+  const [unlockOpen, setUnlockOpen] = useState(false);
   const controller = useRef<AbortController | null>(null);
+
+  // The cookie is httpOnly, so the page can't read it: ask the server instead.
+  useEffect(() => {
+    fetch("/api/session")
+      .then((r) => r.json())
+      .then((s) => setUnlocked(!!s.unlocked))
+      .catch(() => setUnlocked(false));
+  }, []);
+
+  const lock = () => {
+    fetch("/api/session", { method: "DELETE" }).finally(() => setUnlocked(false));
+  };
 
   const update = (id: string, fn: (r: Run) => Run) =>
     setRuns((rs) => rs.map((r) => (r.id === id ? fn(r) : r)));
@@ -52,7 +67,8 @@ export function AppShell() {
   useEffect(() => stop, [stop]);
 
   const ask = (question: string) =>
-    start(newRun(question, mode, "live", false), (signal) => streamLive(question, mode, signal));
+    // Only the UI's first guess: the server's first event says whether an answer follows.
+    start(newRun(question, mode, "live", !!unlocked), (signal) => streamLive(question, mode, signal));
 
   const replay = (r: Replay) =>
     start({ ...newRun(r.question, r.mode, "replay", true), replayId: r.id }, (signal) =>
@@ -74,7 +90,14 @@ export function AppShell() {
 
   return (
     <div className="flex h-dvh overflow-hidden">
-      <Sidebar onReplay={replay} onNew={reset} activeReplayId={selected?.replayId} />
+      <Sidebar
+        onReplay={replay}
+        onNew={reset}
+        activeReplayId={selected?.replayId}
+        unlocked={unlocked}
+        onUnlock={() => setUnlockOpen(true)}
+        onLock={lock}
+      />
 
       <main className="flex min-w-0 flex-1 flex-col">
         <div className="flex h-13 shrink-0 items-center gap-2 border-b border-border px-4 lg:border-transparent">
@@ -112,13 +135,29 @@ export function AppShell() {
             hovered={hovered}
             onHover={setHovered}
             onShowTrace={showTrace}
+            onUnlock={() => setUnlockOpen(true)}
           />
         )}
 
-        <Composer mode={mode} onModeChange={setMode} onSubmit={ask} onStop={stop} running={running} />
+        <Composer
+          mode={mode}
+          onModeChange={setMode}
+          onSubmit={ask}
+          onStop={stop}
+          running={running}
+          unlocked={unlocked}
+          onUnlock={() => setUnlockOpen(true)}
+          onLock={lock}
+        />
       </main>
 
       <TracePanel run={selected} hovered={hovered} onHover={setHovered} className="hidden xl:flex" />
+
+      <UnlockDialog
+        open={unlockOpen}
+        onClose={() => setUnlockOpen(false)}
+        onUnlocked={() => setUnlocked(true)}
+      />
 
       {traceOpen && (
         <div className="fixed inset-0 z-40 flex justify-end bg-black/60 xl:hidden" onClick={() => setTraceOpen(false)}>

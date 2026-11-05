@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUp, Square } from "lucide-react";
+import { ArrowUp, Lock, LockOpen, Square } from "lucide-react";
 import { useState } from "react";
 import { MODES, type Mode } from "@/lib/types";
 import { cn } from "@/lib/utils";
@@ -11,12 +11,18 @@ export function Composer({
   onSubmit,
   onStop,
   running,
+  unlocked,
+  onUnlock,
+  onLock,
 }: {
   mode: Mode;
   onModeChange: (m: Mode) => void;
   onSubmit: (question: string) => void;
   onStop: () => void;
   running: boolean;
+  unlocked: boolean | null;
+  onUnlock: () => void;
+  onLock: () => void;
 }) {
   const [text, setText] = useState("");
   const submit = () => {
@@ -89,6 +95,27 @@ export function Composer({
           )}
         </div>
       </form>
+      {unlocked !== null && (
+        <p className="mt-2 flex items-center justify-center gap-1.5 text-[11px] text-faint">
+          {unlocked ? (
+            <>
+              <LockOpen className="size-3" strokeWidth={1.75} />
+              Answers unlocked.
+              <button onClick={onLock} className="underline underline-offset-2 hover:text-foreground">
+                Lock
+              </button>
+            </>
+          ) : (
+            <>
+              <Lock className="size-3" strokeWidth={1.75} />
+              Your questions show retrieval only.
+              <button onClick={onUnlock} className="underline underline-offset-2 hover:text-foreground">
+                Unlock answers
+              </button>
+            </>
+          )}
+        </p>
+      )}
     </div>
   );
 }

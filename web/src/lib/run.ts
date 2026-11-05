@@ -42,6 +42,15 @@ export function newRun(
 /** Pure reducer: the same function handles live streams and replays. */
 export function applyEvent(run: Run, e: RagEvent): Run {
   switch (e.event) {
+    case "meta":
+      return {
+        ...run,
+        generate: e.data.generate,
+        limited:
+          e.data.reason === "daily_limit"
+            ? "Today's answer limit is used up, so this shows retrieval only"
+            : run.limited,
+      };
     case "vector":
     case "keyword":
     case "fusion":
@@ -109,10 +118,10 @@ export function steps(run: Run): Step[] {
   list.push({
     key: "generate",
     label: "Answer",
-    detail: !run.generate
-      ? "Skipped: retrieval only"
-      : run.limited
-        ? "Skipped: daily answer limit reached"
+    detail: run.limited
+      ? "Skipped: daily answer limit reached"
+      : !run.generate
+        ? "Skipped: retrieval only"
         : run.cited
           ? `Cited ${run.cited.length} of ${context?.length ?? 0} chunks`
           : "LLM writes a cited answer",
