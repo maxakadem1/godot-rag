@@ -1,12 +1,12 @@
 """Convert a Godot docs reStructuredText page into clean text split by headings.
 
-Deliberately plain code, not an LLM: it's free, fast, deterministic and doesn't
-drop or invent content. (See docs/05-decisions.md.)
+Deliberately plain code, not an LLM: it's free, fast, deterministic and can't
+drop or invent content (see docs/decisions.md).
 
 It is not a full RST parser. It handles what the Godot docs actually use:
 headings, Sphinx directives (notes, code blocks, tabs, images, toctrees...),
-roles like :ref:`text <target>` and inline markup. Known gaps are listed in
-docs/04-roadmap.md.
+roles like :ref:`text <target>` and inline markup. Known gaps are listed in the
+README under "Limitations".
 """
 
 import hashlib
@@ -215,7 +215,7 @@ def split_sections(lines: list[str]) -> tuple[str | None, list[Section]]:
             flush()
             if title is None:
                 title = heading
-            path[:] = path[:level] + [heading]
+            path[:] = [*path[:level], heading]
             i += 3 if has_overline else 2
             continue
 

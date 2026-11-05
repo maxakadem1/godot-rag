@@ -99,7 +99,10 @@ def test_content_hash_changes_with_content():
 
 
 def test_markup_wrapped_across_lines_is_cleaned():
-    raw = "Title\n=====\n\nUsing signals limits `coupling\n<https://example.org>`_ and see\n:ref:`doc_scripting_first_script`.\n"
+    raw = (
+        "Title\n=====\n\nUsing signals limits `coupling\n<https://example.org>`_ and see\n"
+        ":ref:`doc_scripting_first_script`.\n"
+    )
     text = parse_rst("s", "a.rst", raw, "https://x").sections[0].text
     assert text == "Using signals limits coupling and see\nscripting first script."
 
@@ -107,7 +110,8 @@ def test_markup_wrapped_across_lines_is_cleaned():
 def test_class_reference_noise_is_removed():
     raw = (
         ":github_url: hide\n\nNode\n====\n\n"
-        "float get_floor_angle\\ (\\ up_direction\\: Vector2\\ ) :ref:`🔗<class_x>`\n\n----\n\nNext.\n"
+        "float get_floor_angle\\ (\\ up_direction\\: Vector2\\ ) :ref:`🔗<class_x>`\n\n"
+        "----\n\nNext.\n"
     )
     doc = parse_rst("s", "classes/class_node.rst", raw, "https://x")
     assert len(doc.sections) == 1

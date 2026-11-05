@@ -1,0 +1,12 @@
+# Allow-list for `vercel deploy` from this folder: upload only what the API needs,
+# so .env, the docs checkout and documents.jsonl stay on this machine.
+/*
+!/app.py
+!/pyproject.toml
+!/README.md
+!/src
+!/data
+/data/*
+!/data/keyword_chunks.jsonl.gz
+**/__pycache__
+**/*.egg-info

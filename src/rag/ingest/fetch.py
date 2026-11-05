@@ -10,7 +10,9 @@ def fetch_godot_docs(repo_url: str, branch: str, dest: Path) -> Path:
         subprocess.run(
             ["git", "-C", str(dest), "fetch", "--depth", "1", "origin", branch], check=True
         )
-        subprocess.run(["git", "-C", str(dest), "reset", "--hard", f"origin/{branch}"], check=True)
+        # FETCH_HEAD, not origin/<branch>: a single-branch clone only tracks the branch
+        # it was cloned with, so origin/<branch> may not exist if the setting changed.
+        subprocess.run(["git", "-C", str(dest), "reset", "--hard", "FETCH_HEAD"], check=True)
     else:
         dest.parent.mkdir(parents=True, exist_ok=True)
         subprocess.run(

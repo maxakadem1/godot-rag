@@ -10,13 +10,14 @@ venv/
 # Env / secrets
 .env
 
-# Data (cloned docs, generated JSONL, eval outputs)
-data/
+# Data (cloned docs, generated JSONL, eval outputs). The keyword chunks file is
+# committed: the deployed API builds its BM25 index from it.
+data/*
+!data/keyword_chunks.jsonl.gz
 eval/results/
 
-# Frontend
-frontend/node_modules/
-frontend/.next/
+# Personal study notes (kept locally, not part of the project)
+notes/
 
 # OS / editor
 .DS_Store
