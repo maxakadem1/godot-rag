@@ -1,4 +1,7 @@
+
 # Godot Docs RAG
+
+<img width="853" height="1110" alt="Screenshot 2026-11-06 110327" src="https://github.com/user-attachments/assets/ae3418c1-ddf7-4b39-ac75-624a0abd8b71" />
 
 [![CI](https://github.com/maxakadem1/godot-rag/actions/workflows/ci.yml/badge.svg)](https://github.com/maxakadem1/godot-rag/actions/workflows/ci.yml)
 
